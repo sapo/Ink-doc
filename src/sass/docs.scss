@@ -841,8 +841,8 @@ footer {
 
     border-top: 1px solid #DDD;
     background: #f0f0f0;
-    
-    .credits { 
+
+    .credits {
         font-size: .938em;
         @extend .fw-300;
 
@@ -852,7 +852,7 @@ footer {
             @include border-radius($border-radius);
 
             &.separator {
-                
+
                 height: .4em;
                 width: .4em;
                 padding: 0;
@@ -869,7 +869,7 @@ footer {
             }
         }
     }
-    
+
     .socialplugins {
         background: $grey-10;
         padding: 1em;
@@ -1200,6 +1200,11 @@ ul.params {
             margin-left: $indent-amount * 2;
         }
     }
+}
+
+p.important {
+    padding: 1em;
+    background: #FFF6C8;
 }
 
 @media screen and (min-width: 641px) and (max-width: 960px) {

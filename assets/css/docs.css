@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .fw-100, .fw-light {
   font-weight: 100;
 }
@@ -1288,6 +1287,11 @@ ul.params li.level2 {
 ul.params li.level3 {
   list-style-type: circle;
   margin-left: 50px;
+}
+
+p.important {
+  padding: 1em;
+  background: #FFF6C8;
 }
 
 @media screen and (min-width: 641px) and (max-width: 960px) {
