@@ -21,6 +21,17 @@ module.exports = function(grunt) {
       },
     },
 
+    imagemin: {                          // Task
+      dynamic: {                         // Another target
+        files: [{
+          expand: true,                  // Enable dynamic expansion
+          cwd: 'assets/img',                   // Src matches are relative to this path
+          src: ['**/*.{png,jpg}'],   // Actual patterns to match
+          dest: 'assets/img'                  // Destination path prefix
+        }]
+      }
+    },
+
     // CONCATENATE JS
     uglify: {
       options: {
@@ -181,9 +192,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
   // Default task(s).
-  grunt.registerTask('default', ['css','update','inkdoc','jekyll:build']);
+  grunt.registerTask('default', ['css','update','inkdoc','imagemin','jekyll:build']);
   grunt.registerTask('update', ['shell:src']);
   grunt.registerTask('docs', ['inkdoc','jekyll']);
   grunt.registerTask('dev', ['watch']);
