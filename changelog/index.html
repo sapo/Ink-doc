@@ -7,11 +7,84 @@ site_root:  ../
 
 
 <section class="no-padding half-top-space">
+    <h1 class="fw-300">3.0.5</h3>
+    <p><time>July 23, 2014</time></p>
+    <p class="clearfix">
+        <a href="{{site.download_url}}3.0.5/ink-3.0.5.zip" class="ink-button black">Download</a>
+        <a href="{{site.download_src_url}}3.0.5.zip" class="ink-button black">Download with source</a>
+    </p>
+
+    <h2 class="fw-300">CSS</h2>
+    <ul>
+        <li>Adds 16.66 (1/6) grid division.</li>
+        <li>Style fixes in <code>ink-modal</code> and <code>ink-table</code>.</li>
+        <li>Fixes issue <a href="https://github.com/sapo/Ink/issues/367">#367</a>, <a href="https://github.com/sapo/Ink/issues/373">#373</a> and <a href="https://github.com/sapo/Ink/issues/381">#381</a>.</li>
+    </ul>
+    
+    <h2 class="fw-300">JS</h2>
+    <ul>
+        <li><code>setOption()</code> function in UI component instances.
+        <li><code>getInstance()</code> function in UI component classes. Use it like this: <code>var myModal = Modal.getInstance('#element-with-a-modal')</code>. This deprecates the need of disabling <code>Ink.UI.Autoload</code> to interact with UI components.</li>
+        <li>Do not pollute elements with data-instance attributes. This also fixes a memory leak when UI components are removed from the DOM.</li>
+        <li>Fixes issue <a href="https://github.com/sapo/Ink/issues/276">#276</a> and <a href="https://github.com/sapo/Ink/issues/364">#364</a>.</li>
+        <li><code>Ink.Dom.Event.KEY_SPACE</code> (<a href="https://github.com/sapo/Ink/commit/eb28b233">eb28b23</a>)</li>
+        <li><code>Ink.Dom.Element.isDOMElement(el)</code> function (moved from <code>Ink.UI.Common</code> to <code>Ink.Dom.Element</code>)</li>
+        <li>Fixed an <code>Ink.UI.TagField</code> crash when it is created.</li>
+        <li>DatePicker improved a bit.</li>
+        <li>Fixed cryptic error reported when <code>Ink.requireModules</code> fails to load a script.</li>
+    </ul>
+</section>
+
+<section>
+    <h1 class="fw-300">3.0.4</h3>
+    <p><time>June 24, 2014</time></p>
+    <p class="clearfix">
+        <a href="{{site.download_url}}3.0.4/ink-3.0.4.zip" class="ink-button black">Download</a>
+        <a href="{{site.download_src_url}}3.0.4.zip" class="ink-button black">Download with source</a>
+    </p>
+
+    <h2 class="fw-300">CSS</h2>
+
+    <ul>
+        <li>Bumping FontAwesome version to 4.1.0</li>
+    </ul>
+    
+    <h2 class="fw-300">JS</h2>
+
+    <ul>
+        <li>Fixed a problem with <code>SmoothScroller</code> which was, together with <code>Autoload</code>, throwing errors whenever a click occurred.</li>
+        <li>Fixed a problem with <code>Modal</code> and percentage measurements, introduced in the previous version.</li>
+    </ul>
+</section>
+
+<section>
+    <h1 class="fw-300">3.0.3</h3>
+    <p><time>June 23, 2014</time></p>
+    <p class="clearfix">
+        <a href="{{site.download_url}}3.0.3/ink-3.0.3.zip" class="ink-button black">Download</a>
+        <a href="{{site.download_src_url}}3.0.3.zip" class="ink-button black">Download with source</a>
+    </p>
+
+    <h2 class="fw-300">CSS</h2>
+    <ul>
+        <li>Adds disabled state styling for buttons inside a <code>button-group</code> <a href="https://github.com/sapo/Ink/issues/353">(#353)</a></li>
+        <li>Adds media types support for media queries. <a href="https://github.com/sapo/Ink/commit/0bf08b641fbfc0951e4b857214fc19b0cb684a30" class="commit-link"><tt>0bf08b6</tt></a></li>
+        
+    </ul>
+
+    <h2 class="fw-300">JS</h2>
+    <ul>
+        <li>Witch hunt for <code>event.stopPropagation()</code> calls.</li>
+        <li><code>Ink.UI.Common</code> now warns and stops UI components from being instantiated several times in the same element.</li>
+    </ul>
+</section>
+
+<section>
     <h1 class="fw-300">3.0.2</h3>
     <p><time>May 16, 2014</time></p>
     <p class="clearfix">
-        <a href="{{site.download_url}}{{site.version}}/ink-{{site.version}}.zip" class="ink-button black">Download</a>
-        <a href="{{site.download_src_url}}{{site.version}}.zip" class="ink-button black">Download with source</a>
+        <a href="{{site.download_url}}3.0.2/ink-3.0.2.zip" class="ink-button black">Download</a>
+        <a href="{{site.download_src_url}}3.0.2.zip" class="ink-button black">Download with source</a>
     </p>
 
     <h2 class="fw-300">Breaking changes</h2>

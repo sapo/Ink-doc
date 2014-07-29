@@ -1,7 +1,13 @@
+    <h2 class="fw-300 class-name">
+        {{#if static}}
+            {{~name}} <i>namespace</i>
+        {{ else }}
+            {{~name}} <i>class</i>
+        {{/if}}
+    </h2>
     {{~#if text~}}
     {{~{text}~}}
     {{~/if}}
-    <p><i class="fa fa-leaf"></i> All samples are using <code>Ink.requireModules</code>, please read how to use it at <a href="{{site.url}}/javascript/Ink/#Ink_1-Ink_1-requireModules">Ink.requireModules section</a></p>
     {{~#if functions.length~}}
     <table class="props bottom-space">
         {{~#if isNamespace~}}
@@ -27,9 +33,9 @@
                 <td>
                     <a href="#{{{hash}}}">
                         {{~#if isConstructor~}}
-                            <em>(constructor)</em>
+                            new {{name~}}{{>shortparams}}
                         {{~else~}}
-                            .{{~name~}}
+                            .{{~name~}}{{>shortparams}}
                         {{~/if~}}
                     </a>
                 </td>

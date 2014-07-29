@@ -13,36 +13,36 @@
 
         <!-- Place favicon.ico and apple-touch-icon(s) here  -->
 
-        <link rel="shortcut icon" href="http://cdn.ink.sapo.pt/3.0.0/img/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" href="http://cdn.ink.sapo.pt/3.0.0/img/touch-icon.57.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://cdn.ink.sapo.pt/3.0.0/img/touch-icon.72.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://cdn.ink.sapo.pt/3.0.0/img/touch-icon.114.png">
-        <link rel="apple-touch-startup-image" href="http://cdn.ink.sapo.pt/3.0.0/img/splash.320x460.png" media="screen and (min-device-width: 200px) and (max-device-width: 320px) and (orientation:portrait)">
-        <link rel="apple-touch-startup-image" href="http://cdn.ink.sapo.pt/3.0.0/img/splash.768x1004.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
-        <link rel="apple-touch-startup-image" href="http://cdn.ink.sapo.pt/3.0.0/img/splash.1024x748.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+        <link rel="shortcut icon" href="http://cdn.ink.sapo.pt/3.0.5/img/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" href="http://cdn.ink.sapo.pt/3.0.5/img/touch-icon.57.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://cdn.ink.sapo.pt/3.0.5/img/touch-icon.72.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://cdn.ink.sapo.pt/3.0.5/img/touch-icon.114.png">
+        <link rel="apple-touch-startup-image" href="http://cdn.ink.sapo.pt/3.0.5/img/splash.320x460.png" media="screen and (min-device-width: 200px) and (max-device-width: 320px) and (orientation:portrait)">
+        <link rel="apple-touch-startup-image" href="http://cdn.ink.sapo.pt/3.0.5/img/splash.768x1004.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+        <link rel="apple-touch-startup-image" href="http://cdn.ink.sapo.pt/3.0.5/img/splash.1024x748.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
 
         <!-- load inks css from the cdn -->
-        <link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-flex.min.css">
-        <link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.5/css/ink-flex.min.css">
+        <link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.5/css/font-awesome.min.css">
 
         <!-- load inks css for IE8 -->
         <!--[if lt IE 9 ]>
-            <link rel="stylesheet" href="http://cdn.ink.sapo.pt/3.0.0/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+            <link rel="stylesheet" href="http://cdn.ink.sapo.pt/3.0.5/css/ink-ie.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
         <![endif]-->
 
         <!-- test browser flexbox support and load legacy grid if unsupported -->
-        <script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/modernizr.js"></script>
+        <script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.5/js/modernizr.js"></script>
         <script type="text/javascript">
             Modernizr.load({
               test: Modernizr.flexbox,
-              nope : 'http://cdn.ink.sapo.pt/3.0.0/css/ink-legacy.min.css'
+              nope : 'http://cdn.ink.sapo.pt/3.0.5/css/ink-legacy.min.css'
             });
         </script>
 
         <!-- load inks javascript files from the cdn -->
-        <script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/holder.js"></script>
-        <script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/ink-all.min.js"></script>
-        <script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/autoload.js"></script>
+        <script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.5/js/holder.js"></script>
+        <script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.5/js/ink-all.min.js"></script>
+        <script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.5/js/autoload.js"></script>
 
         <style>
 
@@ -69,18 +69,18 @@
 
 
     <!--[if lte IE 9 ]>
-    <div class="ink-alert basic">
+    <div class="ink-alert basic" role="alert">
         <button class="ink-dismiss">&times;</button>
         <p>
             <strong>You are using an outdated Internet Explorer version.</strong>
-            Please <a href="http://browsehappy.com/">upgrade to a browser</a> to improve your web experience.
+            Please <a href="http://browsehappy.com/">upgrade to a modern browser</a> to improve your web experience.
         </p>
     </div>
     -->
 
     <div class="panel">
 
-        <div id="car1" class="ink-carousel" data-space-after-last-slide="false">
+        <div id="car1" class="ink-carousel" data-space-after-last-slide="false" data-autoload="false">
 
             <ul class="stage column-group half-gutters">
 
@@ -168,7 +168,7 @@
 
         </div>
 
-        <nav id="p1" class="ink-navigation" data-instance="pagination1">
+        <nav id="p1" class="ink-navigation">
             <ul class="pagination black">
             </ul>
         </nav>
@@ -186,7 +186,7 @@
 
     <div class="panel vertical-space">
 
-        <div id="car2" class="ink-carousel">
+        <div id="car2" class="ink-carousel" data-autoload="false">
 
             <ul class="stage column-group half-gutters unstyled">
 
@@ -247,7 +247,7 @@
                 </li>
             </ul>
 
-            <nav id="p2" class="ink-navigation" data-instance="pagination2" data-next-label="" data-previous-label="">
+            <nav id="p2" class="ink-navigation" data-next-label="" data-previous-label="">
                 <ul class="pagination dotted">
                 </ul>
             </nav>
@@ -266,7 +266,7 @@
 
     <div class="panel vertical-space">
 
-        <div id="car3" class="ink-carousel">
+        <div id="car3" class="ink-carousel" data-autoload="false">
 
             <ul class="stage column-group half-gutters unstyled">
 
@@ -328,7 +328,7 @@
             </ul>
 
 
-            <nav id="p3" class="ink-navigation" data-instance="pagination3" data-previous-label="" data-next-label="">
+            <nav id="p3" class="ink-navigation" data-previous-label="" data-next-label="">
                 <ul class="pagination chevron">
                 </ul>
             </nav>

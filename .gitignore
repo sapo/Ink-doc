@@ -28,3 +28,4 @@ _site
 bower_components
 quick-start.*
 _includes/js
+dist

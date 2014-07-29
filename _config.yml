@@ -12,7 +12,7 @@ timezone: Europe/Lisbon
 title: Ink Interface Kit
 
 # INK LATEST VERSION
-version: 3.0.2
+version: 3.0.5
 
 # URLS
 download_url: https://github.com/sapo/Ink/releases/download/
@@ -108,8 +108,10 @@ sections:
           - title: Ink.UI.Close
           - title: Ink.UI.Common
           - title: Ink.UI.DatePicker
+          - title: Ink.UI.Draggable
           - title: Ink.UI.Drawer
           - title: Ink.UI.Dropdown
+          - title: Ink.UI.Droppable
           - title: Ink.UI.FormValidator
           - title: Ink.UI.FormValidator.2
           - title: Ink.UI.ImageQuery
@@ -117,9 +119,12 @@ sections:
           - title: Ink.UI.Modal
           - title: Ink.UI.Pagination
           - title: Ink.UI.ProgressBar
+          - title: Ink.UI.SmoothScroller
           - title: Ink.UI.SortableList
           - title: Ink.UI.Spy
+          - title: Ink.UI.Stacker
           - title: Ink.UI.Sticky
+          - title: Ink.UI.Swipe
           - title: Ink.UI.Table
           - title: Ink.UI.Tabs
           - title: Ink.UI.Toggle

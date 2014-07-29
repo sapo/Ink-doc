@@ -1,35 +1,36 @@
-<p></p>
-
-<p class="example-title">Code</p>
-
-{% highlight html %}
-<style type="text/css">
-    .hover {
-        border: 1px solid red;
-    }
-    .left, .right {
-        float: left; width: 50%;
-        outline: 1px solid gray;
-        min-height: 2em;
-    }
-</style>
-<ul class="left">
-    <li>Draggable 1</li>
-    <li>Draggable 2</li>
-    <li>Draggable 3</li>
+{% capture example_code %}
+<p>Droppable box</p>
+<ul class="droppable-1">
+    <li class="ink-label blue">Draggable 1</li>
+    <li class="ink-label green">Draggable 2</li>
+    <li class="ink-label orange">Draggable 3</li>
 </ul>
-<ul class="right">
+
+<p>Droppable box</p>
+<ul class="droppable-2">
 </ul>
+
 <script type="text/javascript">
     Ink.requireModules(['Ink.UI.Draggable_1', 'Ink.UI.Droppable_1'], function (Draggable, Droppable) {
-        new Draggable('.left li:eq(0)', {});
-        new Draggable('.left li:eq(1)', {});
-        new Draggable('.left li:eq(2)', {});
-        Droppable.add('.left', {onDrop: 'move', onDropOut: 'revert'});
-        Droppable.add('.right', {onDrop: 'move', onDropOut: 'revert'});
+        draggableLiElements = Ink.ss('.droppable-1 li');
+        new Draggable(draggableLiElements[0], {})
+        new Draggable(draggableLiElements[1], {})
+        new Draggable(draggableLiElements[2], {})
+        Droppable.add('.droppable-1', {onDrop: 'move', onDropOut: 'revert'});
+        Droppable.add('.droppable-2', {onDrop: 'move', onDropOut: 'revert'});
     })
 </script>
+{% endcapture %}
 
+<p class="example-title">Demo</p>
+<div class="example">
+<p class="large">Drag the elements between the dropabble boxes</p>
+{{ example_code }}
+</div>
+
+<p class="example-title">Code</p>
+{% highlight html %}
+{{ example_code }}
 {% endhighlight %}
 
 
