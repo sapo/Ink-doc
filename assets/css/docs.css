@@ -1299,7 +1299,7 @@ p.important {
   border: 1px solid #dad3c6;
   min-height: 2em;
   /* When the list is empty, we want to still be able to drag into it. */
-  padding: 0.5em 1em;
+  padding: .5em 1em;
   -webkit-border-radius: 2px;
   border-radius: 2px;
   background: #e4dfd6;
