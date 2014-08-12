@@ -22,15 +22,15 @@ tags:
           <div class="xlarge-70 large-70 all-80 align-center push-center">
             <div class="column-group horizontal-gutters small-vertical-gutters tiny-vertical-gutters">
               <div class="all-33 small-100 tiny-100">
-                <a href="{{site.download_url}}{{site.version}}/ink-{{site.version}}.zip" data-trackerlink="content|maincontainer|downloadzip" class="ink-button download">Download</a>
+                <a href="{{site.download_url}}{{site.version}}/ink-{{site.version}}.zip" data-trackerlink="content|maincontainer|downloadzip" onclick="ga('send', 'event', 'link', 'click', 'Download');" class="ink-button download">Download</a>
                 <p class="half-top-space">This file contains CSS, JavaScript and their minified versions, images, fonts and the cookbook.</p>
               </div>
               <div class="all-33 small-100 tiny-100">
-                <a href="{{site.download_src_url}}{{site.version}}.zip" data-trackerlink="content|maincontainer|downloadsourcezip" class="ink-button download">Download with source</a>
+                <a href="{{site.download_src_url}}{{site.version}}.zip" data-trackerlink="content|maincontainer|downloadsourcezip" onclick="ga('send', 'event', 'link', 'click', 'Download with source');" class="ink-button download">Download with source</a>
                 <p class="half-top-space">This file contains SASS and JavaScript source code, distribution versions and the build tools config files.</p>
               </div>
               <div class="all-33 small-100 tiny-100">
-                <a href="{{site.repo_url}}" data-trackerlink="external|maincontainer|gotogithub" class="ink-button repo">Github</a>
+                <a href="{{site.repo_url}}" data-trackerlink="external|maincontainer|gotogithub" class="ink-button repo" onclick="ga('send', 'event', 'link', 'click', 'Moved to Github');">Github</a>
                 <p class="half-top-space">If you prefer, head on to our github repository, fork the project and help us create an even better Ink.</p>
               </div>
             </div>
