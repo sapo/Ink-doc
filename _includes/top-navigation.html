@@ -7,10 +7,10 @@
         </ul>
         <ul class="menu horizontal black push-right hide-small hide-tiny hide-medium">
             <li>
-                <a class="ink-button blue" href="{{ site.download_url }}{{ site.version }}/ink-{{ site.version }}.zip" data-trackerlink="content|menutop|downloadzip">Download</a>
+                <a class="ink-button blue" href="{{ site.download_url }}{{ site.version }}/ink-{{ site.version }}.zip" onclick="ga('send', 'event', 'link', 'click', 'Download');" data-trackerlink="content|menutop|downloadzip">Download</a>
             </li>
             {% for section in site.sections %}
-            {% assign section_uri = section.title | downcase | replace:' ','-' %}                
+            {% assign section_uri = section.title | downcase | replace:' ','-' %}
             <li{% if current_section[1] == section_uri %} class="active"{% endif %}>
                 <a href="{{ site.url }}{{ section.title | downcase | replace:' ','-' }}/" title="{{ section.title }}">{{ section.title }}</a>
             </li>
