@@ -110,7 +110,6 @@ module.exports = function(grunt) {
         options: {
           atBegin: true,
           spawn: false,
-          // interrupt: true,
         }
       }
     },
