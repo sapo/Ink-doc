@@ -1,10 +1,10 @@
-# Welcome to [Ink](http://ink.sapo.pt) [![Build Status](https://travis-ci.org/sapo/Ink.svg?branch=gh-pages)](https://travis-ci.org/sapo/Ink)
+# Welcome to [Ink Doc](http://ink.sapo.pt) [![Build Status](https://travis-ci.org/sapo/Ink-doc.svg?branch=gh-pages)](https://travis-ci.org/sapo/Ink-doc)
 
 Ink is an interface kit for quick development of web interfaces, simple to use and expand on. It uses a combination of HTML, CSS and JavaScript to offer modern solutions for building layouts, display common interface elements and implement interactive features that are content-centric and user friendly for both your audience and your designers & developers.
 
 Read the full documentation here: [http://ink.sapo.pt](http://ink.sapo.pt)
 
-## This branch is used for Inks documentation only
+## This repository is used for Inks documentation only
 If you find any inaccuracies or problems in our documentation this is the place to get them fixed. We'll only accept pull request related to the documentation on this branch.
 
 
