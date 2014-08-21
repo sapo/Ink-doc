@@ -4,6 +4,8 @@ Ink is an interface kit for quick development of web interfaces, simple to use a
 
 Read the full documentation here: [http://ink.sapo.pt](http://ink.sapo.pt)
 
+Checkout our source code or report an issue here: https://github.com/sapo/Ink
+
 ## This repository is used for Inks documentation only
 If you find any inaccuracies or problems in our documentation this is the place to get them fixed.
 Check there are already any issues reporting the problem you detected or if you feel you can fx it yourself just fork this repo and go for it.
