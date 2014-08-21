@@ -5,7 +5,9 @@ Ink is an interface kit for quick development of web interfaces, simple to use a
 Read the full documentation here: [http://ink.sapo.pt](http://ink.sapo.pt)
 
 ## This repository is used for Inks documentation only
-If you find any inaccuracies or problems in our documentation this is the place to get them fixed. We'll only accept pull request related to the documentation on this branch.
+If you find any inaccuracies or problems in our documentation this is the place to get them fixed.
+Check there are already any issues reporting the problem you detected or if you feel you can fx it yourself just fork this repo and go for it.
+Please bear in mind that we'll only accept pull request related to the documentation on the **develop** branch of this repository.
 
 
 ## Installing Jekyll and required build tools
