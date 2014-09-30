@@ -1,10 +1,9 @@
-@charset "UTF-8";
 .fw-100, .fw-light {
   font-weight: 100;
 }
 
 .fw-300, ul.props li.prop.breakpoint-aware:after, .example .ink-grid .column,
-html.flexbox .example .ink-grid .column, footer .credits, #home section.download a.ink-button.download,
+html.flexbox .example .ink-grid .column, footer .credits, .copyright .PTClogo small, #home section.download a.ink-button.download,
 #home section.download a.ink-button.repo, .example-box, .fw-thin {
   font-weight: 300;
 }
@@ -997,21 +996,26 @@ footer .socialplugins .fb-like span {
   vertical-align: inherit !important;
 }
 
-#bsu-v2-footer-links {
-  overflow: hidden;
+.copyright .SAPOlogo {
+  background: url("http://imgs.sapo.pt/sapologos/madeby/madeby-100x35-white.png") no-repeat;
+  text-indent: -9999px;
+  text-align: left;
+  display: inline-block;
+  width: 101px;
+  min-height: 43px;
 }
-#bsu-v2-footer-links li {
-  width: 25%;
-  float: left;
-  text-align: center;
+.copyright .PTClogo {
+  background: url("../img/PTlogo.png") no-repeat 0 top;
+  display: block;
+  min-height: 43px;
+  padding-left: 60px;
+  text-decoration: none;
+}
+.copyright .PTClogo small {
+  display: block;
+  line-height: 1.6;
 }
 
-@media screen and (max-width: 641px) {
-  #bsu-v2-footer-links li {
-    width: 50%;
-    margin: .5em 0;
-  }
-}
 .screen-size-helper {
   line-height: 1.6em;
   padding: 0.5333333333333333em 0.8em;
