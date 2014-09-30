@@ -909,6 +909,10 @@ footer {
         min-height: 43px;
     }
 
+    .SAPOlogo.dark {
+        background: url("http://imgs.sapo.pt/sapologos/madeby/madeby-100x35-black.png") no-repeat;
+    }
+
     .PTClogo {
         background: url("#{$img-path}PTlogo.png") no-repeat 0 top;
         display: block;
