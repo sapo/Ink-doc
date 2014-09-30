@@ -898,28 +898,20 @@ footer {
 
 }
 
-.copyright {
-
-    .SAPOlogo {
-        background: url("http://imgs.sapo.pt/sapologos/madeby/madeby-100x35-white.png") no-repeat;
-        text-indent: -9999px;
-        text-align: left;
-        display: inline-block;
-        width: 101px;
-        min-height: 43px;
+#bsu-v2-footer-links {
+    overflow: hidden;  // clearfix
+    li {
+        width: 25%;  // 4 in a line
+        float: left;
+        text-align: center;
     }
+}
 
-    .PTClogo {
-        background: url("#{$img-path}PTlogo.png") no-repeat 0 top;
-        display: block;
-        min-height: 43px;
-        padding-left: 60px;
-        text-decoration: none;
-
-        small {
-            display: block;
-            line-height: 1.6;
-            @extend .fw-300;
+@media screen and (max-width: 641px) {
+    #bsu-v2-footer-links {
+        li {
+            width: 50%;  // 2 in a line
+            margin: .5em 0;  // Space them a bit
         }
     }
 }
