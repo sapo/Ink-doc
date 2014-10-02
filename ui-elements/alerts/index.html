@@ -7,7 +7,24 @@ site_root: ../../
 ---
 
 <section id="#basic-principles">
-    
+
+<h2 class="fw-300">Javascript note</h2>
+<p>These examples are using the <code>ink-dismiss</code> class to add a "close" button. If you are interested in this behaviour, you need to include the Ink.UI.Close Ink component. Don't worry, it's already included with autoload. If you're not using autoload, just add the following code somewhere on your page:</p>
+
+
+{% highlight javascript %}
+Ink.requireModules(['Ink.UI.Close_1'], function (Close) {
+    new Close();  // That was close
+});
+{% endhighlight %}
+
+<script>
+    // Not needed if you have autoload.js!
+    Ink.requireModules(['Ink.UI.Close_1'], function (Close) {
+        new Close();  // Now the "x" buttons work!
+    });
+</script>
+
     <h1 class="fw-300">Basic principles</h1>
     <p>Alerts are useful whenever there is the need to give some sort of visual feedback to a user action or to give your users information.</p>
 
