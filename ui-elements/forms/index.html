@@ -136,9 +136,9 @@ site_root: ../../
             </div>
         </div>
         <div class="control-group all-33">
-            <label for="email">Email</label>
+            <label for="email2">Email</label>
             <div class="control">
-                <input type="text" id="email">
+                <input type="text" id="email2">
             </div>
         </div>
     </div>
@@ -165,9 +165,9 @@ site_root: ../../
                     </div>
                 </div>
                 <div class="control-group all-33 tiny-100">
-                    <label for="email">Email</label>
+                    <label for="email2">Email</label>
                     <div class="control">
-                        <input type="text" id="email">
+                        <input type="text" id="email2">
                     </div>
                 </div>
             </div>
@@ -199,7 +199,7 @@ site_root: ../../
 {% highlight html %}
 <form class="ink-form">
     <div class="control-group column-group gutters">
-        <label for="name" class="all-20 align-right">Name</label>
+        <label for="first-name" class="all-20 align-right">Name</label>
         <div class="control all-80">
             <input type="text" id="first-name">
             <p class="tip">First Name</p>
@@ -211,7 +211,7 @@ site_root: ../../
     <div class="example bottom-space">
         <form class="ink-form half-top-space">
             <div class="control-group column-group horizontal-gutters">
-                <label for="name" class="all-10 tiny-20 align-right">Name</label>
+                <label for="first-name" class="all-10 tiny-20 align-right">Name</label>
                 <div class="control all-90 tiny-80">
                     <input type="text" id="first-name">
                 </div>
@@ -241,25 +241,25 @@ site_root: ../../
     <div class="column-group gutters">
         <div class="control-group all-33">
             <div class="column-group gutters">
-                <label for="name" class="all-20 align-right">Name</label>
+                <label for="inline-name" class="all-20 align-right">Name</label>
                 <div class="control all-80">
-                    <input type="text" id="name">
+                    <input type="text" id="inline-name">
                 </div>
             </div>
         </div>
         <div class="control-group all-33">
             <div class="column-group gutters">
-                <label for="phone" class="all-20 align-right">Phone</label>
+                <label for="inline-phone" class="all-20 align-right">Phone</label>
                 <div class="control all-80">
-                    <input type="text" id="phone">
+                    <input type="text" id="inline-phone">
                 </div>
             </div>
         </div>
         <div class="control-group all-33">
             <div class="column-group gutters">
-                <label for="email" class="all-20 align-right">Email</label>
+                <label for="inline-email" class="all-20 align-right">Email</label>
                 <div class="control all-80">
-                    <input type="text" id="email">
+                    <input type="text" id="inline-email">
                 </div>
             </div>
         </div>
@@ -272,26 +272,26 @@ site_root: ../../
             <div class="column-group horizontal-gutters">
                 <div class="control-group all-33 small-100 tiny-100">
                     <div class="column-group horizontal-gutters">
-                        <label for="name" class="all-20 align-right">Name</label>
+                        <label for="inline-name" class="all-20 align-right">Name</label>
                         <div class="control all-80">
-                            <input type="text" id="name">
+                            <input type="text" id="inline-name">
                         </div>
                         
                     </div>
                 </div>
                 <div class="control-group all-33 small-100 tiny-100">
                     <div class="column-group horizontal-gutters">
-                        <label for="phone" class="all-20 align-right">Phone</label>
+                        <label for="inline-phone" class="all-20 align-right">Phone</label>
                         <div class="control all-80">
-                            <input type="text" id="phone">
+                            <input type="text" id="inline-phone">
                         </div>
                     </div>
                 </div>
                 <div class="control-group all-33 small-100 tiny-100">
                     <div class="column-group horizontal-gutters">
-                        <label for="email" class="all-20 align-right">Email</label>
+                        <label for="inline-email" class="all-20 align-right">Email</label>
                         <div class="control all-80">
-                            <input type="text" id="email">
+                            <input type="text" id="inline-email">
                         </div>
                     </div>
                 </div>
@@ -354,9 +354,9 @@ site_root: ../../
 {% highlight html %}
 <form class="ink-form">
     <div class="control-group required">
-        <label for="text-input">Password</label> 
+        <label for="required-password">Password</label> 
         <div class="control">
-            <input id="text-input" type="text" placeholder="Please enter your password">
+            <input id="required-password" type="text" placeholder="Please enter your password">
         </div>
         <p class="tip">This field is required</p>
     </div>
@@ -366,9 +366,9 @@ site_root: ../../
     <div class="example">
         <form class="ink-form">
             <div class="control-group required">
-                <label for="text-input">Password</label> 
+                <label for="required-password">Password</label> 
                 <div class="control">
-                    <input id="text-input" type="text" placeholder="Please enter your password">
+                    <input id="required-password" type="text" placeholder="Please enter your password">
                 </div>
                 <p class="tip">This field is required</p>
             </div>
@@ -380,9 +380,9 @@ site_root: ../../
 {% highlight html %}
 <form class="ink-form">
     <div class="control-group required validation warning">
-        <label for="text-input">Password</label> 
+        <label for="warn-password">Password</label> 
         <div class="control">
-            <input id="text-input" type="text" placeholder="Please enter your password">
+            <input id="warn-password" type="text" placeholder="Please enter your password">
         </div>
         <p class="tip">Warn about something</p>
     </div>
@@ -392,9 +392,9 @@ site_root: ../../
     <div class="example">
         <form class="ink-form">
             <div class="control-group required validation warning">
-                <label for="text-input">Password</label> 
+                <label for="warn-password">Password</label> 
                 <div class="control">
-                    <input id="text-input" type="text" placeholder="Please enter your password">
+                    <input id="warn-password" type="text" placeholder="Please enter your password">
                 </div>
                 <p class="tip">This field is required</p>
             </div>
@@ -405,9 +405,9 @@ site_root: ../../
 {% highlight html %}
 <form class="ink-form">
     <div class="control-group required validation error">
-        <label for="text-input">Text input</label> 
+        <label for="error-password">Text input</label> 
         <div class="control">
-            <input id="text-input" type="text" placeholder="Please input some text">
+            <input id="error-password" type="text" placeholder="Please input some text">
         </div>
         <p class="tip">Your field has errors</p>
     </div>
@@ -417,9 +417,9 @@ site_root: ../../
     <div class="example">
         <form class="ink-form">
             <div class="control-group required validation error">
-                <label for="text-input">Text input</label> 
+                <label for="error-password">Text input</label> 
                 <div class="control">
-                    <input id="text-input" type="text" placeholder="Please input some text">
+                    <input id="error-password" type="text" placeholder="Please input some text">
                 </div>
                 <p class="tip">Your field has errors</p>
             </div>
