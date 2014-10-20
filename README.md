@@ -6,8 +6,8 @@ Read the full documentation here: [http://ink.sapo.pt](http://ink.sapo.pt)
 
 Checkout our source code or report an issue here: https://github.com/sapo/Ink
 
-## This branch is used for Inks documentation only
-If you find any inaccuracies or problems in our documentation this is the place to get them fixed. We'll only accept pull request related to the documentation on this branch.
+## This repository is used for Ink's documentation only
+If you find any inaccuracies or problems in our documentation this is the place to get them fixed.
 
 
 ## Installing Jekyll and required build tools
