@@ -39,12 +39,12 @@ site_root: ../../
           <td><code>imagequery</code></td>
           <td>Identifies images that will be handled by the <a href="{{ site.url }}javascript/ink.ui.imagequery">Ink.UI.ImageQuery</a> component. <span class="label js"></span></td>
         </tr>
-    </tbody>    
+    </tbody>
   </table>
   <ul class="unstyled">
     <li><span class="label mandatory"></span> This class must be used for the {{page.title | downcase }} to work.</li>
   </ul>
-  <p>We chose to make use of HTML5 tags, so the markup structure for our image element is:</p> 
+  <p>We chose to make use of HTML5 tags, so the markup structure for our image element is:</p>
   <p class="example-title">Structure</p>
 {% highlight html %}
 <figure>
@@ -97,7 +97,7 @@ site_root: ../../
           This caption is placed after the image.
         </figcaption>
       </figure>
-      </div>      
+      </div>
 <p class="example-title">Code</p>
 {% highlight html %}
 <figure class="ink-image">
@@ -105,8 +105,8 @@ site_root: ../../
   <figcaption>
     This caption is placed after the image.
   </figcaption>
-</figure>  
-{% endhighlight %}    
+</figure>
+{% endhighlight %}
 </div>
   </div>
 <p>Adding the <code>dark</code> CSS class to the <code>&ltfigcaption&gt</code> element will set an alternative dark caption theme:</p>
@@ -196,7 +196,7 @@ site_root: ../../
 
 <p>In the script above the <code>src</code> property sets the image base path. It can be relative or absolute. The rest of the url is a template that translates into properties of the <code>queries</code> array.</p>
 <p>In the example above <code>{:label}</code> will be a folder under the base path, and <code>{:file}</code> is the filename, which in this case defaults to the original file name.</p>
-<p><a href="{{ site.url }}javascript/ink.ui.imagequery">Ink.UI.ImageQuery</a> will then look at the <code>queries.width</code> property and the device screen width and decide if a larger image should be served to the device by rewriting the <code>src</code> attribute.</p>
+<p><a href="{{ site.url }}javascript/Ink.UI.ImageQuery">Ink.UI.ImageQuery</a> will then look at the <code>queries.width</code> property and the device screen width and decide if a larger image should be served to the device by rewriting the <code>src</code> attribute.</p>
 
 </section>
 
