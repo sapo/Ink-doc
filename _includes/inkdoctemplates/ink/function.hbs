@@ -46,17 +46,20 @@
         </ul>
     {{~/if~}}
     {{~#if return}}
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p>{{~#if return.type}}{{#each return.type}}<span class="label {{toLowerCase this}}"></span> {{/each}}
-{{~/if~}}</p>
-        
-            {{~#if return.description~}}
-                {{~{return.description}~}}
-            {{~/if}}
-        </li>
-    </ul>
+        {{~#ifvalue return.type value="void"~}}
+            <h3>Returns things:</h3>
+            <ul class="params">
+                <li class="return">
+                    <p>{{~#if return.type}}{{#each return.type}}<span class="label {{toLowerCase this}}"></span> {{/each}}
+        {{~/if~}}</p>
+                
+                    {{~#if return.description~}}
+                        {{~{return.description}~}}
+                    {{~/if}}
+                </li>
+            </ul>
+        {{~else~}}
+        {{~/ifvalue~}}
     {{/if~}}
 
     {{~> examples~}}
