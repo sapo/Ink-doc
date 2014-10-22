@@ -192,7 +192,13 @@ Ink.createExt('Donut', 1, ['Ink.UI.Common_1'], function(Common) {
 
     Donut._name = 'Donut';
 
-    Donut._optionDefinition = { };
+    Donut._optionDefinition = {
+        // optionName:  ['OptionType', defaultValueIfAny]
+        flavor:         ['String', 'simple'],
+        calories:       ['Number', 9000],
+        hole:           ['Boolean', true],
+        onEat:          ['Function', null]
+    };
 
     Donut.prototype = {
         _init: function( ) { }
@@ -201,6 +207,23 @@ Ink.createExt('Donut', 1, ['Ink.UI.Common_1'], function(Common) {
     Common.createUIComponent( Donut );
 
     return Donut;
+});
+{% endhighlight %}
+
+<p>And now your component is ready to use!</p>
+
+<p class="example-title">Code</p>
+{% highlight javascript %}
+Ink.requireModules(['Ink.Ext.Donut_1'], function(Donut) {
+    'use strict';
+
+    var donutElement = document.getElementById('donut-element');
+
+    new Donut(donutElement, {
+        // See `Donut._optionDefinition` for what you can pass as options
+        // Options can also be passed as data-attributes in the element.
+        flavor: 'chocolate'
+    });
 });
 {% endhighlight %}
 
