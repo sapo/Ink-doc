@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .fw-100, .fw-light {
   font-weight: 100;
 }
@@ -98,7 +97,7 @@ html.flexbox .example .ink-grid .column {
 }
 
 a.hover {
-  color: #007ed5;
+  color: #007ED5;
   text-decoration: underline;
 }
 
@@ -107,7 +106,7 @@ a.active {
 }
 
 a.visited {
-  color: gray;
+  color: #808080;
 }
 
 a, .ink-button {
@@ -139,17 +138,17 @@ a, .ink-button {
 }
 #topbar .ink-navigation ul.black li a {
   padding: .7em 1em;
-  color: #bbbbbb;
+  color: #BBB;
   text-transform: uppercase;
   font-weight: 300;
   line-height: 24px;
   *height: auto;
 }
 #topbar .ink-navigation ul.black li a:hover {
-  color: white;
+  color: #fff;
 }
 #topbar .ink-navigation ul.black li a.ink-button {
-  color: white;
+  color: #fff;
   padding: 4px 12px;
   margin: 5px 1em;
   font-size: .875em;
@@ -172,17 +171,17 @@ a, .ink-button {
   font-size: 21px;
   background: none;
   font-size: 1.2em;
-  color: #bbbbbb;
+  color: #BBB;
   border: none;
   padding: .8em .8em .8em 0;
   float: left;
 }
 #topbar .ink-navigation ul.black li button.fa-bars:hover, #topbar .ink-navigation ul.black li button.fa-bars:active, #topbar .ink-navigation ul.black li button.fa-bars:focus {
-  color: white;
+  color: #fff;
   outline: none;
 }
 #topbar .ink-navigation ul.black li.active a {
-  color: white;
+  color: #fff;
 }
 #topbar .ink-navigation:after {
   content: "";
@@ -198,7 +197,7 @@ a, .ink-button {
   border-top: 1px solid #ddd;
   font-size: .875em;
   padding: 1em 0 0;
-  color: #555555;
+  color: #555;
 }
 .sidebar.ink-navigation ul.menu.vertical li.heading ul a {
   padding: .3em 0;
@@ -236,9 +235,9 @@ a, .ink-button {
 .panel {
   -webkit-border-radius: 2px;
   border-radius: 2px;
-  -moz-box-shadow: #dddddd 0 1px 1px 0;
-  -webkit-box-shadow: #dddddd 0 1px 1px 0;
-  box-shadow: #dddddd 0 1px 1px 0;
+  -moz-box-shadow: #DDD 0 1px 1px 0;
+  -webkit-box-shadow: #DDD 0 1px 1px 0;
+  box-shadow: #DDD 0 1px 1px 0;
   padding: 1em;
   border: 1px solid #BBB;
   background-color: #FFF;
@@ -318,7 +317,7 @@ body.ink-drawer .right-drawer li > a:hover {
 }
 body.ink-drawer .left-drawer li > a.ink-button,
 body.ink-drawer .right-drawer li > a.ink-button {
-  color: white;
+  color: #fff;
   padding: 4px 12px;
   margin: 1em;
 }
@@ -349,7 +348,7 @@ body.ink-drawer .right-drawer li:last-child {
 .mosaic .description {
   margin: 0;
   font-size: .875em;
-  color: #555555;
+  color: #555;
 }
 .mosaic:hover {
   text-decoration: none;
@@ -362,7 +361,7 @@ body.ink-drawer .right-drawer li:last-child {
 
 .highlight {
   padding: 1em;
-  background: #eeebe5;
+  background: #EEEBE5;
   margin-bottom: 1.5em;
   -webkit-border-radius: 2px;
   border-radius: 2px;
@@ -745,14 +744,14 @@ section p, section ul, section ol, section dl, section dt code, section table {
 p code, ul code, dl code {
   margin: 0 2px;
   padding: 0 5px;
-  background-color: #eeebe5;
+  background-color: #EEEBE5;
   font-size: 0.85em;
 }
 
 table.props {
   width: 100%;
   border-collapse: initial;
-  background: #eeebe5;
+  background: #EEEBE5;
   -webkit-border-radius: 2px;
   border-radius: 2px;
   margin: 1.5em 0;
@@ -777,7 +776,7 @@ table.props tr td {
 }
 table.props caption {
   padding: 0 0 0 .4em;
-  color: #eeebe5;
+  color: #EEEBE5;
   text-align: left;
   text-transform: uppercase;
   font-weight: 700;
@@ -812,7 +811,7 @@ ul.props li.heading {
   margin: 0 0 .5em;
 }
 ul.props li.prop {
-  background-color: #eeebe5;
+  background-color: #EEEBE5;
   font-size: 0.85em;
   padding: 0 5px;
 }
@@ -836,7 +835,7 @@ span.label:after {
   padding: 0 .35em;
   -webkit-border-radius: 2px;
   border-radius: 2px;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
 }
 span.label.mandatory:after {
@@ -877,7 +876,7 @@ span.label.number:after {
 }
 span.label.domelement:after {
   content: "DOMElement";
-  background: black;
+  background: #000;
   text-transform: none;
 }
 span.label.object:after {
@@ -895,7 +894,7 @@ span.label.function:after {
 
 p.example-title {
   padding: 0 0 0 .4em;
-  color: #eeebe5;
+  color: #EEEBE5;
   text-align: left;
   text-transform: uppercase;
   font-weight: 700;
@@ -915,7 +914,7 @@ p + p.example-title {
 .example,
 html.flexbox .example {
   padding: 1em;
-  background: #eeebe5;
+  background: #EEEBE5;
   -webkit-border-radius: 2px;
   border-radius: 2px;
   margin-bottom: 1.5em;
@@ -980,7 +979,7 @@ footer .credits li.separator {
   border: none;
   display: inline-block;
   vertical-align: middle;
-  background: #555555;
+  background: #555;
   -webkit-border-radius: 50%;
   border-radius: 50%;
 }
@@ -1027,7 +1026,7 @@ footer .socialplugins .fb-like span {
 }
 .screen-size-helper .title,
 .screen-size-helper ul {
-  color: white;
+  color: #fff;
 }
 .screen-size-helper .title {
   margin: 0;
@@ -1059,11 +1058,11 @@ footer .socialplugins .fb-like span {
   color: #c91111;
 }
 .screen-size-helper ul li.xlarge {
-  color: white;
+  color: #fff;
 }
 
 #home a {
-  color: white;
+  color: #fff;
   text-decoration: underline;
 }
 #home section {
@@ -1085,7 +1084,7 @@ footer .socialplugins .fb-like span {
   background-image: radial-gradient(#bcb098, #907f5e);
 }
 #home section.ink h1, #home section.ink h2, #home section.ink h3, #home section.ink p, #home section.ink ul {
-  color: white;
+  color: #fff;
 }
 #home section.ink .ink-grid {
   height: 100%;
@@ -1094,7 +1093,7 @@ footer .socialplugins .fb-like span {
   height: inherit;
 }
 #home section.what {
-  background: #709dc7;
+  background: #709DC7;
   background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #709dc7), color-stop(100%, #4b84b9));
   background-image: -webkit-radial-gradient(#709dc7, #4b84b9);
   background-image: -moz-radial-gradient(#709dc7, #4b84b9);
@@ -1102,7 +1101,7 @@ footer .socialplugins .fb-like span {
   background-image: radial-gradient(#709dc7, #4b84b9);
 }
 #home section.what h1, #home section.what h2, #home section.what h3, #home section.what p, #home section.what ul {
-  color: white;
+  color: #fff;
 }
 #home section.what .ink-grid {
   height: 100%;
@@ -1111,7 +1110,7 @@ footer .socialplugins .fb-like span {
   height: inherit;
 }
 #home section.showcase {
-  background: #a5ad85;
+  background: #A5AD85;
   background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, #a5ad85), color-stop(100%, #727a52));
   background-image: -webkit-radial-gradient(#a5ad85, #727a52);
   background-image: -moz-radial-gradient(#a5ad85, #727a52);
@@ -1119,10 +1118,10 @@ footer .socialplugins .fb-like span {
   background-image: radial-gradient(#a5ad85, #727a52);
 }
 #home section.showcase h1, #home section.showcase h2, #home section.showcase h3, #home section.showcase p, #home section.showcase ul {
-  color: white;
+  color: #fff;
 }
 #home section.showcase img {
-  border: #555555 1px solid;
+  border: #555 1px solid;
 }
 #home section.showcase .ink-grid {
   height: 100%;
@@ -1139,7 +1138,7 @@ footer .socialplugins .fb-like span {
   background-image: radial-gradient(#cd6969, #9c3434);
 }
 #home section.download h1, #home section.download h2, #home section.download h3, #home section.download p, #home section.download ul {
-  color: white;
+  color: #fff;
 }
 #home section.download a.ink-button.download,
 #home section.download a.ink-button.repo {
@@ -1156,7 +1155,7 @@ footer .socialplugins .fb-like span {
 #home section.download a.ink-button.repo:active {
   background: black;
   border-color: black;
-  color: white;
+  color: #fff;
 }
 #home section.download .ink-grid {
   height: 100%;
@@ -1173,7 +1172,7 @@ footer .socialplugins .fb-like span {
   background-image: radial-gradient(#d6a475, #b07135);
 }
 #home section.who h1, #home section.who h2, #home section.who h3, #home section.who p, #home section.who ul {
-  color: white;
+  color: #fff;
 }
 #home section.who .ink-grid {
   height: 100%;
@@ -1214,7 +1213,7 @@ p.loader.show {
 }
 #search-results .result-snippet {
   padding: 1em;
-  background: #eeebe5;
+  background: #EEEBE5;
   -webkit-border-radius: 2px;
   border-radius: 2px;
   margin-bottom: 1.5em;
@@ -1235,22 +1234,18 @@ p.loader.show {
   0% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
 }
-
 @keyframes fadeOut {
   0% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
 }
-
 .fadeOut {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
@@ -1264,7 +1259,7 @@ p.loader.show {
 
 #myToggledLabel {
   padding: 1em;
-  color: white;
+  color: #fff;
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
@@ -1338,4 +1333,10 @@ p.important {
     display: block;
     margin: 0;
   }
+}
+.fastly {
+  line-height: 30px;
+}
+.fastly img {
+  margin-left: .2em;
 }

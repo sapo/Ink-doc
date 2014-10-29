@@ -19,6 +19,7 @@ download_url: https://github.com/sapo/Ink/releases/download/
 download_src_url: https://github.com/sapo/Ink/archive/
 repo_url: https://github.com/sapo/Ink/
 cdn_url: http://fastly.ink.sapo.pt/
+cdn_ssl_url: https://ink.global.ssl.fastly.net/
 
 # ASSETS PATHS
 images_path: /assets/img/
