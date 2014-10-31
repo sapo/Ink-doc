@@ -1,5 +1,5 @@
 <h2 class="fw-300">Basic usage</h2>
-<p>To see this component in action, resize your browser window or look at this page on mobile.</p>
+<p>To see this component in action, resize your browser window or look at this page on a small device.</p>
 <p>ImageQuery will swap the image with a lower (or higher) resolution image as you resize.</p>
 {% capture example_code %}
 <div class="imageQueryExample column-group vspace">
@@ -7,7 +7,6 @@
 </div>
 <script type="text/javascript">
 Ink.requireModules( ['Ink.Dom.Selector_1', 'Ink.UI.ImageQuery_1'], function( Selector, ImageQuery ){
-    var imageQueryElement = Ink.s('.imageQueryExample img');
     var imageQueryObj = new ImageQuery('.imageQueryExample img',{
         src: '/assets/img/examples/{:label}/park.jpg',
         queries: [
