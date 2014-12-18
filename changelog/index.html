@@ -5,7 +5,22 @@ description: Track Ink's latest changes
 site_root:  ../
 ---
 
+<section class="no-padding half-top-space">
+    <h1 class="fw-300">3.1.2</h1>
+    <p><time>December 18, 2014</time></p>
 
+    <p class="clearfix">
+        <a href="{{site.download_url}}3.1.2/ink-3.1.2.zip" class="ink-button black">Download</a>
+        <a href="{{site.download_src_url}}3.1.2.zip" class="ink-button black">Download with source</a>
+    </p>
+
+    <h2 class="fw-300">JS</h2>
+
+    <ul>
+        <li>Minor breaking change: <a href="/javascript/Ink.UI.Toggle">Ink.UI.Toggle</a> no longer supports detecting whether the toggled element is currently visible (using getComputedStyle) in order to set its initial state. To achieve the same effect, set the class of the first target to be the same as the classNameOn option (which defaults to 'show-all'). This may break some things, but it improves the predictability and usability of the component. <a href="https://github.com/sapo/Ink/commit/d497ba567a3b55e012015b247bd91153cbd55d2d">d497ba5</a></li>
+    </ul>
+
+</section>
 
 <section class="no-padding half-top-space">
     <h1 class="fw-300">3.1.1</h1>
@@ -47,7 +62,7 @@ site_root:  ../
             <li>
             <strong>New</strong> print.scss module.</li>
         </ul>
-    
+
     <h2 class="fw-300">JS</h2>
     <ul>
         <li>Carousel won't call onChange more than necessary now</li>
@@ -72,7 +87,7 @@ site_root:  ../
         <li>Style fixes in <code>ink-modal</code> and <code>ink-table</code>.</li>
         <li>Fixes issue <a href="https://github.com/sapo/Ink/issues/367">#367</a>, <a href="https://github.com/sapo/Ink/issues/373">#373</a> and <a href="https://github.com/sapo/Ink/issues/381">#381</a>.</li>
     </ul>
-    
+
     <h2 class="fw-300">JS</h2>
     <ul>
         <li><code>setOption()</code> function in UI component instances.
@@ -100,7 +115,7 @@ site_root:  ../
     <ul>
         <li>Bumping FontAwesome version to 4.1.0</li>
     </ul>
-    
+
     <h2 class="fw-300">JS</h2>
 
     <ul>
@@ -121,7 +136,7 @@ site_root:  ../
     <ul>
         <li>Adds disabled state styling for buttons inside a <code>button-group</code> <a href="https://github.com/sapo/Ink/issues/353">(#353)</a></li>
         <li>Adds media types support for media queries. <a href="https://github.com/sapo/Ink/commit/0bf08b641fbfc0951e4b857214fc19b0cb684a30" class="commit-link"><tt>0bf08b6</tt></a></li>
-        
+
     </ul>
 
     <h2 class="fw-300">JS</h2>
