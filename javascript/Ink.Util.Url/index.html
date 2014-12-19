@@ -92,13 +92,6 @@ site_root:  ../
                     <span class="label string"></span></p>
                 String to match against the script src attribute</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> <span class="label boolean"></span> </p>Returns the `script` DOM Element or false if unable to find it.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Url_currentScriptElement.html %}
@@ -113,16 +106,9 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>urlObj
-                    <span class="label mandatory"></span></p>
+                    <span class="label mandatory"></span><span class="label string"></span><span class="label location"></span><span class="label object"></span></p>
                 Window.location, a.href, or parseUrl object to format</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Full URL.
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -142,13 +128,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label object"></span></p>
                 Object to transform to query string</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>URI with query string set
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Url_genQueryString.html %}
@@ -166,13 +145,6 @@ site_root:  ../
                     <span class="label string"></span></p>
                 URL String. Defaults to current page URL.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> <span class="label boolean"></span> </p>Hash in the URL. If there's no hash, returns false.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Url_getAnchor.html %}
@@ -190,13 +162,6 @@ site_root:  ../
                     <span class="label string"></span></p>
                 URL to parse. Defaults to current URL.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label object"></span> </p>Key-value pair object of the URL's hashtag 'variables'
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Url_getAnchorString.html %}
@@ -214,13 +179,6 @@ site_root:  ../
                     <span class="label string"></span></p>
                 URL String. When not specified it uses the current URL.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label object"></span> </p>Key-Value pair object
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Url_getQueryString.html %}
@@ -230,13 +188,6 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.getUrl()
 
     <i>method</i></h1><p class="text">Gets URL of current page</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p></p>Current URL
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Url_getUrl.html %}
@@ -254,13 +205,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 URL to be parsed</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label object"></span> </p>Parsed URL as a key-value object.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Url_parseUrl.html %}

@@ -27,7 +27,7 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_UI_FormValidator_1-Ink_UI_FormValidator-validate">.validate(elm, options)
+                    <a href="#Ink_UI_FormValidator_1-Ink_UI_FormValidator-validate">.validate(elm, [options])
 </a>
                 </td>
                 <td> Checks if a form is valid</td>
@@ -83,7 +83,7 @@ site_root:  ../
 </section>
 
     <section id="Ink_UI_FormValidator_1-Ink_UI_FormValidator-validate" class="box box-function">
-    <h1 class="fw-300 function-desc">.validate(elm, options)
+    <h1 class="fw-300 function-desc">.validate(elm, [options])
 
     <i>method</i></h1><p class="text">Checks if a form is valid</p>
         <h3>Accepts</h3>
@@ -91,11 +91,11 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>elm
-                    <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
                 DOM form element or form id</li>
             <li class="level1">
                 <p>options
-                    <span class="label mandatory"></span><span class="label object"></span></p>
+                    <span class="label object"></span></p>
                 Configuration options</li>
             <li class="level2">
                 <p>options.onSuccess
@@ -109,14 +109,11 @@ site_root:  ../
                 <p>options.customFlag
                     <span class="label array"></span></p>
                 Custom flags to use to validate form fields</li>
+            <li class="level2">
+                <p>options.confirmGroup
+                    <span class="label array"></span></p>
+                </li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>Whether the form is deemed valid or not.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_UI_FormValidator_1.html %}

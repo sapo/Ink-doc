@@ -22,7 +22,7 @@ site_root:  ../
         <tbody>
             <tr>
                 <td>
-                    <a href="#Ink_Util_I18n_1-Ink_Util_I18n-I18n">new I18n(dict, [lang])
+                    <a href="#Ink_Util_I18n_1-Ink_Util_I18n-I18n">new I18n(dict, [lang], [testMode])
 </a>
                 </td>
                 <td><span class="ink-label green">Constructor</span></td>
@@ -57,21 +57,21 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Util_I18n_1-Ink_Util_I18n-lang">.lang(lang)
+                    <a href="#Ink_Util_I18n_1-Ink_Util_I18n-lang">.lang([lang])
 </a>
                 </td>
                 <td> Gets or sets the language.</td>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Util_I18n_1-Ink_Util_I18n-langGlobal">.langGlobal(lang)
+                    <a href="#Ink_Util_I18n_1-Ink_Util_I18n-langGlobal">.langGlobal([lang])
 </a>
                 </td>
                 <td> Gets or sets the current default language of I18n instances.</td>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Util_I18n_1-Ink_Util_I18n-ntext">.ntext(strSin, strPlur, count, [args*])
+                    <a href="#Ink_Util_I18n_1-Ink_Util_I18n-ntext">.ntext(strSin, strPlur, count)
 </a>
                 </td>
                 <td> Translates and pluralizes text.</td>
@@ -92,14 +92,14 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Util_I18n_1-Ink_Util_I18n-testMode">.testMode(bool)
+                    <a href="#Ink_Util_I18n_1-Ink_Util_I18n-testMode">.testMode([newTestMode])
 </a>
                 </td>
                 <td> Sets or unsets test mode.</td>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Util_I18n_1-Ink_Util_I18n-text">.text(str, [namedParms], [args], [arg2], [argn*])
+                    <a href="#Ink_Util_I18n_1-Ink_Util_I18n-text">.text(str, [namedParms], [args], [arg2])
 </a>
                 </td>
                 <td> Translates a string.</td>
@@ -111,7 +111,7 @@ site_root:  ../
 
 
     <section id="Ink_Util_I18n_1-Ink_Util_I18n-I18n" class="box box-function">
-    <h1 class="fw-300 function-desc">new Ink.Util.I18n(dict, [lang])
+    <h1 class="fw-300 function-desc">new Ink.Util.I18n(dict, [lang], [testMode])
 
     </h1>
         <h3>Accepts</h3>
@@ -125,6 +125,10 @@ site_root:  ../
                 <p>lang
                     <span class="label string"></span></p>
                 &#x27;pt_PT&#x27;language code of the target language</li>
+            <li class="level1">
+                <p>testMode
+                    <span class="label boolean"></span></p>
+                falseSets the test mode (see `testMode()`) on construction.</li>
         </ul>
 
 <!--<h3>Samples</h3>-->
@@ -135,13 +139,6 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.alias()
 
     <i>method</i></h1><p class="text">Create an alias.<br><p>Returns an alias to this I18n instance. It contains the I18n methods documented here, but is also a function. If you call it, it just calls <code>text()</code>. This is commonly assigned to &quot;_&quot;.</p></p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label function"></span> </p>an alias to `text()` on this instance. You can also access the rest of the translation API through this alias.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_I18n_1_alias.html %}
@@ -173,12 +170,12 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>dict
-                    <span class="label mandatory"></span></p>
-                {Object}     Dictionary to be added</li>
+                    <span class="label mandatory"></span><span class="label object"></span></p>
+                Dictionary to be added</li>
             <li class="level1">
                 <p>lang
-                    <span class="label mandatory"></span></p>
-                {String}     Language fo the dictionary being added</li>
+                    <span class="label mandatory"></span><span class="label string"></span></p>
+                Language fo the dictionary being added</li>
         </ul>
 
 </section>
@@ -193,22 +190,15 @@ site_root:  ../
             <li class="level1">
                 <p>key
                     <span class="label mandatory"></span><span class="label string"></span></p>
-                </li>
+                Key you wish to get from the dictionary.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label mixed"></span> </p>The object which happened to be in the current language dictionary on the given key.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_I18n_1_getKey.html %}
 	</section>
 
     <section id="Ink_Util_I18n_1-Ink_Util_I18n-lang" class="box box-function">
-    <h1 class="fw-300 function-desc">.lang(lang)
+    <h1 class="fw-300 function-desc">.lang([lang])
 
     <i>method</i></h1><p class="text">Gets or sets the language.<br>If there are more dictionaries available in cache, they will be loaded.</p>
         <h3>Accepts</h3>
@@ -216,14 +206,14 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>lang
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                Language code to set this instance to.</li>
+                    <span class="label string"></span></p>
+                Language code to set this instance to. Omit this argument if you want to get the language code instead.</li>
         </ul>
 
 </section>
 
     <section id="Ink_Util_I18n_1-Ink_Util_I18n-langGlobal" class="box box-function">
-    <h1 class="fw-300 function-desc">.langGlobal(lang)
+    <h1 class="fw-300 function-desc">.langGlobal([lang])
 
     <i>method</i></h1><p class="text">Gets or sets the current default language of I18n instances.</p>
         <h3>Accepts</h3>
@@ -231,21 +221,14 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>lang
-                    <span class="label mandatory"></span></p>
-                the new language for all I18n instances</li>
+                    <span class="label string"></span></p>
+                the new language for all I18n instances. Omit this argument if you wish to *get* the current default language instead.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>language code
-        </li>
-    </ul>
-    
 
 </section>
 
     <section id="Ink_Util_I18n_1-Ink_Util_I18n-ntext" class="box box-function">
-    <h1 class="fw-300 function-desc">.ntext(strSin, strPlur, count, [args*])
+    <h1 class="fw-300 function-desc">.ntext(strSin, strPlur, count)
 
     <i>method</i></h1><p class="text">Translates and pluralizes text.<br>Given a singular string, a plural string and a number, translates either the singular or plural string.</p>
         <h3>Accepts</h3>
@@ -263,18 +246,11 @@ site_root:  ../
                 <p>count
                     <span class="label mandatory"></span><span class="label number"></span></p>
                 Number which defines which word to use</li>
-            <li class="level1">
-                <p>args*
-                    </p>
+            <li class="level4">
+                <p>args...
+                    <span class="label mixed"></span></p>
                 Extra arguments, to be passed to `text()`</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_I18n_1_ntext.html %}
@@ -304,13 +280,6 @@ site_root:  ../
                     <span class="label object"></span><span class="label function"></span></p>
                 {}Map unique, special cases to their ordinal suffixes.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Ordinal suffix for `num`.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_I18n_1_ordinal.html %}
@@ -324,22 +293,22 @@ site_root:  ../
 </section>
 
     <section id="Ink_Util_I18n_1-Ink_Util_I18n-testMode" class="box box-function">
-    <h1 class="fw-300 function-desc">.testMode(bool)
+    <h1 class="fw-300 function-desc">.testMode([newTestMode])
 
     <i>method</i></h1><p class="text">Sets or unsets test mode.<br>In test mode, unknown strings are wrapped in <code>[ ... ]</code>. This is useful for debugging your application and to make sure all your translation keys are in place.</p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
-                <p>bool
-                    <span class="label mandatory"></span><span class="label boolean"></span></p>
-                Flag to set the test mode state</li>
+                <p>newTestMode
+                    <span class="label boolean"></span></p>
+                Flag to set the test mode state. Omit this argument to *get* the current testMode instead.</li>
         </ul>
 
 </section>
 
     <section id="Ink_Util_I18n_1-Ink_Util_I18n-text" class="box box-function">
-    <h1 class="fw-300 function-desc">.text(str, [namedParms], [args], [arg2], [argn*])
+    <h1 class="fw-300 function-desc">.text(str, [namedParms], [args], [arg2])
 
     <i>method</i></h1><p class="text">Translates a string.<br>Given a translation key, return a translated string, with replaced parameters.<br>When a translated string is not available, the original string is returned unchanged.</p>
         <h3>Accepts</h3>
@@ -361,8 +330,8 @@ site_root:  ../
                 <p>arg2
                     <span class="label string"></span></p>
                 Replacement #2 (replaces second {} and all {2})</li>
-            <li class="level1">
-                <p>argn*
+            <li class="level4">
+                <p>argn...
                     <span class="label string"></span></p>
                 Replacement #n (replaces nth {} and all {n})</li>
         </ul>

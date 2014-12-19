@@ -30,7 +30,7 @@ site_root:  ../
                     <a href="#Ink_Util_String_1-Ink_Util_String_1-escapeText">.escapeText(txt, [whiteList])
 </a>
                 </td>
-                <td> Escapes a string to unicode characters</td>
+                <td> Escapes unicode characters in a string as unicode character entities (<code>\x##</code>, where the <code>##</code> are hex digits).</td>
             </tr>
             <tr>
                 <td>
@@ -93,7 +93,7 @@ site_root:  ../
                     <a href="#Ink_Util_String_1-Ink_Util_String_1-shortString">.shortString(str, n)
 </a>
                 </td>
-                <td> Truncates a string without breaking words.</td>
+                <td> Truncates a string without breaking words. Inserts an ellipsis HTML entity at the end of the string if it&#39;s too long.</td>
             </tr>
             <tr>
                 <td>
@@ -156,7 +156,7 @@ site_root:  ../
                     <a href="#Ink_Util_String_1-Ink_Util_String_1-unescapeText">.unescapeText(txt)
 </a>
                 </td>
-                <td> Unescapes a string</td>
+                <td> Removes unicode entities (in the format &quot;\x##&quot; or &quot;\u####&quot;, where &quot;#&quot; is a hexadecimal digit)</td>
             </tr>
             <tr>
                 <td>
@@ -209,13 +209,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 Character to escape</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Escaped character. Returns \xXX if hex smaller than 0x100, otherwise \uXXXX
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_escape.html %}
@@ -224,26 +217,19 @@ site_root:  ../
     <section id="Ink_Util_String_1-Ink_Util_String_1-escapeText" class="box box-function">
     <h1 class="fw-300 function-desc">.escapeText(txt, [whiteList])
 
-    <i>method</i></h1><p class="text">Escapes a string to unicode characters</p>
+    <i>method</i></h1><p class="text">Escapes unicode characters in a string as unicode character entities (<code>\x##</code>, where the <code>##</code> are hex digits).</p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
                 <p>txt
                     <span class="label mandatory"></span><span class="label string"></span></p>
-                </li>
+                String with characters outside the ASCII printable range (32 < charCode < 127)</li>
             <li class="level1">
                 <p>whiteList
                     <span class="label array"></span></p>
-                Whitelist of characters</li>
+                Whitelist of characters which should NOT be escaped</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>String escaped to Unicode
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_escapeText.html %}
@@ -265,13 +251,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label boolean"></span></p>
                 Flag to sanitize input</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label object"></span> </p>JS Object
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -287,13 +266,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 String to be decoded</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Decoded string
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_htmlEntitiesDecode.html %}
@@ -309,15 +281,8 @@ site_root:  ../
             <li class="level1">
                 <p>string
                     <span class="label mandatory"></span><span class="label string"></span></p>
-                </li>
+                Input string.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>string encoded
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_htmlEntitiesEncode.html %}
@@ -335,13 +300,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 String to escape</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Escaped string
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_htmlEscapeUnsafe.html %}
@@ -359,13 +317,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 String to check</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -381,13 +332,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 String to normalize</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Normalized string
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_normalizeWhitespace.html %}
@@ -409,13 +353,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label number"></span></p>
                 Maximum chunk size (in characters)</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>Chunks of the original string
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_packetize.html %}
@@ -433,13 +370,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 String to remove accents from</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>String without accented chars
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_removeAccentedChars.html %}
@@ -448,7 +378,7 @@ site_root:  ../
     <section id="Ink_Util_String_1-Ink_Util_String_1-shortString" class="box box-function">
     <h1 class="fw-300 function-desc">.shortString(str, n)
 
-    <i>method</i></h1><p class="text">Truncates a string without breaking words.</p>
+    <i>method</i></h1><p class="text">Truncates a string without breaking words. Inserts an ellipsis HTML entity at the end of the string if it&#39;s too long.</p>
         <h3>Accepts</h3>
         
         <ul class="params">
@@ -461,13 +391,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label number"></span></p>
                 Number of chars of the short string</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_shortString.html %}
@@ -489,13 +412,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 Second String</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_strcmp.html %}
@@ -517,13 +433,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 Comma separated list of allowed tags.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Stripped string
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_stripTags.html %}
@@ -545,13 +454,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 String to search for</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Number of occurrences
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_substrCount.html %}
@@ -569,13 +471,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 String to convert</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Unicoded String
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_toUnicode.html %}
@@ -593,13 +488,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 String to be trimmed</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Trimmed string
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_trim.html %}
@@ -621,13 +509,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label number"></span></p>
                 Limit for the returned string, ellipsis included.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Truncated String
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_truncateString.html %}
@@ -649,13 +530,6 @@ site_root:  ../
                     <span class="label boolean"></span></p>
                 falseFlag to capitalize only the first word.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Camel cased string.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_ucFirst.html %}
@@ -673,13 +547,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 Escape sequence</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>String un-unicoded
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_unescape.html %}
@@ -688,22 +555,15 @@ site_root:  ../
     <section id="Ink_Util_String_1-Ink_Util_String_1-unescapeText" class="box box-function">
     <h1 class="fw-300 function-desc">.unescapeText(txt)
 
-    <i>method</i></h1><p class="text">Unescapes a string</p>
+    <i>method</i></h1><p class="text">Removes unicode entities (in the format &quot;\x##&quot; or &quot;\u####&quot;, where &quot;#&quot; is a hexadecimal digit)</p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
                 <p>txt
                     <span class="label mandatory"></span><span class="label string"></span></p>
-                </li>
+                Text you intend to remove unicode character entities.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Unescaped string
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_String_unescapeText.html %}
@@ -721,13 +581,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 String to be decoded</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Decoded string
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -743,13 +596,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 String to be encoded</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>string      UTF-8 encoded string
-        </li>
-    </ul>
-    
 
 </section>
 

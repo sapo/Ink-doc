@@ -184,7 +184,7 @@ site_root:  ../
                     <a href="#Ink_Dom_Event_1-Ink_Dom_Event_1-throttle">.throttle(func, [wait])
 </a>
                 </td>
-                <td> Creates a debounced version of a function.</td>
+                <td> Creates a throttled version of a function.</td>
             </tr></tbody>
     </table>
     
@@ -212,13 +212,6 @@ site_root:  ../
                     <span class="label string"></span></p>
                 An Event (or multiple events, space separated) to clone</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> <span class="label object"></span> </p>Returns the original DOM Element or Javascript Object
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_clone.html %}
@@ -236,13 +229,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label object"></span></p>
                 Event object</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domnode"></span> </p>The target
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_element.html %}
@@ -268,13 +254,6 @@ site_root:  ../
                     <span class="label boolean"></span></p>
                 falseFlag to skip returning `document` and to return `false` instead.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> </p>the first element which matches given tag name or the document element if the wanted tag is not found
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_findElement.html %}
@@ -300,13 +279,6 @@ site_root:  ../
                     </p>
                 Additional arguments to pass to the callback function when triggered</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> <span class="label object"></span> </p>Returns the original DOM Element or Javascript Object
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_fire.html %}
@@ -328,13 +300,6 @@ site_root:  ../
                     <span class="label boolean"></span></p>
                 If true uppercases, if false lowercases, otherwise keeps casing</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Character representation of pressed key combination
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_getCharFromKeyboardEvent.html %}
@@ -352,13 +317,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label object"></span></p>
                 Event object</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if the event is a left click
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_isLeftClick.html %}
@@ -376,13 +334,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label object"></span></p>
                 Event object</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if the event is a middle click
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_isMiddleClick.html %}
@@ -400,13 +351,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label object"></span></p>
                 Event object</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if the event is a right click
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_isRightClick.html %}
@@ -436,13 +380,6 @@ site_root:  ../
                     <span class="label boolean"></span></p>
                 Flag to change event listening from bubbling to capture.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label function"></span> </p>The event handler used. Hang on to this if you want to `stopObserving` later.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_observe.html %}
@@ -457,7 +394,7 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>element
-                    <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
                 Element to observe.</li>
             <li class="level1">
                 <p>eventName
@@ -472,13 +409,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label function"></span></p>
                 Callback to be called when the event is fired</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label function"></span> </p>The used callback, for ceasing to listen to the event later.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_observeDelegated.html %}
@@ -494,7 +424,7 @@ site_root:  ../
             <li class="level1">
                 <p>elements
                     <span class="label mandatory"></span><span class="label array"></span><span class="label string"></span></p>
-                </li>
+                Array of elements which are going to be observed. A selector is acceptable too.</li>
             <li class="level1">
                 <p>eventName
                     <span class="label mandatory"></span><span class="label string"></span></p>
@@ -508,13 +438,6 @@ site_root:  ../
                     <span class="label boolean"></span></p>
                 Flag change event listening from bubbling to capture.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label function"></span> </p>The used callback.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_observeMulti.html %}
@@ -544,13 +467,6 @@ site_root:  ../
                     <span class="label boolean"></span></p>
                 Flag to change event listening from bubbling to capture.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label function"></span> </p>The event handler used. Hang on to this if you want to `stopObserving` later.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_observeOnce.html %}
@@ -576,13 +492,6 @@ site_root:  ../
                     <span class="label function"></span></p>
                 The specific callback function to remove</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> <span class="label object"></span> </p>Returns the original DOM Element or Javascript Object
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_off.html %}
@@ -616,13 +525,6 @@ site_root:  ../
                     <span class="label object"></span></p>
                 Additional arguments to pass to the callback function when triggered</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> <span class="label object"></span> </p>Returns the original DOM Element or Javascript Object
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_on.html %}
@@ -656,13 +558,6 @@ site_root:  ../
                     </p>
                 Additional arguments to pass to the callback function when triggered</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> <span class="label object"></span> </p>Returns the original DOM Element or Javascript Object
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_one.html %}
@@ -680,13 +575,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label object"></span></p>
                 Event object</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label object"></span> </p>An object with the mouse X and Y position
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_pointer.html %}
@@ -704,13 +592,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label object"></span></p>
                 Event object</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Mouse X position
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -726,13 +607,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label object"></span></p>
                 Event object</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Mouse Y position
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -748,13 +622,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label object"></span></p>
                 event object</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domnode"></span> </p>The related target
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Event_1_relatedTarget.html %}
@@ -843,7 +710,7 @@ site_root:  ../
     <section id="Ink_Dom_Event_1-Ink_Dom_Event_1-throttle" class="box box-function">
     <h1 class="fw-300 function-desc">.throttle(func, [wait])
 
-    <i>method</i></h1><p class="text">Creates a debounced version of a function.<br>Returns a function which calls <code>func</code>, waiting at least <code>wait</code> milliseconds between calls. This is useful for events such as <code>scroll</code> or <code>resize</code>, which can be triggered too many times per second, slowing down the browser with needless function calls.<br><p><em>note:</em> This does not delay the first function call to the function.</p></p>
+    <i>method</i></h1><p class="text">Creates a throttled version of a function.<br>Returns a function which calls <code>func</code>, waiting at least <code>wait</code> milliseconds between calls. This is useful for events such as <code>scroll</code> or <code>resize</code>, which can be triggered too many times per second, slowing down the browser with needless function calls.<br><p><em>note:</em> This does not delay the first function call to the function.</p></p>
         <h3>Accepts</h3>
         
         <ul class="params">

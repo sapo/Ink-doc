@@ -75,12 +75,12 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>moduleName
-                    <span class="label mandatory"></span></p>
-                {String}</li>
+                    <span class="label mandatory"></span><span class="label string"></span></p>
+                The module name (Example: 'Modal_1', or 'Dropdown_1')</li>
             <li class="level1">
                 <p>selector
-                    <span class="label mandatory"></span></p>
-                {String}</li>
+                    <span class="label mandatory"></span><span class="label string"></span></p>
+                A selector which finds elements where this module should be autoloaded (Example: '.my-modal' or '.my-dropdown')</li>
         </ul>
 
 </section>
@@ -94,8 +94,8 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>moduleName
-                    <span class="label mandatory"></span></p>
-                {String}</li>
+                    <span class="label mandatory"></span><span class="label string"></span></p>
+                The module's name and version ('Name_ver')</li>
         </ul>
 
 </section>
@@ -109,8 +109,8 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>parentEl
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
-                </li>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
+                Root element. The children of this element will be processed by Autoload.</li>
             <li class="level1">
                 <p>options
                     <span class="label object"></span></p>

@@ -31,7 +31,7 @@ To enable sorting, just set the <code>data-sortable</code> attribute of your tab
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_UI_Table_1-Ink_UI_Table-setEndpoint">.setEndpoint(endpoint)
+                    <a href="#Ink_UI_Table_1-Ink_UI_Table-setEndpoint">.setEndpoint(endpoint, currentPage)
 </a>
                 </td>
                 <td> Sets the AJAX endpoint.</td>
@@ -51,12 +51,12 @@ To enable sorting, just set the <code>data-sortable</code> attribute of your tab
         <ul class="params">
             <li class="level1">
                 <p>selector
-                    <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
-                </li>
+                    <span class="label mandatory"></span><span class="label string"></span><span class="label element"></span></p>
+                Your `<table>` element.</li>
             <li class="level1">
                 <p>options
                     <span class="label object"></span></p>
-                Options</li>
+                Options object containing:</li>
             <li class="level2">
                 <p>options.pageSize
                     <span class="label number"></span></p>
@@ -132,7 +132,7 @@ To enable sorting, just set the <code>data-sortable</code> attribute of your tab
 	</section>
 
     <section id="Ink_UI_Table_1-Ink_UI_Table-setEndpoint" class="box box-function">
-    <h1 class="fw-300 function-desc">.setEndpoint(endpoint)
+    <h1 class="fw-300 function-desc">.setEndpoint(endpoint, currentPage)
 
     <i>method</i></h1><p class="text">Sets the AJAX endpoint.<br>Useful to change the endpoint in runtime.</p>
         <h3>Accepts</h3>
@@ -142,6 +142,10 @@ To enable sorting, just set the <code>data-sortable</code> attribute of your tab
                 <p>endpoint
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 New endpoint</li>
+            <li class="level1">
+                <p>currentPage
+                    <span class="label mandatory"></span><span class="label number"></span></p>
+                If you pass this, setCurrent will also be called.</li>
         </ul>
 
 </section>

@@ -44,7 +44,7 @@ site_root:  ../
                     <a href="#Ink_Dom_Element_1-Ink_Dom_Element_1-create">.create(tag, properties)
 </a>
                 </td>
-                <td> Creates a DOM element</td>
+                <td> Creates a DOM element.</td>
             </tr>
             <tr>
                 <td>
@@ -104,7 +104,7 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Dom_Element_1-Ink_Dom_Element_1-fillChecks">.fillChecks(insertAfterEl, name, data, [skipEmpty], [defaultValue], [splitEl])
+                    <a href="#Ink_Dom_Element_1-Ink_Dom_Element_1-fillChecks">.fillChecks(insertAfterEl, name, data, [defaultValue], [splitEl])
 </a>
                 </td>
                 <td> Creates set of checkbox buttons</td>
@@ -258,7 +258,7 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Dom_Element_1-Ink_Dom_Element_1-isLink">.isLink(node)
+                    <a href="#Ink_Dom_Element_1-Ink_Dom_Element_1-isLink">.isLink(element)
 </a>
                 </td>
                 <td> Checks if an element is a link</td>
@@ -314,7 +314,7 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Dom_Element_1-Ink_Dom_Element_1-offset2">.offset2()
+                    <a href="#Ink_Dom_Element_1-Ink_Dom_Element_1-offset2">.offset2(el)
 </a>
                 </td>
                 <td><span class="ink-label red">deprecated</span> Alias for offset()</td>
@@ -356,14 +356,14 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Dom_Element_1-Ink_Dom_Element_1-parentIndexOf">.parentIndexOf(parentEl, childEl)
+                    <a href="#Ink_Dom_Element_1-Ink_Dom_Element_1-parentIndexOf">.parentIndexOf([parentEl], childEl)
 </a>
                 </td>
                 <td> Gets the index of an element relative to a parent</td>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Dom_Element_1-Ink_Dom_Element_1-positionedOffset">.positionedOffset(elm)
+                    <a href="#Ink_Dom_Element_1-Ink_Dom_Element_1-positionedOffset">.positionedOffset(element)
 </a>
                 </td>
                 <td> Gets the relative offset of an element</td>
@@ -533,13 +533,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
                 element</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>number of child elements
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_childElementCount.html %}
@@ -554,20 +547,13 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>cloneTo
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
                 element to be position cloned</li>
             <li class="level1">
                 <p>cloneFrom
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
                 element to get the cloned position</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> </p>The element with positionClone
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_clonePosition.html %}
@@ -576,18 +562,18 @@ site_root:  ../
     <section id="Ink_Dom_Element_1-Ink_Dom_Element_1-create" class="box box-function">
     <h1 class="fw-300 function-desc">.create(tag, properties)
 
-    <i>method</i></h1><p class="text">Creates a DOM element</p>
+    <i>method</i></h1><p class="text">Creates a DOM element.<br><p>Just a shortcut for <code>document.createElement(tag)</code>, but with the second argument you can call additional functions present in Ink.Dom.Element.</p></p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
                 <p>tag
                     <span class="label mandatory"></span><span class="label string"></span></p>
-                tag name</li>
+                Tag name</li>
             <li class="level1">
                 <p>properties
                     <span class="label mandatory"></span><span class="label object"></span></p>
-                object with properties to be set on the element. You can also call other functions in Ink.Dom.Element like this</li>
+                Object with properties to be set on the element. You can also call other functions in Ink.Dom.Element like this</li>
         </ul>
 
 <!--<h3>Samples</h3>-->
@@ -606,13 +592,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
                 Element or CSS selector</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label object"></span> </p>Object with the data-* properties. If no data-attributes are present, an empty object is returned.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_data.html %}
@@ -634,13 +613,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domnode"></span></p>
                 The descendant</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>true if 'descendant' is descendant of 'node'
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_descendantOf.html %}
@@ -658,13 +630,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
                 DOM element or target ID</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>Array with element's width and height
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_elementDimensions.html %}
@@ -682,13 +647,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
                 DOM element or target ID</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>The element's height
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_elementHeight.html %}
@@ -706,13 +664,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
                 DOM element or target ID</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Element's left position
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -728,13 +679,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
                 Target DOM element or target ID</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>element's top position
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -750,13 +694,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
                 Target DOM element or target ID</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>The element's width
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_elementWidth.html %}
@@ -771,7 +708,7 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>element
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
                 Element to modify text content</li>
             <li class="level1">
                 <p>ellipsis
@@ -782,7 +719,7 @@ site_root:  ../
 </section>
 
     <section id="Ink_Dom_Element_1-Ink_Dom_Element_1-fillChecks" class="box box-function">
-    <h1 class="fw-300 function-desc">.fillChecks(insertAfterEl, name, data, [skipEmpty], [defaultValue], [splitEl])
+    <h1 class="fw-300 function-desc">.fillChecks(insertAfterEl, name, data, [defaultValue], [splitEl])
 
     <i>method</i></h1><p class="text">Creates set of checkbox buttons</p>
         <h3>Accepts</h3>
@@ -790,7 +727,7 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>insertAfterEl
-                    <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
                 Element after which the input elements will be created</li>
             <li class="level1">
                 <p>name
@@ -801,10 +738,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label array"></span></p>
                 Data to populate the component</li>
             <li class="level1">
-                <p>skipEmpty
-                    <span class="label boolean"></span></p>
-                Flag to skip creation of empty options</li>
-            <li class="level1">
                 <p>defaultValue
                     <span class="label string"></span><span class="label number"></span></p>
                 Initial selected value</li>
@@ -813,13 +746,6 @@ site_root:  ../
                     <span class="label string"></span></p>
                 Name of element to add after each input element (example: 'br')</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> </p>Wrapper element around the checkboxes
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -832,7 +758,7 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>insertAfterEl
-                    <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
                 Element after which the input elements will be created</li>
             <li class="level1">
                 <p>name
@@ -855,13 +781,6 @@ site_root:  ../
                     <span class="label string"></span></p>
                 Name of element to add after each input element (example: 'br')</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> </p>Wrapper element around the radio buttons
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -910,13 +829,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 Class name to search</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> <span class="label false"></span> </p>The matched element or false if did not match
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_findUpwardsByClass.html %}
@@ -938,13 +850,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 ID to search</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label htmlelement"></span> <span class="label false"></span> </p>The matched element or false if did not match
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_findUpwardsById.html %}
@@ -966,13 +871,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 CSS selector</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label htmlelement"></span> <span class="label false"></span> </p>The matched element or false if did not match
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_findUpwardsBySelector.html %}
@@ -994,13 +892,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 Tag to search</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> <span class="label false"></span> </p>the matched element or false if did not match
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_findUpwardsByTag.html %}
@@ -1015,20 +906,13 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>element
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
                 Element to base the search from</li>
             <li class="level1">
                 <p>boolTest
                     <span class="label mandatory"></span><span class="label function"></span></p>
                 Testing function</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> <span class="label false"></span> </p>The matched element or false if did not match
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_findUpwardsHaving.html %}
@@ -1046,13 +930,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domelement"></span></p>
                 Parent node</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> </p>the Element child
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_firstElementChild.html %}
@@ -1070,13 +947,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
                 Either an ID of an element, or an element.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> <span class="label null"></span> </p>The DOM element with the given id or null when it was not found
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_get.html %}
@@ -1098,13 +968,6 @@ site_root:  ../
                     <span class="label boolean"></span></p>
                 Flag to remove the text from the element</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Text found
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_getChildrenText.html %}
@@ -1122,13 +985,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
                 element</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>The selected values
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_getSelectValues.html %}
@@ -1150,13 +1006,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 Attribute name</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>Boolean based on existance of attribute
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_hasAttribute.html %}
@@ -1174,13 +1023,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 HTML string</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label documentfragment"></span> </p>DocumentFragment containing all of the elements from the html string
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_htmlToFragment.html %}
@@ -1210,13 +1052,6 @@ site_root:  ../
                     <span class="label number"></span></p>
                 0Consider a margin all around the viewport with `opts.margin` width a dead zone.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_inViewport.html %}
@@ -1322,13 +1157,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domnode"></span></p>
                 Descendant node</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_isAncestorOf.html %}
@@ -1346,13 +1174,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label mixed"></span></p>
                 The object to be checked.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if it's a valid DOM Element.
-        </li>
-    </ul>
-    
 <p class="example-title">Example</p>
   
 {% highlight html %}{% raw %}
@@ -1380,37 +1201,23 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domelement"></span></p>
                 Element to check</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_isHidden.html %}
 	</section>
 
     <section id="Ink_Dom_Element_1-Ink_Dom_Element_1-isLink" class="box box-function">
-    <h1 class="fw-300 function-desc">.isLink(node)
+    <h1 class="fw-300 function-desc">.isLink(element)
 
     <i>method</i></h1><p class="text">Checks if an element is a link</p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
-                <p>node
-                    <span class="label mandatory"></span><span class="label domnode"></span></p>
-                Node to check if it's link</li>
+                <p>element
+                    <span class="label mandatory"></span><span class="label element"></span></p>
+                Element to check if it's a link.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_isLink.html %}
@@ -1428,13 +1235,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domelement"></span></p>
                 Element to check</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_isVisible.html %}
@@ -1452,13 +1252,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domelement"></span></p>
                 Parent node</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> </p>the Element child
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_lastElementChild.html %}
@@ -1473,7 +1266,7 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>el
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
                 Input or Textarea element</li>
             <li class="level1">
                 <p>t
@@ -1497,13 +1290,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domnode"></span></p>
                 The current node</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> <span class="label null"></span> </p>The first sibling element after node or null if none is found
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_nextElementSibling.html %}
@@ -1521,13 +1307,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
                 Element</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>Array of next sibling elements
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_nextSiblings.html %}
@@ -1545,13 +1324,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
                 Target element</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label [number, number]"></span> </p>Array with pixel distance from the target element to the top left corner of the document
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_offset.html %}
@@ -1565,9 +1337,17 @@ site_root:  ../
 </section>
 
     <section id="Ink_Dom_Element_1-Ink_Dom_Element_1-offset2" class="box box-function">
-    <h1 class="fw-300 function-desc">.offset2()
+    <h1 class="fw-300 function-desc">.offset2(el)
 
     <i>method</i></h1><p class="text">Alias for offset()</p>
+        <h3>Accepts</h3>
+        
+        <ul class="params">
+            <li class="level1">
+                <p>el
+                    <span class="label mandatory"></span><span class="label element"></span></p>
+                Element to be passed to `offset()`</li>
+        </ul>
 
 </section>
 
@@ -1583,13 +1363,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
                 Target element</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Offset from the target element to the left of the document
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_offsetLeft.html %}
@@ -1607,13 +1380,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
                 Target element</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Offset from the target element to the top of the document
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_offsetTop.html %}
@@ -1631,13 +1397,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domelement"></span></p>
                 Target element</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>Array with element width and height.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_outerDimensions.html %}
@@ -1647,13 +1406,6 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.pageHeight()
 
     <i>method</i></h1><p class="text">Get the page&#39;s height.</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Page height in pixels
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_pageHeight.html %}
@@ -1663,20 +1415,13 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.pageWidth()
 
     <i>method</i></h1><p class="text">Get the page&#39;s width.</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Page width in pixels
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_pageWidth.html %}
 	</section>
 
     <section id="Ink_Dom_Element_1-Ink_Dom_Element_1-parentIndexOf" class="box box-function">
-    <h1 class="fw-300 function-desc">.parentIndexOf(parentEl, childEl)
+    <h1 class="fw-300 function-desc">.parentIndexOf([parentEl], childEl)
 
     <i>method</i></h1><p class="text">Gets the index of an element relative to a parent</p>
         <h3>Accepts</h3>
@@ -1684,44 +1429,30 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>parentEl
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
-                Element to parse</li>
+                    <span class="label element"></span></p>
+                childEl's parent. Deprecated.</li>
             <li class="level1">
                 <p>childEl
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
                 Child Element to look for</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>The index of the childEl inside parentEl. Returns -1 if it's not a direct child
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_parentIndexOf.html %}
 	</section>
 
     <section id="Ink_Dom_Element_1-Ink_Dom_Element_1-positionedOffset" class="box box-function">
-    <h1 class="fw-300 function-desc">.positionedOffset(elm)
+    <h1 class="fw-300 function-desc">.positionedOffset(element)
 
     <i>method</i></h1><p class="text">Gets the relative offset of an element</p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
-                <p>elm
-                    <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
+                <p>element
+                    <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
                 Target element</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>Array with the element offsetleft and offsettop relative to the closest positioned ancestor
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_positionedOffset.html %}
@@ -1736,12 +1467,12 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>elm
-                    <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label string"></span><span class="label element"></span></p>
                 Element</li>
             <li class="level1">
                 <p>html
                     <span class="label mandatory"></span><span class="label string"></span></p>
-                Markup string</li>
+                Markup string to prepend</li>
         </ul>
 
 <!--<h3>Samples</h3>-->
@@ -1760,13 +1491,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domnode"></span></p>
                 The current node</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> <span class="label null"></span> </p>The first element sibling before node or null if none is found
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_previousElementSibling.html %}
@@ -1784,13 +1508,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
                 Element</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>Array of previous sibling elements
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_previousSiblings.html %}
@@ -1805,7 +1522,7 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>elm
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
                 The element to remove</li>
         </ul>
 
@@ -1822,7 +1539,7 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>el
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
                 Element to remove text from</li>
         </ul>
 
@@ -1839,11 +1556,11 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>element
-                    <span class="label mandatory"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
                 The element to be replaced.</li>
             <li class="level1">
                 <p>replacement
-                    <span class="label mandatory"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
                 The new element.</li>
         </ul>
 <p class="example-title">Example</p>
@@ -1872,13 +1589,6 @@ site_root:  ../
                     <span class="label domelement"></span><span class="label string"></span></p>
                 Target element or document.body</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>offset values for x and y scroll
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_scroll.html %}
@@ -1888,13 +1598,6 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.scrollHeight()
 
     <i>method</i></h1><p class="text">Get the scroll&#39;s height.</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Scroll height
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -1919,13 +1622,6 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.scrollWidth()
 
     <i>method</i></h1><p class="text">Get the scroll&#39;s width.</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Scroll width
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -1959,12 +1655,12 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>node
-                    <span class="label mandatory"></span><span class="label domnode"></span></p>
-                node Target node where the text will be added.</li>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
+                Target node where the text will be added.</li>
             <li class="level1">
                 <p>text
                     <span class="label mandatory"></span><span class="label string"></span></p>
-                text Text to be added on the node.</li>
+                Text to be added on the node.</li>
         </ul>
 
 <!--<h3>Samples</h3>-->
@@ -1983,13 +1679,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
                 Element</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>Array of sibling elements
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_siblings.html %}
@@ -2007,13 +1696,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label domnode"></span></p>
                 Where to retreive text from. Can be any node type.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>the text
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_textContent.html %}
@@ -2066,13 +1748,6 @@ You get this:
     <h1 class="fw-300 function-desc">.viewportHeight()
 
     <i>method</i></h1><p class="text">Get the viewport&#39;s height.</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Viewport height in pixels
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_viewportHeight.html %}
@@ -2082,13 +1757,6 @@ You get this:
     <h1 class="fw-300 function-desc">.viewportWidth()
 
     <i>method</i></h1><p class="text">Get the viewport&#39;s width.</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Viewport width in pixels
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Element_1_viewportWidth.html %}
@@ -2103,20 +1771,13 @@ You get this:
         <ul class="params">
             <li class="level1">
                 <p>target
-                    <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label string"></span><span class="label element"></span></p>
                 Element to be wrapped</li>
             <li class="level1">
                 <p>container
-                    <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label string"></span><span class="label element"></span></p>
                 Element to wrap the target</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p></p>Container element
-        </li>
-    </ul>
-    
 <p class="example-title">Example</p>
   
 {% highlight html %}{% raw %}

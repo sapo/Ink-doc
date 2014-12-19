@@ -53,13 +53,6 @@ You can disable some (or all) tabs by passing an array for the <code>disabled</c
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_UI_Tabs_1-Ink_UI_Tabs-activeMenuTab">.activeMenuTab()
-</a>
-                </td>
-                <td><span class="ink-label red">deprecated</span> Returns the parent of the currently active menu link.</td>
-            </tr>
-            <tr>
-                <td>
                     <a href="#Ink_UI_Tabs_1-Ink_UI_Tabs-activeTab">.activeTab()
 </a>
                 </td>
@@ -84,14 +77,14 @@ You can disable some (or all) tabs by passing an array for the <code>disabled</c
                     <a href="#Ink_UI_Tabs_1-Ink_UI_Tabs-disable">.disable(selector)
 </a>
                 </td>
-                <td> Disables the desired tag</td>
+                <td> Disables the desired tab</td>
             </tr>
             <tr>
                 <td>
                     <a href="#Ink_UI_Tabs_1-Ink_UI_Tabs-enable">.enable(selector)
 </a>
                 </td>
-                <td> Enables the desired tag</td>
+                <td> Enables the desired tab</td>
             </tr></tbody>
     </table>
     
@@ -108,8 +101,8 @@ You can disable some (or all) tabs by passing an array for the <code>disabled</c
         <ul class="params">
             <li class="level1">
                 <p>selector
-                    <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
-                </li>
+                    <span class="label mandatory"></span><span class="label string"></span><span class="label element"></span></p>
+                Your container element. You can pass in a pure DOM element or a selector.</li>
             <li class="level1">
                 <p>options
                     <span class="label object"></span></p>
@@ -160,13 +153,6 @@ You can disable some (or all) tabs by passing an array for the <code>disabled</c
     <h1 class="fw-300 function-desc">.activeContentTab()
 
     <i>method</i></h1><p class="text">Gets the currently active section<br><p>(Each section contains content for a tab, and must have an <code>id</code> attribute)</p></p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> <span class="label null"></span> </p>Active section, or `null` if there is none.
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -174,27 +160,6 @@ You can disable some (or all) tabs by passing an array for the <code>disabled</c
     <h1 class="fw-300 function-desc">.activeMenuLink()
 
     <i>method</i></h1><p class="text">Gets the currently active Menu link (the links which the user clicks on to change tabs)</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> <span class="label null"></span> </p>Active menu link, or `null` if there is none.
-        </li>
-    </ul>
-    
-
-</section>
-
-    <section id="Ink_UI_Tabs_1-Ink_UI_Tabs-activeMenuTab" class="box box-function">
-    <h1 class="fw-300 function-desc">.activeMenuTab()
-
-    <i>method</i></h1><p class="text">Returns the parent of the currently active menu link.<br><p>This is useful if you want to have <code>li</code> elements wrapping your links<br>and want to access the currently visible one.</p><br><p>(This method is deprecated)</p></p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> <span class="label null"></span> </p>Active menu LI, or `null` if there is none.
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -202,13 +167,6 @@ You can disable some (or all) tabs by passing an array for the <code>disabled</c
     <h1 class="fw-300 function-desc">.activeTab()
 
     <i>method</i></h1><p class="text">Returns the active tab id</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>ID of the active section (use activeSection() instead to get the element).
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -221,7 +179,7 @@ You can disable some (or all) tabs by passing an array for the <code>disabled</c
         <ul class="params">
             <li class="level1">
                 <p>selector
-                    <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label string"></span><span class="label element"></span></p>
                 Selector of the desired tab or the link that links to it</li>
         </ul>
 
@@ -237,13 +195,13 @@ You can disable some (or all) tabs by passing an array for the <code>disabled</c
     <section id="Ink_UI_Tabs_1-Ink_UI_Tabs-disable" class="box box-function">
     <h1 class="fw-300 function-desc">.disable(selector)
 
-    <i>method</i></h1><p class="text">Disables the desired tag</p>
+    <i>method</i></h1><p class="text">Disables the desired tab</p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
                 <p>selector
-                    <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label string"></span><span class="label element"></span></p>
                 the id of the desired tab or the link that links to it</li>
         </ul>
 
@@ -252,13 +210,13 @@ You can disable some (or all) tabs by passing an array for the <code>disabled</c
     <section id="Ink_UI_Tabs_1-Ink_UI_Tabs-enable" class="box box-function">
     <h1 class="fw-300 function-desc">.enable(selector)
 
-    <i>method</i></h1><p class="text">Enables the desired tag</p>
+    <i>method</i></h1><p class="text">Enables the desired tab</p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
                 <p>selector
-                    <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label string"></span><span class="label element"></span></p>
                 The id of the desired tab or the link that links to it</li>
         </ul>
 

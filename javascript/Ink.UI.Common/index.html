@@ -24,17 +24,17 @@ site_root:  ../
         <tbody>
             <tr>
                 <td>
-                    <a href="#Ink_UI_Common_1-Ink_UI_Common_BaseUIComponent-BaseUIComponent">new BaseUIComponent(element, options)
+                    <a href="#Ink_UI_Common_1-Ink_UI_Common_BaseUIComponent-BaseUIComponent">new BaseUIComponent(element, [options])
 </a>
                 </td>
                 <td><span class="ink-label green">Constructor</span></td>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_UI_Common_1-Ink_UI_Common_BaseUIComponent-createUIComponent">.createUIComponent(theConstructor, options)
+                    <a href="#Ink_UI_Common_1-Ink_UI_Common_BaseUIComponent-createUIComponent">.createUIComponent(theConstructor, [options])
 </a>
                 </td>
-                <td></td>
+                <td> Take a constructor, and make it an Ink UI component.</td>
             </tr>
             <tr>
                 <td>
@@ -55,7 +55,7 @@ site_root:  ../
                     <a href="#Ink_UI_Common_1-Ink_UI_Common_BaseUIComponent-getOption">.getOption(name, value)
 </a>
                 </td>
-                <td> Sets an option&#39;s value</td>
+                <td> Sets an option&#39;s value.</td>
             </tr></tbody>
     </table>
     
@@ -64,7 +64,7 @@ site_root:  ../
 
 
     <section id="Ink_UI_Common_1-Ink_UI_Common_BaseUIComponent-BaseUIComponent" class="box box-function">
-    <h1 class="fw-300 function-desc">new Ink.UI.Common.BaseUIComponent(element, options)
+    <h1 class="fw-300 function-desc">new Ink.UI.Common.BaseUIComponent(element, [options])
 
     </h1>
         <h3>Accepts</h3>
@@ -72,34 +72,34 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>element
-                    <span class="label mandatory"></span></p>
-                </li>
+                    <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
+                Element to associate this UI component with. It's the element you can get later using `comp.getElement()`</li>
             <li class="level1">
                 <p>options
-                    <span class="label mandatory"></span></p>
-                </li>
+                    <span class="label object"></span></p>
+                Options to pass to the component. You should see your specific UI component for this information.</li>
         </ul>
 
 </section>
 
     <section id="Ink_UI_Common_1-Ink_UI_Common_BaseUIComponent-createUIComponent" class="box box-function">
-    <h1 class="fw-300 function-desc">.createUIComponent(theConstructor, options)
+    <h1 class="fw-300 function-desc">.createUIComponent(theConstructor, [options])
 
-    <i>method</i></h1>
+    <i>method</i></h1><p class="text">Take a constructor, and make it an Ink UI component.<br><p>Makes it inherit BaseUIComponent, makes sure it has the basic properties Ink.UI.Common needs it to have, adds the necessary static methods, sets its options, etc.</p></p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
                 <p>theConstructor
-                    <span class="label mandatory"></span></p>
+                    <span class="label mandatory"></span><span class="label function"></span></p>
                 UI component constructor. It should have an _init function in its prototype, an _optionDefinition object, and a _name property indicating its name.</li>
             <li class="level1">
                 <p>options
-                    <span class="label mandatory"></span></p>
-                </li>
+                    <span class="label object"></span></p>
+                Options hash, containing:</li>
             <li class="level2">
                 <p>options.elementIsOptional
-                    </p>
+                    <span class="label boolean"></span></p>
                 falseWhether the element argument is optional (For example, when the component might work on existing markup or create its own).</li>
         </ul>
 
@@ -109,13 +109,6 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.getElement()
 
     <i>method</i></h1><p class="text">Get the element associated with an UI component (IE the one you used in the constructor)</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label element"></span> </p>The component's element.
-        </li>
-    </ul>
-    
 <p class="example-title">Example</p>
   
 {% highlight html %}{% raw %}
@@ -137,16 +130,9 @@ myUIComponent.getElement();  // -> The '#element' (not the selector string, mind
         <ul class="params">
             <li class="level1">
                 <p>name
-                    <span class="label mandatory"></span></p>
-                </li>
+                    <span class="label mandatory"></span><span class="label string"></span></p>
+                The option's name.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p></p>The option value, or undefined if nothing is found.
-        </li>
-    </ul>
-    
 <p class="example-title">Example</p>
   
 {% highlight html %}{% raw %}
@@ -163,18 +149,18 @@ myUIComponent.getOption('trigger');  // -> The trigger element (not the selector
     <section id="Ink_UI_Common_1-Ink_UI_Common_BaseUIComponent-getOption" class="box box-function">
     <h1 class="fw-300 function-desc">.getOption(name, value)
 
-    <i>method</i></h1><p class="text">Sets an option&#39;s value</p>
+    <i>method</i></h1><p class="text">Sets an option&#39;s value.</p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
                 <p>name
-                    <span class="label mandatory"></span></p>
-                </li>
+                    <span class="label mandatory"></span><span class="label string"></span></p>
+                Name of the option.</li>
             <li class="level1">
                 <p>value
-                    <span class="label mandatory"></span></p>
-                </li>
+                    <span class="label mandatory"></span><span class="label mixed"></span></p>
+                New option value.</li>
         </ul>
 <p class="example-title">Example</p>
   
@@ -214,7 +200,7 @@ myUIComponent.setOption('trigger', '#some-element');
                     <a href="#Ink_UI_Common_1-Ink_UI_Common_1-childIndex">.childIndex(childEl)
 </a>
                 </td>
-                <td> Gets an element&#39;s one-base index relative to its parent.</td>
+                <td><span class="ink-label red">deprecated</span> Gets an element&#39;s one-base index relative to its parent.</td>
             </tr>
             <tr>
                 <td>
@@ -228,7 +214,7 @@ myUIComponent.setOption('trigger', '#some-element');
                     <a href="#Ink_UI_Common_1-Ink_UI_Common_1-clone">.clone(o)
 </a>
                 </td>
-                <td> Deep copy (clone) an object.</td>
+                <td><span class="ink-label red">deprecated</span> Deep copy (clone) an object.</td>
             </tr>
             <tr>
                 <td>
@@ -253,17 +239,17 @@ myUIComponent.setOption('trigger', '#some-element');
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_UI_Common_1-Ink_UI_Common_1-elsOrSelector">.elsOrSelector(elOrSelector, fieldName, required)
+                    <a href="#Ink_UI_Common_1-Ink_UI_Common_1-elsOrSelector">.elsOrSelector(elsOrSelector, [fieldName], required)
 </a>
                 </td>
-                <td> Alias for <code>elOrSelector</code> but returns an array of elements.</td>
+                <td> Like <code>elOrSelector</code> but returns an array of elements.</td>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_UI_Common_1-Ink_UI_Common_1-getInstance">.getInstance(el)
+                    <a href="#Ink_UI_Common_1-Ink_UI_Common_1-getInstance">.getInstance(el, [UIComponent])
 </a>
                 </td>
-                <td> Gets an UI instance from an element or instance id.</td>
+                <td> Gets an UI component instance from an element.</td>
             </tr>
             <tr>
                 <td>
@@ -316,10 +302,10 @@ myUIComponent.setOption('trigger', '#some-element');
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_UI_Common_1-Ink_UI_Common_1-registerInstance">.registerInstance(inst, el)
+                    <a href="#Ink_UI_Common_1-Ink_UI_Common_1-registerInstance">.registerInstance(inst, [el])
 </a>
                 </td>
-                <td> Saves a component&#39;s instance reference for later retrieval.</td>
+                <td> Saves an object (which should inherit BaseUIComponent) in the registry, associated with an element. You can retrieve it later by calling getInstance.</td>
             </tr>
             <tr>
                 <td>
@@ -337,10 +323,10 @@ myUIComponent.setOption('trigger', '#some-element');
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_UI_Common_1-Ink_UI_Common_1-unregisterInstance">.unregisterInstance(id)
+                    <a href="#Ink_UI_Common_1-Ink_UI_Common_1-unregisterInstance">.unregisterInstance(inst)
 </a>
                 </td>
-                <td> Deletes an instance with a given id.</td>
+                <td> Unregisters (removes from the registry) a UI component instance from whatever element it&#39;s on.</td>
             </tr></tbody>
     </table>
     
@@ -401,22 +387,15 @@ myUIComponent.setOption('trigger', '#some-element');
     <section id="Ink_UI_Common_1-Ink_UI_Common_1-childIndex" class="box box-function">
     <h1 class="fw-300 function-desc">.childIndex(childEl)
 
-    <i>method</i></h1><p class="text">Gets an element&#39;s one-base index relative to its parent.</p>
+    <i>method</i></h1><p class="text">Gets an element&#39;s one-base index relative to its parent.<br><p>Deprecated. Use Ink.Dom.Element.parentIndexOf instead.</p></p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
                 <p>childEl
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
                 Valid DOM Element.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Numerical position of an element relatively to its parent.
-        </li>
-    </ul>
-    
 <p class="example-title">Example</p>
   
 {% highlight html %}{% raw %}
@@ -447,7 +426,7 @@ myUIComponent.setOption('trigger', '#some-element');
         <ul class="params">
             <li class="level1">
                 <p>parentEl
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
                 Valid DOM Element</li>
         </ul>
 <p class="example-title">Example</p>
@@ -485,13 +464,6 @@ myUIComponent.setOption('trigger', '#some-element');
                     <span class="label mandatory"></span><span class="label object"></span></p>
                 The object to be cloned/copied.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label object"></span> </p>Returns the result of the clone/copy.
-        </li>
-    </ul>
-    
 <p class="example-title">Example</p>
   
 {% highlight html %}{% raw %}
@@ -511,13 +483,6 @@ myUIComponent.setOption('trigger', '#some-element');
     <h1 class="fw-300 function-desc">.currentLayout()
 
     <i>method</i></h1><p class="text">Gets the current Ink layout.</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>A string representation of the current layout name.
-        </li>
-    </ul>
-    
 <p class="example-title">Example</p>
   
 {% highlight html %}{% raw %}
@@ -547,20 +512,13 @@ myUIComponent.setOption('trigger', '#some-element');
         <ul class="params">
             <li class="level1">
                 <p>elOrSelector
-                    <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
                 DOM Element or CSS Selector</li>
             <li class="level1">
                 <p>fieldName
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 The name of the field. Commonly used for debugging.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> </p>Returns the DOMElement passed or the first result of the CSS Selector. Otherwise it throws an exception.
-        </li>
-    </ul>
-    
 <p class="example-title">Example</p>
   
 {% highlight html %}{% raw %}
@@ -573,32 +531,25 @@ myUIComponent.setOption('trigger', '#some-element');
 </section>
 
     <section id="Ink_UI_Common_1-Ink_UI_Common_1-elsOrSelector" class="box box-function">
-    <h1 class="fw-300 function-desc">.elsOrSelector(elOrSelector, fieldName, required)
+    <h1 class="fw-300 function-desc">.elsOrSelector(elsOrSelector, [fieldName], required)
 
-    <i>method</i></h1><p class="text">Alias for <code>elOrSelector</code> but returns an array of elements.</p>
+    <i>method</i></h1><p class="text">Like <code>elOrSelector</code> but returns an array of elements.</p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
-                <p>elOrSelector
-                    <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
-                DOM Element or CSS Selector</li>
+                <p>elsOrSelector
+                    <span class="label mandatory"></span><span class="label element"></span><span class="label array"></span><span class="label string"></span></p>
+                DOM Element, array of DOM Elements, or CSS Selector</li>
             <li class="level1">
                 <p>fieldName
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                The name of the field. Commonly used for debugging.</li>
+                    <span class="label string"></span></p>
+                The name of the field. Used for the error shown when no elements are found.</li>
             <li class="level1">
                 <p>required
                     <span class="label mandatory"></span><span class="label boolean"></span></p>
-                Flag to accept an empty array as output.</li>
+                If this is true, throw an error instead of returning an empty array.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>The selected DOM Elements.
-        </li>
-    </ul>
-    
 <p class="example-title">Example</p>
   
 {% highlight html %}{% raw %}
@@ -610,24 +561,21 @@ myUIComponent.setOption('trigger', '#some-element');
 </section>
 
     <section id="Ink_UI_Common_1-Ink_UI_Common_1-getInstance" class="box box-function">
-    <h1 class="fw-300 function-desc">.getInstance(el)
+    <h1 class="fw-300 function-desc">.getInstance(el, [UIComponent])
 
-    <i>method</i></h1><p class="text">Gets an UI instance from an element or instance id.</p>
+    <i>method</i></h1><p class="text">Gets an UI component instance from an element.<br><p>This function is already available in the UI components&#39; classes themselves. You can call Modal.getInstance() and retrieve a modal.</p></p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
                 <p>el
-                    <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
-                DOM Element from which we want the instances.</li>
+                    <span class="label mandatory"></span><span class="label string"></span><span class="label element"></span></p>
+                Element from which we want the instances. A selector is okay.</li>
+            <li class="level1">
+                <p>UIComponent
+                    <span class="label baseuicomponent"></span></p>
+                If you pass an Ink UI component class (Like Ink.UI.Modal or Ink.UI.Carousel), this won't return an array of all instances associated with the element. Instead it will return only the object which is an instance of that class.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label object"></span> <span class="label array"></span> </p>Returns an instance or a collection of instances.
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -641,15 +589,8 @@ myUIComponent.setOption('trigger', '#some-element');
             <li class="level1">
                 <p>selector
                     <span class="label mandatory"></span><span class="label string"></span></p>
-                CSS selector to get the instances from.</li>
+                CSS selector to get the instances from. This function will only use the *first* element.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label object"></span> <span class="label array"></span> </p>Returns an instance or a collection of instances.
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -657,13 +598,6 @@ myUIComponent.setOption('trigger', '#some-element');
     <h1 class="fw-300 function-desc">.getInstanceIds()
 
     <i>method</i></h1><p class="text">Gets all the instance ids</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>Collection of instance ids
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -671,13 +605,6 @@ myUIComponent.setOption('trigger', '#some-element');
     <h1 class="fw-300 function-desc">.getInstances()
 
     <i>method</i></h1><p class="text">Gets all the instances</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>Collection of existing instances.
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -720,13 +647,6 @@ myUIComponent.setOption('trigger', '#some-element');
                     <span class="label mandatory"></span><span class="label mixed"></span></p>
                 The object to be checked.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if it's a valid DOM Element.
-        </li>
-    </ul>
-    
 <p class="example-title">Example</p>
   
 {% highlight html %}{% raw %}
@@ -754,13 +674,6 @@ myUIComponent.setOption('trigger', '#some-element');
                     <span class="label mandatory"></span><span class="label mixed"></span></p>
                 The value to be checked.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if it's a valid integer.
-        </li>
-    </ul>
-    
 <p class="example-title">Example</p>
   
 {% highlight html %}{% raw %}
@@ -786,7 +699,7 @@ myUIComponent.setOption('trigger', '#some-element');
             <li class="level1">
                 <p>fieldId
                     <span class="label object"></span></p>
-                Name to be used in debugging features.</li>
+                Name to be used in error reports.</li>
             <li class="level1">
                 <p>defaults
                     <span class="label mandatory"></span><span class="label object"></span></p>
@@ -797,7 +710,7 @@ myUIComponent.setOption('trigger', '#some-element');
                 Options to override the defaults. Usually passed when instantiating an UI module.</li>
             <li class="level1">
                 <p>element
-                    <span class="label domelement"></span></p>
+                    <span class="label element"></span></p>
                 Element with data-attributes</li>
         </ul>
 <p class="example-title">Example</p>
@@ -847,20 +760,20 @@ Options which go to default:
 </section>
 
     <section id="Ink_UI_Common_1-Ink_UI_Common_1-registerInstance" class="box box-function">
-    <h1 class="fw-300 function-desc">.registerInstance(inst, el)
+    <h1 class="fw-300 function-desc">.registerInstance(inst, [el])
 
-    <i>method</i></h1><p class="text">Saves a component&#39;s instance reference for later retrieval.</p>
+    <i>method</i></h1><p class="text">Saves an object (which should inherit BaseUIComponent) in the registry, associated with an element. You can retrieve it later by calling getInstance.<br><p>This won&#39;t allow two instances of the same class to be created on a single element. It will fail and print a warning to the console if you try to do it. That is a common error when using Ink.</p></p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
                 <p>inst
                     <span class="label mandatory"></span><span class="label object"></span></p>
-                Object that holds the instance.</li>
+                Object to be registered</li>
             <li class="level1">
                 <p>el
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
-                DOM Element to associate with the object.</li>
+                    <span class="label element"></span></p>
+                inst._elementElement to associate with `inst`. Defaults to `_element` property of `inst`.</li>
         </ul>
 
 </section>
@@ -874,7 +787,7 @@ Options which go to default:
         <ul class="params">
             <li class="level1">
                 <p>toEl
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
                 Valid DOM Element to set the id and classes on.</li>
             <li class="level1">
                 <p>inObj
@@ -912,7 +825,7 @@ Options which go to default:
         <ul class="params">
             <li class="level1">
                 <p>fromEl
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span></p>
                 Valid DOM Element to get the id and classes from.</li>
             <li class="level1">
                 <p>inObj
@@ -940,16 +853,16 @@ Options which go to default:
 </section>
 
     <section id="Ink_UI_Common_1-Ink_UI_Common_1-unregisterInstance" class="box box-function">
-    <h1 class="fw-300 function-desc">.unregisterInstance(id)
+    <h1 class="fw-300 function-desc">.unregisterInstance(inst)
 
-    <i>method</i></h1><p class="text">Deletes an instance with a given id.</p>
+    <i>method</i></h1><p class="text">Unregisters (removes from the registry) a UI component instance from whatever element it&#39;s on.</p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
-                <p>id
+                <p>inst
                     <span class="label mandatory"></span><span class="label string"></span></p>
-                Id of the instance to be destroyed.</li>
+                Instance to be unregistered.</li>
         </ul>
 
 </section>

@@ -48,7 +48,7 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>target
-                    <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label string"></span><span class="label element"></span></p>
                 Target element.</li>
             <li class="level1">
                 <p>options
@@ -60,7 +60,7 @@ site_root:  ../
                 Movement constraint. None by default. Can be `vertical`, `horizontal`, or `both`.</li>
             <li class="level2">
                 <p>options.constraintElm
-                    <span class="label string"></span><span class="label domelement"></span></p>
+                    <span class="label string"></span><span class="label element"></span></p>
                 Constrain dragging to be within this element. None by default.</li>
             <li class="level2">
                 <p>options.top
@@ -80,16 +80,16 @@ site_root:  ../
                 Limits to constrain draggable movement.</li>
             <li class="level2">
                 <p>options.handle
-                    <span class="label string"></span><span class="label domelement"></span></p>
+                    <span class="label string"></span><span class="label element"></span></p>
                 If specified, this element or CSS ID will be used as a handle for dragging.</li>
             <li class="level2">
                 <p>options.revert
                     <span class="label boolean"></span></p>
-                Flag to revert the draggable to the original position when dragging stops.</li>
+                falseFlag to revert the draggable to the original position when dragging stops.</li>
             <li class="level2">
                 <p>options.cursor
                     <span class="label string"></span></p>
-                Cursor type (CSS `cursor` value) used when the mouse is over the draggable object.</li>
+                &#x27;move&#x27;Cursor type (CSS `cursor` value) used when the mouse is over the draggable object.</li>
             <li class="level2">
                 <p>options.zIndex
                     <span class="label number"></span></p>
@@ -100,7 +100,7 @@ site_root:  ../
                 If set, throttles the drag effect to this number of frames per second.</li>
             <li class="level2">
                 <p>options.droppableProxy
-                    <span class="label domelement"></span></p>
+                    <span class="label element"></span></p>
                 If set, a shallow copy of this element will be moved around with transparent background.</li>
             <li class="level2">
                 <p>options.mouseAnchor

@@ -8,8 +8,9 @@ site_root:  ../
 
     <h2 class="fw-300 class-name">
         Ink.UI.Toggle <i>class</i>
-
-    </h2><p>You need two elements to use Toggle: the <code>trigger</code> element, and the <code>target</code> element (or elements). The default behaviour is to toggle the <code>target</code>(s) when you click the <code>trigger</code>.</p>
+        
+    </h2><p><em>Important note: Do NOT use this as a dropdown! Use Ink.UI.Dropdown for that.</em></p>
+<p>You need two elements to use Toggle: the <code>trigger</code> element, and the <code>target</code> element (or elements). The default behaviour is to toggle the <code>target</code>(s) when you click the <code>trigger</code>.</p>
 <p>The toggle has a state. It is either &quot;on&quot; or &quot;off&quot;. It works by switching between the CSS classes in <code>classNameOn</code> and <code>classNameOff</code> according to the current state.</p>
 <p>When you initialize the Toggle, it will check if the targets are visible to figure out what the initial state is. You can force the toggle to consider itself turned &quot;on&quot; or &quot;off&quot; by setting the <code>initialState</code> option to <code>true</code> or <code>false</code>, respectively.</p>
 <p>You can get the current state of the Toggle by calling <code>getState</code>, or by checking if your <code>trigger</code> element has the &quot;active&quot; class.
@@ -23,7 +24,7 @@ to turn the Toggle on (or <code>setState(false)</code> to turn it off).</p>
                 <th>Description</th>
             </tr>
         </thead>
-
+        
         <tbody>
             <tr>
                 <td>
@@ -41,13 +42,13 @@ to turn the Toggle on (or <code>setState(false)</code> to turn it off).</p>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_UI_Toggle_1-Ink_UI_Toggle-setState">.setState(newState)
+                    <a href="#Ink_UI_Toggle_1-Ink_UI_Toggle-setState">.setState(on, callHandler)
 </a>
                 </td>
                 <td> Sets the state of the toggle. (on/off)</td>
             </tr></tbody>
     </table>
-
+    
 </section>
 
 
@@ -57,11 +58,11 @@ to turn the Toggle on (or <code>setState(false)</code> to turn it off).</p>
 
     </h1>
         <h3>Accepts</h3>
-
+        
         <ul class="params">
             <li class="level1">
                 <p>selector
-                    <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label string"></span><span class="label element"></span></p>
                 Trigger element. By clicking this, the target (or targets) are triggered.</li>
             <li class="level1">
                 <p>options
@@ -71,6 +72,10 @@ to turn the Toggle on (or <code>setState(false)</code> to turn it off).</p>
                 <p>options.target
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 CSS Selector that specifies the elements that this component will toggle</li>
+            <li class="level2">
+                <p>options.isAccordion
+                    <span class="label boolean"></span></p>
+                Set this to true to signal that this toggle is part of an accordion with other toggles. The toggles of an accordion must be common descendants of an element with the class "accordion". If they're not, Ink will warn you about this on the console.</li>
             <li class="level2">
                 <p>options.classNameOn
                     <span class="label string"></span></p>
@@ -89,15 +94,8 @@ to turn the Toggle on (or <code>setState(false)</code> to turn it off).</p>
                 Flag to toggle the targe off when clicking outside the toggled content. Defaults to true.</li>
             <li class="level2">
                 <p>options.canToggleAnAncestor
-                    <span class="label boolean"></span>
-                </p>
-                Set to true if you want the toggle to target ancestors of itself. Defaults to false.
-            </li>
-            <li class="level2">
-                <p>options.isAccordion
                     <span class="label boolean"></span></p>
-                Set this to true to signal that this toggle is part of an accordion with other toggles. The toggles of an accordion must be common descendants of an element with the class "accordion". If they're not, Ink will warn you about this on the console.
-            </li>
+                Set to true if you want the toggle to target ancestors of itself. Defaults to false.</li>
             <li class="level2">
                 <p>options.closeOnInsideClick
                     <span class="label string"></span></p>
@@ -120,31 +118,28 @@ to turn the Toggle on (or <code>setState(false)</code> to turn it off).</p>
     <h1 class="fw-300 function-desc">.getState()
 
     <i>method</i></h1><p class="text">Gets the state of the toggle. (on/off)</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>whether the toggle is toggled on.
-        </li>
-    </ul>
-
 
 </section>
 
     <section id="Ink_UI_Toggle_1-Ink_UI_Toggle-setState" class="box box-function">
-    <h1 class="fw-300 function-desc">.setState(newState)
+    <h1 class="fw-300 function-desc">.setState(on, callHandler)
 
     <i>method</i></h1><p class="text">Sets the state of the toggle. (on/off)</p>
         <h3>Accepts</h3>
-
+        
         <ul class="params">
             <li class="level1">
-                <p>newState
-                    <span class="label mandatory"></span></p>
-                {Boolean} New state (on/off)</li>
+                <p>on
+                    <span class="label mandatory"></span><span class="label boolean"></span></p>
+                New state (on/off)</li>
+            <li class="level1">
+                <p>callHandler
+                    <span class="label mandatory"></span><span class="label boolean"></span></p>
+                Whether to call the onChangeState handler.</li>
         </ul>
 
 </section>
 
 
 
-
+    

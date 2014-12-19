@@ -55,7 +55,7 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>trigger
-                    <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
                 Trigger Element</li>
             <li class="level1">
                 <p>options
@@ -63,8 +63,40 @@ site_root:  ../
                 Options Object</li>
             <li class="level2">
                 <p>options.target
-                    <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
+                    <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
                 Target of the dropdown action.</li>
+            <li class="level2">
+                <p>options.hoverOpen
+                    <span class="label number"></span></p>
+                The number of milliseconds you need to hover with the mouse before the dropdown opens.</li>
+            <li class="level2">
+                <p>options.dismissOnInsideClick
+                    <span class="label boolean"></span></p>
+                falseWhether to dismiss the dropdown when there's a click inside.</li>
+            <li class="level2">
+                <p>options.dismissOnOutsideClick
+                    <span class="label boolean"></span></p>
+                trueWhether to dismiss the dropdown when there's a click outside.</li>
+            <li class="level2">
+                <p>options.dismissAfter
+                    <span class="label number"></span></p>
+                When the mouse moves away from the dropdown, wait for `dismissAfter` milliseconds and only then dismiss.</li>
+            <li class="level2">
+                <p>options.onInsideClick
+                    <span class="label function"></span></p>
+                Called when there's a click inside the dropdown.</li>
+            <li class="level2">
+                <p>options.onOutsideClick
+                    <span class="label function"></span></p>
+                Called when there's a click outside the dropdown.</li>
+            <li class="level2">
+                <p>options.onOpen
+                    <span class="label function"></span></p>
+                Called when the dropdown is opened.</li>
+            <li class="level2">
+                <p>options.onDismiss
+                    <span class="label function"></span></p>
+                Called when the dropdown is dismissed.</li>
         </ul>
 
 <!--<h3>Samples</h3>-->
@@ -80,8 +112,8 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>callHandler
-                    </p>
-                falsecall onDismiss handler</li>
+                    <span class="label boolean"></span></p>
+                falseWhether to call the onDismiss handler</li>
         </ul>
 
 </section>
@@ -95,7 +127,7 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>callHandler
-                    </p>
+                    <span class="label boolean"></span></p>
                 falsecall onOpen handler</li>
         </ul>
 

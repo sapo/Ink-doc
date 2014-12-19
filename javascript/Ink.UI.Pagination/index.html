@@ -38,7 +38,7 @@ site_root:  ../
                     <a href="#Ink_UI_Pagination_1-Ink_UI_Pagination-getCurrent">.getCurrent()
 </a>
                 </td>
-                <td> Gets the current page index</td>
+                <td> Gets the current page index. First page is 0.</td>
             </tr>
             <tr>
                 <td>
@@ -91,24 +91,31 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_UI_Pagination_1-Ink_UI_Pagination-setCurrent">.setCurrent(nr, isRelative)
+                    <a href="#Ink_UI_Pagination_1-Ink_UI_Pagination-setCurrent">.setCurrent(nr, [isRelative])
 </a>
                 </td>
-                <td> Sets the current page.</td>
+                <td> Sets the current page. First page is 0.</td>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_UI_Pagination_1-Ink_UI_Pagination-setOnChange">.setOnChange(cb)
+                    <a href="#Ink_UI_Pagination_1-Ink_UI_Pagination-setOnChange">.setOnChange(onChange)
 </a>
                 </td>
                 <td> Allows you to subscribe to the onChange event</td>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_UI_Pagination_1-Ink_UI_Pagination-setSize">.setSize(sz, setSizeInItems, totalItems, itemsPerPage)
+                    <a href="#Ink_UI_Pagination_1-Ink_UI_Pagination-setSize">.setSize(sz)
 </a>
                 </td>
-                <td> Sets the number of pages</td>
+                <td> Sets the number of pages to <code>sz</code></td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#Ink_UI_Pagination_1-Ink_UI_Pagination-setSizeInItems">.setSizeInItems(totalItems, itemsPerPage)
+</a>
+                </td>
+                <td> An alternative to setSize, to define the number of pages in the Paginator.</td>
             </tr></tbody>
     </table>
     
@@ -125,7 +132,7 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>selector
-                    <span class="label mandatory"></span><span class="label string"></span><span class="label domelement"></span></p>
+                    <span class="label mandatory"></span><span class="label string"></span><span class="label element"></span></p>
                 Selector or element</li>
             <li class="level1">
                 <p>options
@@ -234,7 +241,11 @@ site_root:  ../
             <li class="level2">
                 <p>options.numberFormatter
                     <span class="label function"></span></p>
-                Number formatter function. Receives a 0-indexed number and returns the text for the numbered page button.</li>
+                Number formatter function. Receives a 0-indexed page number, and the page count. Returns the text for the numbered page button.</li>
+            <li class="level2">
+                <p>options.autoWrap
+                    <span class="label boolean"></span></p>
+                falseWhether to navigate to first page when clicking next in last page or vice-versa.</li>
         </ul>
 
 <!--<h3>Samples</h3>-->
@@ -251,14 +262,7 @@ site_root:  ../
     <section id="Ink_UI_Pagination_1-Ink_UI_Pagination-getCurrent" class="box box-function">
     <h1 class="fw-300 function-desc">.getCurrent()
 
-    <i>method</i></h1><p class="text">Gets the current page index</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Current page
-        </li>
-    </ul>
-    
+    <i>method</i></h1><p class="text">Gets the current page index. First page is 0.</p>
 
 </section>
 
@@ -266,13 +270,6 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.getSize()
 
     <i>method</i></h1><p class="text">Gets the number of pages</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Number of pages
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -280,13 +277,6 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.hasNext()
 
     <i>method</i></h1><p class="text">Checks if it has next pages</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if has pages ahead
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -294,13 +284,6 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.hasNextPage()
 
     <i>method</i></h1><p class="text">Checks if it has a next set of pages</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>Returns true iif has set of page(s) ahead
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -308,13 +291,6 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.hasPrevious()
 
     <i>method</i></h1><p class="text">Checks if it has previous pages</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if has prior pages
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -322,13 +298,6 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.hasPreviousPage()
 
     <i>method</i></h1><p class="text">Checks if it has a previous set of pages</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>Returns true iif has prior set of page(s)
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -336,13 +305,6 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.isFirst()
 
     <i>method</i></h1><p class="text">Checks if it&#39;s at the first page</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if at first page
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -350,20 +312,13 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.isLast()
 
     <i>method</i></h1><p class="text">Checks if it&#39;s on the last page</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if at last page
-        </li>
-    </ul>
-    
 
 </section>
 
     <section id="Ink_UI_Pagination_1-Ink_UI_Pagination-setCurrent" class="box box-function">
-    <h1 class="fw-300 function-desc">.setCurrent(nr, isRelative)
+    <h1 class="fw-300 function-desc">.setCurrent(nr, [isRelative])
 
-    <i>method</i></h1><p class="text">Sets the current page.</p>
+    <i>method</i></h1><p class="text">Sets the current page. First page is 0.</p>
         <h3>Accepts</h3>
         
         <ul class="params">
@@ -373,31 +328,31 @@ site_root:  ../
                 Sets the current page to given number.</li>
             <li class="level1">
                 <p>isRelative
-                    <span class="label mandatory"></span><span class="label boolean"></span></p>
-                Flag to change the position from absolute to relative.</li>
+                    <span class="label boolean"></span></p>
+                falseIf you set this to `true`, the function will perform a relative change. (example: setCurrent(1) will move to the next page, while setCurrent(-1) will move to the previous page)</li>
         </ul>
 
 </section>
 
     <section id="Ink_UI_Pagination_1-Ink_UI_Pagination-setOnChange" class="box box-function">
-    <h1 class="fw-300 function-desc">.setOnChange(cb)
+    <h1 class="fw-300 function-desc">.setOnChange(onChange)
 
     <i>method</i></h1><p class="text">Allows you to subscribe to the onChange event</p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
-                <p>cb
-                    <span class="label mandatory"></span></p>
-                {Function} Callback called with `(thisPaginator, newPageNumber)`.</li>
+                <p>onChange
+                    <span class="label mandatory"></span><span class="label function"></span></p>
+                Callback called with `(thisPaginator, newPageNumber)`.</li>
         </ul>
 
 </section>
 
     <section id="Ink_UI_Pagination_1-Ink_UI_Pagination-setSize" class="box box-function">
-    <h1 class="fw-300 function-desc">.setSize(sz, setSizeInItems, totalItems, itemsPerPage)
+    <h1 class="fw-300 function-desc">.setSize(sz)
 
-    <i>method</i></h1><p class="text">Sets the number of pages</p>
+    <i>method</i></h1><p class="text">Sets the number of pages to <code>sz</code></p>
         <h3>Accepts</h3>
         
         <ul class="params">
@@ -405,10 +360,17 @@ site_root:  ../
                 <p>sz
                     <span class="label mandatory"></span><span class="label number"></span></p>
                 number of pages</li>
-            <li class="level1">
-                <p>setSizeInItems
-                    <span class="label mandatory"></span></p>
-                </li>
+        </ul>
+
+</section>
+
+    <section id="Ink_UI_Pagination_1-Ink_UI_Pagination-setSizeInItems" class="box box-function">
+    <h1 class="fw-300 function-desc">.setSizeInItems(totalItems, itemsPerPage)
+
+    <i>method</i></h1><p class="text">An alternative to setSize, to define the number of pages in the Paginator.<br><p>If you don&#39;t know how many pages you want, but know the amount of items you have and how many of them you want on each page, use this.</p></p>
+        <h3>Accepts</h3>
+        
+        <ul class="params">
             <li class="level1">
                 <p>totalItems
                     <span class="label mandatory"></span><span class="label number"></span></p>

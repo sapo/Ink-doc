@@ -26,7 +26,7 @@ This was created to load images later, but can be also used for widgets which ar
         <tbody>
             <tr>
                 <td>
-                    <a href="#Ink_UI_LazyLoad_1-Ink_UI_LazyLoad_1-LazyLoad_1">new LazyLoad_1(rootElement, [options])
+                    <a href="#Ink_UI_LazyLoad_1-Ink_UI_LazyLoad_1-LazyLoad_1">new LazyLoad_1(selector, [options])
 </a>
                 </td>
                 <td><span class="ink-label green">Constructor</span></td>
@@ -52,16 +52,16 @@ This was created to load images later, but can be also used for widgets which ar
 
 
     <section id="Ink_UI_LazyLoad_1-Ink_UI_LazyLoad_1-LazyLoad_1" class="box box-function">
-    <h1 class="fw-300 function-desc">new Ink.UI.LazyLoad_1(rootElement, [options])
+    <h1 class="fw-300 function-desc">new Ink.UI.LazyLoad_1(selector, [options])
 
     </h1>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
-                <p>rootElement
-                    <span class="label mandatory"></span></p>
-                {String|DOMElement} The element which contains the lazily-loaded items.</li>
+                <p>selector
+                    <span class="label mandatory"></span><span class="label string"></span><span class="label element"></span></p>
+                The element which contains the lazily-loaded items.</li>
             <li class="level1">
                 <p>options
                     <span class="label object"></span></p>
@@ -96,7 +96,7 @@ This was created to load images later, but can be also used for widgets which ar
                 Set to false to make this component do nothing to any elements and just give you the onInsideViewport callback.</li>
             <li class="level2">
                 <p>options.scrollElement
-                    <span class="label domelement"></span></p>
+                    <span class="label element"></span></p>
                 (advanced) What element is to be listened for the scroll event. Defaults to document.window.</li>
             <li class="level2">
                 <p>options.touchEvents

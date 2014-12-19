@@ -55,7 +55,7 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Dom_Css_1-Ink_Dom_Css-blinkClass">.blinkClass(elm, className, timeout, negate)
+                    <a href="#Ink_Dom_Css_1-Ink_Dom_Css-blinkClass">.blinkClass(element, className, timeout, negate)
 </a>
                 </td>
                 <td> Blinks a class from an element</td>
@@ -180,12 +180,12 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>elm
-                    <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
-                DOM element or element id</li>
+                    <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
+                Element or element id</li>
             <li class="level1">
                 <p>className
                     <span class="label mandatory"></span><span class="label string"></span><span class="label array"></span></p>
-                Classes</li>
+                Class or classes to add. Examples: 'my-class', ['my-class', 'other-class'], 'my-class other-class'</li>
         </ul>
 
 <!--<h3>Samples</h3>-->
@@ -305,15 +305,15 @@ site_root:  ../
 	</section>
 
     <section id="Ink_Dom_Css_1-Ink_Dom_Css-blinkClass" class="box box-function">
-    <h1 class="fw-300 function-desc">.blinkClass(elm, className, timeout, negate)
+    <h1 class="fw-300 function-desc">.blinkClass(element, className, timeout, negate)
 
     <i>method</i></h1><p class="text">Blinks a class from an element<br>Add and removes the class from the element with a timeout, so it blinks</p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
-                <p>elm
-                    <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
+                <p>element
+                    <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
                 DOM element or element id</li>
             <li class="level1">
                 <p>className
@@ -376,13 +376,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 Either a single decimal value, an rgb(r, g, b) string or an Object with r, g and b properties</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>Hexadecimal value
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Css_decToHex.html %}
@@ -404,13 +397,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 a CSS property</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>value of the found property, or null if it wasn't matched
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -430,13 +416,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 Which css attribute to fetch</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p></p>Style value
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Css_getStyle.html %}
@@ -456,19 +435,12 @@ site_root:  ../
             <li class="level1">
                 <p>className
                     <span class="label mandatory"></span><span class="label string"></span><span class="label array"></span></p>
-                Class names to test</li>
+                Class name(s) to test</li>
             <li class="level1">
                 <p>all
                     <span class="label boolean"></span></p>
-                falseIf flagged as true, it will check if the element contains ALL the CSS classes</li>
+                falseIrrelevant if only one `className` is passed. If `true`, check if the element contains ALL the CSS classes. If `false`, check whether the element contains ANY of the given classes.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>true if a given class is applied to a given element
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Css_hasClassName.html %}
@@ -486,13 +458,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 hexadecimal Value with 6, 3, 2 or 1 characters</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label number"></span> </p>Object with properties r, g, b if length of number is >= 3 or decimal value instead.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Dom_Css_hexToDec.html %}

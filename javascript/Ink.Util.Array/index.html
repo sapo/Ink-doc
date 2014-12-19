@@ -27,7 +27,7 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Util_Array_1-Ink_Util_Array_1-each">.each()
+                    <a href="#Ink_Util_Array_1-Ink_Util_Array_1-each">.each([forEachArguments])
 </a>
                 </td>
                 <td> Alias for backwards compatibility. See forEach</td>
@@ -41,10 +41,10 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Util_Array_1-Ink_Util_Array_1-forEach">.forEach(arr, cb)
+                    <a href="#Ink_Util_Array_1-Ink_Util_Array_1-forEach">.forEach(array, callback, context)
 </a>
                 </td>
-                <td> Runs a function through each of the elements of an array</td>
+                <td> Runs a function through each of the elements of an array.</td>
             </tr>
             <tr>
                 <td>
@@ -90,7 +90,7 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Util_Array_1-Ink_Util_Array_1-map">.map(array, map, [context])
+                    <a href="#Ink_Util_Array_1-Ink_Util_Array_1-map">.map(array, mapFn, [context])
 </a>
                 </td>
                 <td> Runs a function for each item in the array.</td>
@@ -162,22 +162,23 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label array"></span></p>
                 Array to be converted</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>Array resulting of the conversion
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Array_convert.html %}
 	</section>
 
     <section id="Ink_Util_Array_1-Ink_Util_Array_1-each" class="box box-function">
-    <h1 class="fw-300 function-desc">.each()
+    <h1 class="fw-300 function-desc">.each([forEachArguments])
 
     <i>method</i></h1><p class="text">Alias for backwards compatibility. See forEach</p>
+        <h3>Accepts</h3>
+        
+        <ul class="params">
+            <li class="level1">
+                <p>forEachArguments
+                    <span class="label mixed"></span></p>
+                (see forEach)</li>
+        </ul>
 
 </section>
 
@@ -201,41 +202,31 @@ site_root:  ../
                     <span class="label object"></span></p>
                 Object to be `this` in the test function.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>Returns the filtered array
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Array_filter.html %}
 	</section>
 
     <section id="Ink_Util_Array_1-Ink_Util_Array_1-forEach" class="box box-function">
-    <h1 class="fw-300 function-desc">.forEach(arr, cb)
+    <h1 class="fw-300 function-desc">.forEach(array, callback, context)
 
-    <i>method</i></h1><p class="text">Runs a function through each of the elements of an array</p>
+    <i>method</i></h1><p class="text">Runs a function through each of the elements of an array.<br><p>Uses Array.prototype.forEach if available.</p></p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
-                <p>arr
+                <p>array
                     <span class="label mandatory"></span><span class="label array"></span></p>
                 The array to be cycled/iterated</li>
             <li class="level1">
-                <p>cb
+                <p>callback
                     <span class="label mandatory"></span><span class="label function"></span></p>
                 The function receives as arguments the value, index and array.</li>
+            <li class="level1">
+                <p>context
+                    <span class="label mandatory"></span><span class="label mixed"></span></p>
+                The value of `this` inside the `callback` you passed.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>Iterated array.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Array_forEach.html %}
@@ -250,32 +241,24 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>arr
-                    <span class="label mandatory"></span></p>
-                {Array} The input array.</li>
+                    <span class="label mandatory"></span><span class="label array"></span></p>
+                The input array.</li>
             <li class="level1">
                 <p>options
-                    </p>
-                {Object} options object, containing:</li>
+                    <span class="label object"></span></p>
+                Options object, containing:</li>
             <li class="level2">
                 <p>options.key
-                    </p>
-                {Function} A function which computes the group key by which the items are grouped.</li>
+                    <span class="label function"></span></p>
+                A function which computes the group key by which the items are grouped.</li>
             <li class="level2">
                 <p>options.pairs
-                    </p>
-                {Boolean} Set to `true` if you want to output an array of `[key, [group...]]` pairs instead of an array of groups.</li>
+                    <span class="label boolean"></span></p>
+                Set to `true` if you want to output an array of `[key, [group...]]` pairs instead of an array of groups.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>An array of arrays of chunks.
-        </li>
-    </ul>
-    
 <p class="example-title">Example</p>
   
 {% highlight html %}{% raw %}
-
        InkArray.groupBy([1, 1, 2, 2, 3, 1])  // -> [ [1, 1], [2, 2], [3], [1] ]
        InkArray.groupBy([1.1, 1.2, 2.1], { key: Math.floor })  // -> [ [1.1, 1.2], [2.1] ]
        InkArray.groupBy([1.1, 1.2, 2.1], { key: Math.floor, pairs: true })  // -> [ [1, [1.1, 1.2]], [2, [2.1]] ]
@@ -302,13 +285,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label array"></span></p>
                 Array to search in</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if value exists in the array
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Array_inArray.html %}
@@ -355,13 +331,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label array"></span></p>
                 Second array</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>Empty array if one of the arrays is false (or do not intersect) | Array with the intersected values
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Array_intersect.html %}
@@ -376,8 +345,8 @@ site_root:  ../
         <ul class="params">
             <li class="level1">
                 <p>testedObject
-                    <span class="label mandatory"></span></p>
-                {Mixed} The object we want to check</li>
+                    <span class="label mandatory"></span><span class="label mixed"></span></p>
+                The object we want to check</li>
         </ul>
 
 </section>
@@ -402,22 +371,15 @@ site_root:  ../
                     <span class="label boolean"></span></p>
                 Flag to stop the search at the first match. It also returns an index number instead of an array of indexes.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> <span class="label number"></span> <span class="label array"></span> </p>False for no matches. Array of matches or first match index.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Array_keyValue.html %}
 	</section>
 
     <section id="Ink_Util_Array_1-Ink_Util_Array_1-map" class="box box-function">
-    <h1 class="fw-300 function-desc">.map(array, map, [context])
+    <h1 class="fw-300 function-desc">.map(array, mapFn, [context])
 
-    <i>method</i></h1><p class="text">Runs a function for each item in the array.<br>That function will receive each item as an argument and its return value will change the corresponding array item.</p>
+    <i>method</i></h1><p class="text">Runs a function for each item in the array.<br>Uses Array.prototype.map if available.<br>That function will receive each item as an argument and its return value will change the corresponding array item.</p>
         <h3>Accepts</h3>
         
         <ul class="params">
@@ -426,9 +388,9 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label array"></span></p>
                 The array to map over</li>
             <li class="level1">
-                <p>map
+                <p>mapFn
                     <span class="label mandatory"></span><span class="label function"></span></p>
-                The map function. Will take `(item, index, array)` as arguments and `this` will be the `context` argument.</li>
+                The map function. Will take `(item, index, array)` as arguments and the `this` value will be the `context` argument you pass to this function.</li>
             <li class="level1">
                 <p>context
                     <span class="label object"></span></p>
@@ -467,22 +429,22 @@ site_root:  ../
     <section id="Ink_Util_Array_1-Ink_Util_Array_1-reduce" class="box box-function">
     <h1 class="fw-300 function-desc">.reduce(array, callback, initial)
 
-    <i>method</i></h1><p class="text">Replacement for Array.prototype.reduce.<br><p>Produces a single result from a list of values by calling an &quot;aggregator&quot; function.</p><br><p>Falls back to Array.prototype.reduce if available.</p></p>
+    <i>method</i></h1><p class="text">Replacement for Array.prototype.reduce.<br><p>Uses Array.prototype.reduce if available.</p><br><p>Produces a single result from a list of values by calling an &quot;aggregator&quot; function.</p><br><p>Falls back to Array.prototype.reduce if available.</p></p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
                 <p>array
-                    <span class="label mandatory"></span></p>
-                {Array} Input array to be reduced.</li>
+                    <span class="label mandatory"></span><span class="label array"></span></p>
+                Input array to be reduced.</li>
             <li class="level1">
                 <p>callback
-                    <span class="label mandatory"></span></p>
-                {Function} `function (previousValue, currentValue, index, all) { return {Mixed} }` to execute for each value.</li>
+                    <span class="label mandatory"></span><span class="label function"></span></p>
+                `function (previousValue, currentValue, index, all) { return {Mixed} }` to execute for each value.</li>
             <li class="level1">
                 <p>initial
-                    <span class="label mandatory"></span></p>
-                {Mixed} Object used as the first argument to the first call of `callback`</li>
+                    <span class="label mandatory"></span><span class="label mixed"></span></p>
+                Object used as the first argument to the first call of `callback`</li>
         </ul>
 <p class="example-title">Example</p>
   
@@ -514,13 +476,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label number"></span></p>
                 Number of items to be removed from the index onwards.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>An array with the remaining values
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Array_remove.html %}
@@ -538,13 +493,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label array"></span></p>
                 Array to shuffle</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> <span class="label boolean"></span> </p>Shuffled Array or false if not an array.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Array_shuffle.html %}
@@ -570,13 +518,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label object"></span></p>
                 Object of the callback function</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if the callback returns true at any point, false otherwise
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Array_some.html %}
@@ -598,13 +539,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 Property to sort by</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> <span class="label boolean"></span> </p>False if it's not an array, returns a sorted array if it's an array.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Array_sortMulti.html %}
@@ -622,13 +556,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label array"></span></p>
                 Array to filter</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>Array with only unique values
-        </li>
-    </ul>
-    
 
 </section>
 

@@ -21,21 +21,21 @@ site_root:  ../
         <tbody>
             <tr>
                 <td>
-                    <a href="#Ink_1-Ink_1-bind">.bind(fn, context, [args*])
+                    <a href="#Ink_1-Ink_1-bind">.bind(fn, context)
 </a>
                 </td>
-                <td> Function.prototype.bind alternative.</td>
+                <td> Function.prototype.bind alternative/fallback.</td>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_1-Ink_1-bindEvent">.bindEvent(fn, context, [args*])
+                    <a href="#Ink_1-Ink_1-bindEvent">.bindEvent(fn, context)
 </a>
                 </td>
                 <td> Function.prototype.bind alternative for event handlers.</td>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_1-Ink_1-bindMethod">.bindMethod(object, methodName, [args*])
+                    <a href="#Ink_1-Ink_1-bindMethod">.bindMethod(object, methodName)
 </a>
                 </td>
                 <td> Function.prototype.bind alternative for class methods</td>
@@ -52,18 +52,18 @@ site_root:  ../
                     <a href="#Ink_1-Ink_1-createModule">.createModule(mod, version, deps, modFn)
 </a>
                 </td>
-                <td> Creates a new module. </td>
+                <td> Creates a new module.</td>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_1-Ink_1-error">.error([args*])
+                    <a href="#Ink_1-Ink_1-error">.error()
 </a>
                 </td>
                 <td> Calls native console.error if available.</td>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_1-Ink_1-extendObj">.extendObj(destination, source, [args*])
+                    <a href="#Ink_1-Ink_1-extendObj">.extendObj(destination, source)
 </a>
                 </td>
                 <td> Extends an object with another</td>
@@ -101,7 +101,7 @@ site_root:  ../
                     <a href="#Ink_1-Ink_1-i">.i(id)
 </a>
                 </td>
-                <td> Alias to document.getElementById</td>
+                <td> Shorter alias to document.getElementById.</td>
             </tr>
             <tr>
                 <td>
@@ -112,7 +112,7 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_1-Ink_1-log">.log([args*])
+                    <a href="#Ink_1-Ink_1-log">.log()
 </a>
                 </td>
                 <td> Calls native console.log if available.</td>
@@ -129,14 +129,14 @@ site_root:  ../
                     <a href="#Ink_1-Ink_1-requireModules">.requireModules(deps, cbFn)
 </a>
                 </td>
-                <td> Requires modules asynchronously </td>
+                <td> Requires modules asynchronously</td>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_1-Ink_1-s">.s(rule, [from])
+                    <a href="#Ink_1-Ink_1-s">.s(selector, [from])
 </a>
                 </td>
-                <td> Alias for Ink.Dom.Selector first result</td>
+                <td> Selects elements like <code>Ink.ss</code>, but only returns the first element found.</td>
             </tr>
             <tr>
                 <td>
@@ -147,18 +147,37 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_1-Ink_1-ss">.ss(rule, [from])
+                    <a href="#Ink_1-Ink_1-ss">.ss(selector, [from])
 </a>
                 </td>
                 <td> Alias for Ink.Dom.Selector</td>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_1-Ink_1-warn">.warn([args*])
+                    <a href="#Ink_1-Ink_1-warn">.warn()
 </a>
                 </td>
                 <td> Calls native console.warn if available.</td>
             </tr></tbody>
+    </table>
+    
+    <table class="props">
+        <caption>Properties</caption>
+        <thead>
+            <tr>
+                <th>Property name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td><a href="#Ink_1-Ink_1-VERSION">.VERSION</a></td>
+                <td><span class="label {string}"></span>
+                </td>
+            </tr>
+            
+        </tbody>
     </table>
     
 </section>
@@ -166,9 +185,9 @@ site_root:  ../
 
 
     <section id="Ink_1-Ink_1-bind" class="box box-function">
-    <h1 class="fw-300 function-desc">.bind(fn, context, [args*])
+    <h1 class="fw-300 function-desc">.bind(fn, context)
 
-    <i>method</i></h1><p class="text">Function.prototype.bind alternative.<br>Creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.</p>
+    <i>method</i></h1><p class="text">Function.prototype.bind alternative/fallback.<br>Creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.</p>
         <h3>Accepts</h3>
         
         <ul class="params">
@@ -180,27 +199,20 @@ site_root:  ../
                 <p>context
                     <span class="label mandatory"></span><span class="label object"></span></p>
                 The value to be passed as the this parameter to the target function when the bound function is called. If used as false, it preserves the original context and just binds the arguments.</li>
-            <li class="level1">
-                <p>args*
-                    <span class="label any"></span></p>
+            <li class="level4">
+                <p>more...
+                    <span class="label mixed"></span></p>
                 Additional arguments will be sent to the original function as prefix arguments.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label function"></span> </p>
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_1_bind.html %}
 	</section>
 
     <section id="Ink_1-Ink_1-bindEvent" class="box box-function">
-    <h1 class="fw-300 function-desc">.bindEvent(fn, context, [args*])
+    <h1 class="fw-300 function-desc">.bindEvent(fn, context)
 
-    <i>method</i></h1><p class="text">Function.prototype.bind alternative for event handlers.<br>Same as bind but keeps first argument of the call the original event.<br>Set &quot;context&quot; to <code>false</code> to preserve the original context of the function and just bind the arguments.</p>
+    <i>method</i></h1><p class="text">Function.prototype.bind alternative for event handlers.<br>Same as bind but keeps first argument of the call the original event.<br>Set <code>context</code> to <code>false</code> to preserve the original context of the function and just bind the arguments.</p>
         <h3>Accepts</h3>
         
         <ul class="params">
@@ -212,27 +224,20 @@ site_root:  ../
                 <p>context
                     <span class="label mandatory"></span><span class="label object"></span></p>
                 The value to be passed as the this parameter to the target</li>
-            <li class="level1">
-                <p>args*
-                    <span class="label any"></span></p>
+            <li class="level4">
+                <p>more...
+                    <span class="label mixed"></span></p>
                 Additional arguments will be sent to the original function as prefix arguments</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label function"></span> </p>
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_1_bindEvent.html %}
 	</section>
 
     <section id="Ink_1-Ink_1-bindMethod" class="box box-function">
-    <h1 class="fw-300 function-desc">.bindMethod(object, methodName, [args*])
+    <h1 class="fw-300 function-desc">.bindMethod(object, methodName)
 
-    <i>method</i></h1><p class="text">Function.prototype.bind alternative for class methods<br>Creates a new function that, when called, has this k</p>
+    <i>method</i></h1><p class="text">Function.prototype.bind alternative for class methods<br>See Ink.bind. The difference between <code>bindMethod</code> and <code>bind</code> is that <code>bindMethod</code> fetches a method from an object. It can be useful, for instance, to bind a function which is a property of an object returned by another function.</p>
         <h3>Accepts</h3>
         
         <ul class="params">
@@ -244,18 +249,11 @@ site_root:  ../
                 <p>methodName
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 The name of the method that will be bound</li>
-            <li class="level1">
-                <p>args*
-                    <span class="label any"></span></p>
+            <li class="level4">
+                <p>more...
+                    <span class="label mixed"></span></p>
                 Additional arguments will be sent to the new method as prefix arguments.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label function"></span> </p>
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_1_bindMethod.html %}
@@ -293,7 +291,7 @@ site_root:  ../
     <section id="Ink_1-Ink_1-createModule" class="box box-function">
     <h1 class="fw-300 function-desc">.createModule(mod, version, deps, modFn)
 
-    <i>method</i></h1><p class="text">Creates a new module. <br>Use this to wrap your code and benefit from the module loading used throughout the Ink library</p>
+    <i>method</i></h1><p class="text">Creates a new module.<br>Use this to wrap your code and benefit from the module loading used throughout the Ink library</p>
         <h3>Accepts</h3>
         
         <ul class="params">
@@ -320,15 +318,15 @@ site_root:  ../
 	</section>
 
     <section id="Ink_1-Ink_1-error" class="box box-function">
-    <h1 class="fw-300 function-desc">.error([args*])
+    <h1 class="fw-300 function-desc">.error()
 
     <i>method</i></h1><p class="text">Calls native console.error if available.</p>
         <h3>Accepts</h3>
         
         <ul class="params">
-            <li class="level1">
-                <p>args*
-                    <span class="label any"></span></p>
+            <li class="level4">
+                <p>more...
+                    <span class="label mixed"></span></p>
                 Arguments to be evaluated</li>
         </ul>
 
@@ -337,7 +335,7 @@ site_root:  ../
 	</section>
 
     <section id="Ink_1-Ink_1-extendObj" class="box box-function">
-    <h1 class="fw-300 function-desc">.extendObj(destination, source, [args*])
+    <h1 class="fw-300 function-desc">.extendObj(destination, source)
 
     <i>method</i></h1><p class="text">Extends an object with another<br>Copy all of the properties in one or more source objects over to the destination object, and return the destination object. It&#39;s in-order, so the last source will override properties of the same name in previous arguments.</p>
         <h3>Accepts</h3>
@@ -351,18 +349,11 @@ site_root:  ../
                 <p>source
                     <span class="label mandatory"></span><span class="label object"></span></p>
                 The object whose properties will be copied over to the destination object</li>
-            <li class="level1">
-                <p>args*
+            <li class="level4">
+                <p>more...
                     <span class="label object"></span></p>
                 Additional source objects. The last source will override properties of the same name in the previous defined sources</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p></p>destination object, enriched with defaults from the sources
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_1_extendObj.html %}
@@ -384,13 +375,6 @@ site_root:  ../
                     <span class="label number"></span></p>
                 Version number of the module</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label object"></span> <span class="label function"></span> </p>Module object or function, depending how the module is defined
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -398,13 +382,6 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.getModuleScripts()
 
     <i>method</i></h1><p class="text">Builds the markup needed to load the modules.<br>This method builds the script tags needed to load the currently used modules</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label string"></span> </p>The script markup
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -412,13 +389,6 @@ site_root:  ../
     <h1 class="fw-300 function-desc">.getModulesLoadOrder()
 
     <i>method</i></h1><p class="text">Lists loaded module names.<br>The list is ordered by loaded time (oldest module comes first)</p>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>returns the order in which modules were resolved and correctly loaded
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -444,7 +414,7 @@ site_root:  ../
     <section id="Ink_1-Ink_1-i" class="box box-function">
     <h1 class="fw-300 function-desc">.i(id)
 
-    <i>method</i></h1><p class="text">Alias to document.getElementById</p>
+    <i>method</i></h1><p class="text">Shorter alias to document.getElementById.<br>Just calls <code>document.getElementById(id)</code>, unless <code>id</code> happens to be an element.<br>If <code>id</code> is an element, <code>Ink.i</code> just returns it.<br><p>You can use this in situations where you want to accept an element id, but a raw element is also okay.</p></p>
         <h3>Accepts</h3>
         
         <ul class="params">
@@ -453,13 +423,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 Element ID</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> </p>
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_1_i.html %}
@@ -485,15 +448,15 @@ site_root:  ../
 </section>
 
     <section id="Ink_1-Ink_1-log" class="box box-function">
-    <h1 class="fw-300 function-desc">.log([args*])
+    <h1 class="fw-300 function-desc">.log()
 
     <i>method</i></h1><p class="text">Calls native console.log if available.</p>
         <h3>Accepts</h3>
         
         <ul class="params">
-            <li class="level1">
-                <p>args*
-                    <span class="label any"></span></p>
+            <li class="level4">
+                <p>more...
+                    <span class="label mixed"></span></p>
                 Arguments to be evaluated</li>
         </ul>
 
@@ -517,20 +480,13 @@ site_root:  ../
                     <span class="label boolean"></span></p>
                 Flag to change the return value to an array containing the namespace parent and the namespace key</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label object"></span> <span class="label array"></span> </p>Returns the created namespace object
-        </li>
-    </ul>
-    
 
 </section>
 
     <section id="Ink_1-Ink_1-requireModules" class="box box-function">
     <h1 class="fw-300 function-desc">.requireModules(deps, cbFn)
 
-    <i>method</i></h1><p class="text">Requires modules asynchronously <br>Use this to get modules, even if they&#39;re not loaded yet</p>
+    <i>method</i></h1><p class="text">Requires modules asynchronously<br>Use this to get modules, even if they&#39;re not loaded yet</p>
         <h3>Accepts</h3>
         
         <ul class="params">
@@ -549,28 +505,21 @@ site_root:  ../
 	</section>
 
     <section id="Ink_1-Ink_1-s" class="box box-function">
-    <h1 class="fw-300 function-desc">.s(rule, [from])
+    <h1 class="fw-300 function-desc">.s(selector, [from])
 
-    <i>method</i></h1><p class="text">Alias for Ink.Dom.Selector first result</p>
+    <i>method</i></h1><p class="text">Selects elements like <code>Ink.ss</code>, but only returns the first element found.<br><p>Using sizzle-specific selectors is NOT encouraged!</p></p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
-                <p>rule
+                <p>selector
                     <span class="label mandatory"></span><span class="label string"></span></p>
-                Selector string</li>
+                CSS3 selector string</li>
             <li class="level1">
                 <p>from
                     <span class="label domelement"></span></p>
-                Context element. If set to a DOM element, the rule will only look for descendants of this DOM Element.</li>
+                documentContext element. If set to a DOM element, the `selector` will only look for descendants of this DOM Element.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label domelement"></span> </p>
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_1_s.html %}
@@ -609,49 +558,60 @@ site_root:  ../
 </section>
 
     <section id="Ink_1-Ink_1-ss" class="box box-function">
-    <h1 class="fw-300 function-desc">.ss(rule, [from])
+    <h1 class="fw-300 function-desc">.ss(selector, [from])
 
-    <i>method</i></h1><p class="text">Alias for Ink.Dom.Selector</p>
+    <i>method</i></h1><p class="text">Alias for Ink.Dom.Selector<br><p>Using sizzle-specific selectors is NOT encouraged!</p></p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
-                <p>rule
+                <p>selector
                     <span class="label mandatory"></span><span class="label string"></span></p>
-                </li>
+                CSS3 selector string</li>
             <li class="level1">
                 <p>from
                     <span class="label domelement"></span></p>
-                </li>
+                documentContext element. If set to a DOM element, the `selector` will only look for descendants of this DOM Element.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label array"></span> </p>array of DOMElements
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_1_ss.html %}
 	</section>
 
     <section id="Ink_1-Ink_1-warn" class="box box-function">
-    <h1 class="fw-300 function-desc">.warn([args*])
+    <h1 class="fw-300 function-desc">.warn()
 
     <i>method</i></h1><p class="text">Calls native console.warn if available.</p>
         <h3>Accepts</h3>
         
         <ul class="params">
-            <li class="level1">
-                <p>args*
-                    <span class="label any"></span></p>
+            <li class="level4">
+                <p>more...
+                    <span class="label mixed"></span></p>
                 Arguments to be evaluated</li>
         </ul>
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_1_warn.html %}
 	</section>
+
+
+    <section id="Ink_1-Ink_1-VERSION" class="box box-attribute">
+    <h1 class="fw-300">
+        
+            .VERSION
+        
+        
+            <i>attribute</i>
+        
+    </h1>
+    
+    
+        <pre>{String}</pre>
+    
+    
+    
+</section>
 
 
 

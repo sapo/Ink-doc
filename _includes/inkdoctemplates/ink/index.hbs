@@ -33,8 +33,8 @@ site_root:  ../
 <p class="example-title">Code</p>
 {% highlight html %}
 <!-- Load the js files -->
-<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/ink-all.js"></script>
-<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/autoload.js"></script><!-- required -->
+<script type="text/javascript" src="http://fastly.ink.sapo.pt/3.1.2/js/ink-all.js"></script>
+<script type="text/javascript" src="http://fastly.ink.sapo.pt/3.1.2/js/autoload.js"></script><!-- required -->
 ...
 <!-- Set the init options on the component markup with data-attributes -->
 <div id="carousel" class="ink-carousel" data-pagination="#carousel-pagination">
@@ -64,21 +64,19 @@ Ink.requireModules(['Ink.UI.Carousel_1'], function(Carousel) {
 
 
 
-<h2 class="fw-300">CDN</h2>
-  <p>If you don't want or need to host Inks code you can use our CDN. All of our releases are available:</p>
+  <h2 class="fw-300">CDN</h2>
+  <p>If you don't want or need to host Inks code you can use our CDN (generously provided by <a href="http://fastly.com" target="_blank">Fastly</a>). All of our releases are available:</p>
 
-{% highlight html %}
-<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/x.x.x/">
-{% endhighlight %}
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;http://fastly.ink.sapo.pt/x.x.x/&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+<p>If you need <b>SSL</b> get the files from:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;https://ink.global.ssl.fastly.net/x.x.x/&quot;</span><span class="nt">&gt;</span></code></pre></div>
 
 <p>x.x.x will be the version number and inside each version the CDN mimicks the distibution bundle:</p>
 
-{% highlight html %}
-<link rel="stylesheet" type="text/css" href="http://cdn.ink.sapo.pt/3.0.0/css/ink.css"> <!-- inks css file -->
-<script type="text/javascript" src="http://cdn.ink.sapo.pt/3.0.0/js/ink-all.js"></script> <!-- inks js bundle -->
-{% endhighlight %}
-
-<p>If you need we also serve all of our files over HTTPS.</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;http://fastly.ink.sapo.pt/3.1.2/css/ink.css&quot;</span><span class="nt">&gt;</span> <span class="c">&lt;!-- inks css file --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span> <span class="na">src=</span><span class="s">&quot;http://fastly.ink.sapo.pt/3.1.2/js/ink-all.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span> <span class="c">&lt;!-- inks js bundle --&gt;</span></code></pre></div>
 
 <ul>
 <li>ink.js - Contains: Ink, Ink.Dom, Ink.Net and Ink.Util modules. Minified version available: ink.min.js</li>
@@ -111,7 +109,7 @@ Ink.requireModules([
     var container = Ink.ss('#container')[0];
 
     function onClickBody() {
-        InkCss.addClassName(body, 'body-class'); 
+        InkCss.addClassName(body, 'body-class');
 
         var newElm = InkElement.create('div', {
                 className:'some-class',
@@ -133,7 +131,7 @@ Ink.requireModules([
         new Carousel('#project-carousel', {pagination: '#carousel-pagination'})
     }
 
-    Loaded.run(function() { // will run on DOMContentLoaded 
+    Loaded.run(function() { // will run on DOMContentLoaded
         initProject();
     });
 
@@ -152,25 +150,25 @@ Ink.createExt('myExtension', 1, ['Ink.Dom.Event_1'], function(InkEvent) {
 
     var myExtension = function() {
         this._init();
-    }; 
+    };
 
     myExtension.prototype = {
         _init: function() {
-            this._doStuff(); 
+            this._doStuff();
         },
 
         _doStuff: function() {
             alert('Doing stuff in myExtension');
             /* ... */
-        } 
+        }
     };
 
-    return myExtension; 
+    return myExtension;
 });
 
 
-Ink.requireModules(['Ink.Ext.myExtension_1'], function(myExtension) {        
-    new myExtension(); 
+Ink.requireModules(['Ink.Ext.myExtension_1'], function(myExtension) {
+    new myExtension();
 });
 {% endhighlight %}
 

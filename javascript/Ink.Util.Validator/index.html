@@ -34,17 +34,24 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Util_Validator_1-Ink_Util_Validator_1-codPostal">.codPostal(cp1, cp2, returnBothResults)
+                    <a href="#Ink_Util_Validator_1-Ink_Util_Validator_1-codPostal">.codPostal(cp1, [cp2], [returnBothResults])
 </a>
                 </td>
                 <td> Validates if a zip code is valid in Portugal</td>
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Util_Validator_1-Ink_Util_Validator_1-createRegExp">.createRegExp(Groups*)
+                    <a href="#Ink_Util_Validator_1-Ink_Util_Validator_1-createRegExp">.createRegExp(groups)
 </a>
                 </td>
                 <td> Creates a regular expression for several character groups.</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#Ink_Util_Validator_1-Ink_Util_Validator_1-email">.email(email)
+</a>
+                </td>
+                <td> Checks if an email address is valid</td>
             </tr>
             <tr>
                 <td>
@@ -132,13 +139,6 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_Util_Validator_1-Ink_Util_Validator_1-mail">.mail(email)
-</a>
-                </td>
-                <td> Checks if an email is valid</td>
-            </tr>
-            <tr>
-                <td>
                     <a href="#Ink_Util_Validator_1-Ink_Util_Validator_1-number">.number(numb, [options])
 </a>
                 </td>
@@ -199,7 +199,7 @@ site_root:  ../
             <li class="level1">
                 <p>groups
                     <span class="label object"></span></p>
-                {}What groups are included. See createRegexp</li>
+                {}What groups are included. See `createRegExp`</li>
         </ul>
 
 <!--<h3>Samples</h3>-->
@@ -207,7 +207,7 @@ site_root:  ../
 	</section>
 
     <section id="Ink_Util_Validator_1-Ink_Util_Validator_1-codPostal" class="box box-function">
-    <h1 class="fw-300 function-desc">.codPostal(cp1, cp2, returnBothResults)
+    <h1 class="fw-300 function-desc">.codPostal(cp1, [cp2], [returnBothResults])
 
     <i>method</i></h1><p class="text">Validates if a zip code is valid in Portugal</p>
         <h3>Accepts</h3>
@@ -216,42 +216,52 @@ site_root:  ../
             <li class="level1">
                 <p>cp1
                     <span class="label mandatory"></span><span class="label number"></span><span class="label string"></span></p>
-                </li>
+                If passed alone, it's the full postal code. If passed with `cp2`, it's the first fragment of the zip code, which should have 4 numeric digits.</li>
             <li class="level1">
                 <p>cp2
-                    <span class="label mandatory"></span><span class="label optional number"></span><span class="label string"></span></p>
-                </li>
+                    <span class="label number"></span><span class="label string"></span></p>
+                Second fragment of the zip code, which should have 3 numeric digits.</li>
             <li class="level1">
                 <p>returnBothResults
-                    <span class="label mandatory"></span><span class="label optional boolean"></span></p>
-                </li>
+                    <span class="label boolean"></span></p>
+                When given both `cp1` and `cp2`, return an array `[Boolean, Boolean]`, indicating which of these were valid. For example `[true, true]` means both were valid, while `[true, false]` means `cp1` was valid, and `cp2` was invalid.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if it's a valid zip code
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Validator_codPostal.html %}
 	</section>
 
     <section id="Ink_Util_Validator_1-Ink_Util_Validator_1-createRegExp" class="box box-function">
-    <h1 class="fw-300 function-desc">.createRegExp(Groups*)
+    <h1 class="fw-300 function-desc">.createRegExp(groups)
 
     <i>method</i></h1><p class="text">Creates a regular expression for several character groups.</p>
         <h3>Accepts</h3>
         
         <ul class="params">
             <li class="level1">
-                <p>Groups*
-                    <span class="label mandatory"></span></p>
-                {Object}</li>
+                <p>groups
+                    <span class="label mandatory"></span><span class="label object"></span></p>
+                Groups to build regular expressions for. Possible keys are:</li>
         </ul>
 
 </section>
+
+    <section id="Ink_Util_Validator_1-Ink_Util_Validator_1-email" class="box box-function">
+    <h1 class="fw-300 function-desc">.email(email)
+
+    <i>method</i></h1><p class="text">Checks if an email address is valid</p>
+        <h3>Accepts</h3>
+        
+        <ul class="params">
+            <li class="level1">
+                <p>email
+                    <span class="label mandatory"></span><span class="label string"></span></p>
+                String containing the e-mail.</li>
+        </ul>
+
+<!--<h3>Samples</h3>-->
+		{% include js_samples/Ink_Util_Validator_mail.html %}
+	</section>
 
     <section id="Ink_Util_Validator_1-Ink_Util_Validator_1-isAOPhone" class="box box-function">
     <h1 class="fw-300 function-desc">.isAOPhone(phone)
@@ -265,13 +275,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label number"></span></p>
                 Phone number to be checked</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if it's a valid Angolan Phone
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Validator_isAOPhone.html %}
@@ -289,13 +292,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label number"></span></p>
                 Phone number to be checked</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if it's a valid Cape Verdean Phone
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Validator_isCVPhone.html %}
@@ -313,13 +309,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 Color string to be checked</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if it's a valid color string
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Validator_isColor.html %}
@@ -339,15 +328,8 @@ site_root:  ../
             <li class="level1">
                 <p>creditCardType
                     <span class="label mandatory"></span><span class="label string"></span><span class="label array"></span></p>
-                Credit card type. See _creditCardSpecs for the list of supported values.</li>
+                Credit card type or list of types. See _creditCardSpecs for the list of supported values.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Validator_isCreditCard.html %}
@@ -369,13 +351,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 Date string</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if it's a valid date and in the specified format
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Validator_isDate.html %}
@@ -397,13 +372,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label string"></span></p>
                 Type of IP to be validated. The values are: ipv4, ipv6. By default is ipv4.</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if the value is a valid IP address. False if not.
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Validator_isIP.html %}
@@ -421,13 +389,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label number"></span></p>
                 Phone number to be checked</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if it's a valid Mozambican Phone
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Validator_isMZPhone.html %}
@@ -445,13 +406,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label number"></span></p>
                 Phone number to be checked</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if it's a valid Portuguese Phone
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Validator_isPTPhone.html %}
@@ -473,13 +427,6 @@ site_root:  ../
                     <span class="label string"></span><span class="label array"></span></p>
                 Country code or  array of countries to validate</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if it's a valid phone in any country available
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Validator_isPhone.html %}
@@ -497,13 +444,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label number"></span></p>
                 Phone number to be checked</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if it's a valid Portuguese Phone
-        </li>
-    </ul>
-    
 
 </section>
 
@@ -519,13 +459,6 @@ site_root:  ../
                     <span class="label mandatory"></span><span class="label number"></span></p>
                 Phone number to be checked</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if it's a valid phone from Timor-Leste
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Validator_isTLPhone.html %}
@@ -552,30 +485,6 @@ site_root:  ../
 		{% include js_samples/Ink_Util_Validator_latin1.html %}
 	</section>
 
-    <section id="Ink_Util_Validator_1-Ink_Util_Validator_1-mail" class="box box-function">
-    <h1 class="fw-300 function-desc">.mail(email)
-
-    <i>method</i></h1><p class="text">Checks if an email is valid</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>email
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                </li>
-        </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if it's valid
-        </li>
-    </ul>
-    
-
-<!--<h3>Samples</h3>-->
-		{% include js_samples/Ink_Util_Validator_mail.html %}
-	</section>
-
     <section id="Ink_Util_Validator_1-Ink_Util_Validator_1-number" class="box box-function">
     <h1 class="fw-300 function-desc">.number(numb, [options])
 
@@ -593,32 +502,32 @@ site_root:  ../
                 Further options</li>
             <li class="level2">
                 <p>options.decimalSep
-                    </p>
+                    <span class="label string"></span></p>
                 &#x27;.&#x27;Allow decimal separator.</li>
             <li class="level2">
                 <p>options.thousandSep
-                    </p>
+                    <span class="label string"></span></p>
                 &quot;,&quot;Strip this character from the number.</li>
             <li class="level2">
                 <p>options.negative
-                    </p>
+                    <span class="label string"></span></p>
                 falseAllow negative numbers.</li>
             <li class="level2">
                 <p>options.decimalPlaces
-                    </p>
+                    <span class="label string"></span></p>
                 nullMaximum number of decimal places. Use `0` for an integer number.</li>
             <li class="level2">
                 <p>options.max
-                    </p>
+                    <span class="label number"></span></p>
                 nullMaximum number</li>
             <li class="level2">
                 <p>options.min
-                    </p>
+                    <span class="label number"></span></p>
                 nullMinimum number</li>
             <li class="level2">
                 <p>options.returnNumber
-                    </p>
-                falseWhen this option is true, return the number itself when the value is valid.</li>
+                    <span class="label boolean"></span></p>
+                falseWhen this option is `true`, return the number itself when the value is valid.</li>
         </ul>
 
 <!--<h3>Samples</h3>-->
@@ -660,13 +569,6 @@ site_root:  ../
                     <span class="label boolean"></span></p>
                 If true, validates a full URL (one that should start with 'http')</li>
         </ul>
-    <h3>Returns</h3>
-    <ul class="params">
-        <li class="return">
-            <p><span class="label boolean"></span> </p>True if valid
-        </li>
-    </ul>
-    
 
 <!--<h3>Samples</h3>-->
 		{% include js_samples/Ink_Util_Validator_url.html %}
