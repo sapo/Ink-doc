@@ -139,6 +139,7 @@ $code-border        : darken($code-background,8%);
 $teal               : #009999;
 $code-font-size     : .85em;
 $indent-amount: 25px !default;
+$dry-green: #5b7560;
 
 a.hover {
     color: $link-hover-color;
@@ -754,6 +755,12 @@ span.label {
         &:after {
             content: "Selector";
             background: tint($green,25%);
+        }
+    }
+    &.boolean {
+        &:after {
+            content: "Boolean";
+            background: tint($dry-green,25%);
         }
     }
     &.number {

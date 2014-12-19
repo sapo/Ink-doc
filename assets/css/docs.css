@@ -870,6 +870,10 @@ span.label.selector:after {
   content: "Selector";
   background: #77b451;
 }
+span.label.boolean:after {
+  content: "Boolean";
+  background: #849787;
+}
 span.label.number:after {
   content: "number";
   background: #ffb43f;
