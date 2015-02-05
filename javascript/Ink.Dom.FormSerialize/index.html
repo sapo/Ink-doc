@@ -4,126 +4,84 @@ title: Ink.Dom.FormSerialize_1
 description: 
 site_root:  ../
 ---
-    <section><p><i class="fa fa-leaf"></i> All samples are using <code>Ink.requireModules</code>, please read how to use it at <a href="/javascript/Ink/#Ink_1-Ink_1-requireModules">Ink.requireModules section</a></p>
-
-    <h2 class="fw-300 class-name">
+<section><p><i class="fa fa-leaf"></i> All samples are using <code>Ink.requireModules</code>, please read how to use it at <a href="/javascript/Ink/#Ink_1-Ink_1-requireModules">Ink.requireModules section</a></p>
+            <h2 class="fw-300 class-name">
         Ink.Dom.FormSerialize <i>namespace</i>
-        
-    </h2><p>Two way serialization of form data and javascript objects.
-Valid applications are ad hoc AJAX/syndicated submission of forms, restoring form values from server side state, etc.</p>
-<table class="props bottom-space"><caption>Functions</caption>
-        <thead>
-            <tr>
-                <th>Function name</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        
-        <tbody>
-            <tr>
-                <td>
-                    <a href="#Ink_Dom_FormSerialize_1-Ink_Dom_FormSerialize-asPairs">.asPairs(form, [options])
-</a>
-                </td>
-                <td> Like <code>serialize</code>, but returns an array of [fieldName, value] pairs.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_Dom_FormSerialize_1-Ink_Dom_FormSerialize-fillIn">.fillIn(form, map2)
-</a>
-                </td>
-                <td> Sets form elements&#39; values with values from an object</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_Dom_FormSerialize_1-Ink_Dom_FormSerialize-serialize">.serialize(form, [options])
-</a>
-                </td>
-                <td> Serializes a form element into a JS object</td>
-            </tr></tbody>
-    </table>
-    
-</section>
-
-
-
-    <section id="Ink_Dom_FormSerialize_1-Ink_Dom_FormSerialize-asPairs" class="box box-function">
-    <h1 class="fw-300 function-desc">.asPairs(form, [options])
-
-    <i>method</i></h1><p class="text">Like <code>serialize</code>, but returns an array of [fieldName, value] pairs.</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>form
-                    <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
-                Form element</li>
-            <li class="level1">
-                <p>options
-                    <span class="label object"></span></p>
-                Options object, containing:</li>
-            <li class="level2">
-                <p>options.elements
-                    <span class="label boolean"></span></p>
-                Instead of returning an array of [fieldName, value] pairs, return an array of [fieldName, value, fieldElement] triples.</li>
-            <li class="level2">
-                <p>options.emptyArray
-                    <span class="label boolean"></span></p>
-                What to emit as the value of an empty select[multiple]. If you don't pass this option, nothing comes out.</li>
-            <li class="level2">
-                <p>options.outputUnchecked
-                    <span class="label boolean"></span></p>
-                falseWhether to emit unchecked checkboxes and unselected radio buttons.</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_Dom_FormSerialize_1-Ink_Dom_FormSerialize-fillIn" class="box box-function">
-    <h1 class="fw-300 function-desc">.fillIn(form, map2)
-
-    <i>method</i></h1><p class="text">Sets form elements&#39; values with values from an object<br><p>Note: You can&#39;t set the values of an input with <code>type=&quot;file&quot;</code> (browser prohibits it)</p></p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>form
-                    <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
-                Form element to be populated</li>
-            <li class="level1">
-                <p>map2
-                    <span class="label mandatory"></span><span class="label object"></span><span class="label array"></span></p>
-                Mapping of fields to values contained in fields. Can be a hash (keys as names, strings or arrays for values), or an array of [name, value] pairs.</li>
-        </ul>
-
-<!--<h3>Samples</h3>-->
-		{% include js_samples/Ink_Dom_FormSerialize_fillIn.html %}
-	</section>
-
-    <section id="Ink_Dom_FormSerialize_1-Ink_Dom_FormSerialize-serialize" class="box box-function">
-    <h1 class="fw-300 function-desc">.serialize(form, [options])
-
-    <i>method</i></h1><p class="text">Serializes a form element into a JS object<br>It turns field <em>names</em> (not IDs!) into keys and field values into values.<br><p>note: Multi-select and checkboxes with multiple values will result in arrays</p></p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>form
-                    <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
-                Form element to extract data</li>
-            <li class="level1">
-                <p>options
-                    <span class="label object"></span></p>
-                Options object, containing:</li>
-            <li class="level2">
-                <p>options.outputUnchecked
-                    <span class="label boolean"></span></p>
-                falseWhether to emit unchecked checkboxes and unselected radio buttons.</li>
-        </ul>
-
-<!--<h3>Samples</h3>-->
-		{% include js_samples/Ink_Dom_FormSerialize_serialize.html %}
-	</section>
-
-
-
-    
+            </h2><p>Two way serialization of form data and javascript objects.
+        Valid applications are ad hoc AJAX/syndicated submission of forms, restoring form values from server side state, etc.</p>
+        <table class="props bottom-space"><caption>Functions</caption>
+                <thead>
+                    <tr>
+                        <th>Function name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>            <tr>
+                        <td>
+                            <a href="#Ink_Dom_FormSerialize_1-Ink_Dom_FormSerialize-asPairs">.asPairs(form, [options])
+        </a>
+                        </td>
+                        <td> Like <code>serialize</code>, but returns an array of [fieldName, value] pairs.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Dom_FormSerialize_1-Ink_Dom_FormSerialize-fillIn">.fillIn(form, map2)
+        </a>
+                        </td>
+                        <td> Sets form elements&#39; values with values from an object</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Dom_FormSerialize_1-Ink_Dom_FormSerialize-serialize">.serialize(form, [options])
+        </a>
+                        </td>
+                        <td> Serializes a form element into a JS object</td>
+                    </tr></tbody>
+            </table>
+        </section>
+            <section id="Ink_Dom_FormSerialize_1-Ink_Dom_FormSerialize-asPairs" class="box box-function">
+                <h1 class="fw-300 function-desc">.asPairs(form, [options])
+            <i>method</i></h1><p class="text">Like <code>serialize</code>, but returns an array of [fieldName, value] pairs.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>form
+                                <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
+            Form element</li>            <li class="level1">
+                            <p>options
+                                <span class="label object"></span></p>
+            Options object, containing:</li>            <li class="level2">
+                            <p>options.elements
+                                <span class="label boolean"></span></p>
+            Instead of returning an array of [fieldName, value] pairs, return an array of [fieldName, value, fieldElement] triples.</li>            <li class="level2">
+                            <p>options.emptyArray
+                                <span class="label boolean"></span></p>
+            What to emit as the value of an empty select[multiple]. If you don't pass this option, nothing comes out.</li>            <li class="level2">
+                            <p>options.outputUnchecked
+                                <span class="label boolean"></span></p>
+            falseWhether to emit unchecked checkboxes and unselected radio buttons.</li>        </ul>
+            </section>    <section id="Ink_Dom_FormSerialize_1-Ink_Dom_FormSerialize-fillIn" class="box box-function">
+                <h1 class="fw-300 function-desc">.fillIn(form, map2)
+            <i>method</i></h1><p class="text">Sets form elements&#39; values with values from an object<br><p>Note: You can&#39;t set the values of an input with <code>type=&quot;file&quot;</code> (browser prohibits it)</p></p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>form
+                                <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
+            Form element to be populated</li>            <li class="level1">
+                            <p>map2
+                                <span class="label mandatory"></span><span class="label object"></span><span class="label array"></span></p>
+            Mapping of fields to values contained in fields. Can be a hash (keys as names, strings or arrays for values), or an array of [name, value] pairs.</li>        </ul>
+            <!--<h3>Samples</h3>-->		{% include js_samples/Ink_Dom_FormSerialize_fillIn.html %}
+            </section>    <section id="Ink_Dom_FormSerialize_1-Ink_Dom_FormSerialize-serialize" class="box box-function">
+                <h1 class="fw-300 function-desc">.serialize(form, [options])
+            <i>method</i></h1><p class="text">Serializes a form element into a JS object<br>It turns field <em>names</em> (not IDs!) into keys and field values into values.<br><p>note: Multi-select and checkboxes with multiple values will result in arrays</p></p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>form
+                                <span class="label mandatory"></span><span class="label domelement"></span><span class="label string"></span></p>
+            Form element to extract data</li>            <li class="level1">
+                            <p>options
+                                <span class="label object"></span></p>
+            Options object, containing:</li>            <li class="level2">
+                            <p>options.outputUnchecked
+                                <span class="label boolean"></span></p>
+            falseWhether to emit unchecked checkboxes and unselected radio buttons.</li>        </ul>
+            <!--<h3>Samples</h3>-->		{% include js_samples/Ink_Dom_FormSerialize_serialize.html %}
+            </section>

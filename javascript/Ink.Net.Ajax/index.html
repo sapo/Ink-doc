@@ -4,356 +4,241 @@ title: Ink.Net.Ajax_1
 description: Cross Browser Ajax requests
 site_root:  ../
 ---
-    <section><p><i class="fa fa-leaf"></i> All samples are using <code>Ink.requireModules</code>, please read how to use it at <a href="/javascript/Ink/#Ink_1-Ink_1-requireModules">Ink.requireModules section</a></p>
-
-    <h2 class="fw-300 class-name">
+<section><p><i class="fa fa-leaf"></i> All samples are using <code>Ink.requireModules</code>, please read how to use it at <a href="/javascript/Ink/#Ink_1-Ink_1-requireModules">Ink.requireModules section</a></p>
+            <h2 class="fw-300 class-name">
         Ink.Net.Ajax <i>class</i>
-        
-    </h2><p>Creates a new XMLHttpRequest object</p>
-<table class="props bottom-space">
-        <caption>Methods</caption>
-        <thead>
-            <tr>
-                <th>Method name</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        
-        <tbody>
-            <tr>
-                <td>
-                    <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-Ajax">new Ajax(url, [options])
-</a>
-                </td>
-                <td><span class="ink-label green">Constructor</span></td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-abort">.abort()
-</a>
-                </td>
-                <td> Aborts the request if still running. No callbacks are called</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-evalJSON">.evalJSON(strJSON, sanitize)
-</a>
-                </td>
-                <td> Evaluates a given string as JSON</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-getAllHeaders">.getAllHeaders()
-</a>
-                </td>
-                <td> Gets all the HTTP headers from the response</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-getHeader">.getHeader(name)
-</a>
-                </td>
-                <td> Gets an HTTP header from the response</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-getResponse">.getResponse()
-</a>
-                </td>
-                <td> Gets the ajax response object</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-isJSON">.isJSON(str)
-</a>
-                </td>
-                <td> Checks if a given string is valid JSON</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-load">.load(url, callback)
-</a>
-                </td>
-                <td> Loads content from a given url through an XMLHttpRequest.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-ping">.ping(url, callback)
-</a>
-                </td>
-                <td> Loads content from a given url through an XMLHttpRequest.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-runStateChange">.runStateChange()
-</a>
-                </td>
-                <td> Executes the state changing phase of an ajax request</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-setHeaders">.setHeaders()
-</a>
-                </td>
-                <td> Set the necessary headers for an ajax request.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-setRequestHeader">.setRequestHeader(name, value)
-</a>
-                </td>
-                <td> Sets a new request header for the next http request</td>
-            </tr></tbody>
-    </table>
-    
-</section>
-
-
-
-    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-Ajax" class="box box-function">
-    <h1 class="fw-300 function-desc">new Ink.Net.Ajax(url, [options])
-
-    </h1>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>url
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                Request URL</li>
-            <li class="level1">
-                <p>options
-                    <span class="label object"></span></p>
-                Request options, containing:</li>
-            <li class="level2">
-                <p>options.asynchronous
-                    <span class="label boolean"></span></p>
-                trueIf false, the request synchronous.</li>
-            <li class="level2">
-                <p>options.contentType
-                    <span class="label string"></span></p>
-                Content-type header to be sent. Defaults to 'application/x-www-form-urlencoded'</li>
-            <li class="level2">
-                <p>options.cors
-                    <span class="label boolean"></span></p>
-                Flag to activate CORS. Set this to true if you're doing a cross-origin request</li>
-            <li class="level2">
-                <p>options.delay
-                    <span class="label number"></span></p>
-                Artificial delay. If the request is completed faster than this delay, wait the remaining time before executing the callbacks</li>
-            <li class="level2">
-                <p>options.evalJS
-                    <span class="label boolean"></span><span class="label string"></span></p>
-                trueIf the request Content-type header is application/json, evaluates the response and populates responseJSON. Use 'force' if you want to force the response evaluation, no matter what Content-type it's using.</li>
-            <li class="level2">
-                <p>options.method
-                    <span class="label string"></span></p>
-                &#x27;POST&#x27;HTTP request method. POST by default.</li>
-            <li class="level2">
-                <p>options.parameters
-                    <span class="label object"></span><span class="label string"></span></p>
-                Request parameters to be sent with the request</li>
-            <li class="level2">
-                <p>options.postBody
-                    <span class="label string"></span></p>
-                POST request body. If not specified, it's filled with the contents from parameters</li>
-            <li class="level2">
-                <p>options.requestHeaders
-                    <span class="label object"></span></p>
-                Key-value pairs for additional request headers</li>
-            <li class="level2">
-                <p>options.sanitizeJSON
-                    <span class="label boolean"></span></p>
-                Flag to sanitize the content of responseText before evaluation</li>
-            <li class="level2">
-                <p>options.timeout
-                    <span class="label number"></span></p>
-                Request timeout in seconds</li>
-            <li class="level2">
-                <p>options.xhrProxy
-                    <span class="label string"></span></p>
-                URI for proxy service hosted on the same server as the web app, that can fetch documents from other domains. The service must pipe all input and output untouched (some input sanitization is allowed, like clearing cookies). e.g., requesting http://example.org/doc can become /proxy/http%3A%2F%2Fexample.org%2Fdoc The proxy service will be used for cross-domain requests, if set, else a network error is returned as exception.</li>
-            <li class="level2">
-                <p>options.onComplete
-                    <span class="label function"></span></p>
-                Callback executed after the request is completed, regardless of what happened during the request.</li>
-            <li class="level2">
-                <p>options.onCreate
-                    <span class="label function"></span></p>
-                Callback executed after object initialization but before the request is made</li>
-            <li class="level2">
-                <p>options.onException
-                    <span class="label function"></span></p>
-                Callback executed if an exception occurs. Receives the exception as a parameter.</li>
-            <li class="level2">
-                <p>options.onFailure
-                    <span class="label function"></span></p>
-                Callback executed if the request fails (requests with status codes different from 2xx)</li>
-            <li class="level2">
-                <p>options.onHeaders
-                    <span class="label function"></span></p>
-                Callback executed when headers of the response arrive.</li>
-            <li class="level2">
-                <p>options.onInit
-                    <span class="label function"></span></p>
-                Callback executed before any initialization</li>
-            <li class="level2">
-                <p>options.onSuccess
-                    <span class="label function"></span></p>
-                Callback executed if the request is successful (requests with 2xx status codes)</li>
-            <li class="level2">
-                <p>options.onTimeout
-                    <span class="label function"></span></p>
-                Callback executed if the request times out</li>
-        </ul>
-
-<!--<h3>Samples</h3>-->
-		{% include js_samples/Ink_Net_Ajax_1.html %}
-	</section>
-
-    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-abort" class="box box-function">
-    <h1 class="fw-300 function-desc">.abort()
-
-    <i>method</i></h1><p class="text">Aborts the request if still running. No callbacks are called</p>
-
-</section>
-
-    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-evalJSON" class="box box-function">
-    <h1 class="fw-300 function-desc">.evalJSON(strJSON, sanitize)
-
-    <i>method</i></h1><p class="text">Evaluates a given string as JSON</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>strJSON
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                String to be evaluated</li>
-            <li class="level1">
-                <p>sanitize
-                    <span class="label mandatory"></span><span class="label boolean"></span></p>
-                Flag to sanitize the content</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-getAllHeaders" class="box box-function">
-    <h1 class="fw-300 function-desc">.getAllHeaders()
-
-    <i>method</i></h1><p class="text">Gets all the HTTP headers from the response</p>
-
-</section>
-
-    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-getHeader" class="box box-function">
-    <h1 class="fw-300 function-desc">.getHeader(name)
-
-    <i>method</i></h1><p class="text">Gets an HTTP header from the response</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>name
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                Header name</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-getResponse" class="box box-function">
-    <h1 class="fw-300 function-desc">.getResponse()
-
-    <i>method</i></h1><p class="text">Gets the ajax response object</p>
-
-</section>
-
-    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-isJSON" class="box box-function">
-    <h1 class="fw-300 function-desc">.isJSON(str)
-
-    <i>method</i></h1><p class="text">Checks if a given string is valid JSON</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>str
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                String to be evaluated</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-load" class="box box-function">
-    <h1 class="fw-300 function-desc">.load(url, callback)
-
-    <i>method</i></h1><p class="text">Loads content from a given url through an XMLHttpRequest.<br><p>Shortcut function for simple AJAX use cases. Works with JSON, XML and plain text.</p></p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>url
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                Request URL</li>
-            <li class="level1">
-                <p>callback
-                    <span class="label mandatory"></span><span class="label function"></span></p>
-                Callback to be executed if the request is successful</li>
-        </ul>
-
-<!--<h3>Samples</h3>-->
-		{% include js_samples/Ink_Net_Ajax_load.html %}
-	</section>
-
-    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-ping" class="box box-function">
-    <h1 class="fw-300 function-desc">.ping(url, callback)
-
-    <i>method</i></h1><p class="text">Loads content from a given url through an XMLHttpRequest.<br>Shortcut function for simple AJAX use cases.</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>url
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                Request url</li>
-            <li class="level1">
-                <p>callback
-                    <span class="label mandatory"></span><span class="label function"></span></p>
-                Callback to be executed if the request is successful</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-runStateChange" class="box box-function">
-    <h1 class="fw-300 function-desc">.runStateChange()
-
-    <i>method</i></h1><p class="text">Executes the state changing phase of an ajax request</p>
-
-</section>
-
-    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-setHeaders" class="box box-function">
-    <h1 class="fw-300 function-desc">.setHeaders()
-
-    <i>method</i></h1><p class="text">Set the necessary headers for an ajax request.</p>
-
-</section>
-
-    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-setRequestHeader" class="box box-function">
-    <h1 class="fw-300 function-desc">.setRequestHeader(name, value)
-
-    <i>method</i></h1><p class="text">Sets a new request header for the next http request</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>name
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                Header name.</li>
-            <li class="level1">
-                <p>value
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                New header value.</li>
-        </ul>
-
-</section>
-
-
-
-    
+            </h2><p>Creates a new XMLHttpRequest object</p>
+        <table class="props bottom-space">        <caption>Methods</caption>
+                <thead>
+                    <tr>
+                        <th>Method name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>            <tr>
+                        <td>
+                            <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-Ajax">new Ajax(url, [options])
+        </a>
+                        </td>
+                        <td><span class="ink-label green">Constructor</span></td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-abort">.abort()
+        </a>
+                        </td>
+                        <td> Aborts the request if still running. No callbacks are called</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-evalJSON">.evalJSON(strJSON, sanitize)
+        </a>
+                        </td>
+                        <td> Evaluates a given string as JSON</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-getAllHeaders">.getAllHeaders()
+        </a>
+                        </td>
+                        <td> Gets all the HTTP headers from the response</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-getHeader">.getHeader(name)
+        </a>
+                        </td>
+                        <td> Gets an HTTP header from the response</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-getResponse">.getResponse()
+        </a>
+                        </td>
+                        <td> Gets the ajax response object</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-isJSON">.isJSON(str)
+        </a>
+                        </td>
+                        <td> Checks if a given string is valid JSON</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-load">.load(url, callback)
+        </a>
+                        </td>
+                        <td> Loads content from a given url through an XMLHttpRequest.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-ping">.ping(url, callback)
+        </a>
+                        </td>
+                        <td> Loads content from a given url through an XMLHttpRequest.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-runStateChange">.runStateChange()
+        </a>
+                        </td>
+                        <td> Executes the state changing phase of an ajax request</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-setHeaders">.setHeaders()
+        </a>
+                        </td>
+                        <td> Set the necessary headers for an ajax request.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Net_Ajax_1-Ink_Net_Ajax-setRequestHeader">.setRequestHeader(name, value)
+        </a>
+                        </td>
+                        <td> Sets a new request header for the next http request</td>
+                    </tr></tbody>
+            </table>
+        </section>
+            <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-Ajax" class="box box-function">
+                <h1 class="fw-300 function-desc">new Ink.Net.Ajax(url, [options])
+            </h1>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>url
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Request URL</li>            <li class="level1">
+                            <p>options
+                                <span class="label object"></span></p>
+            Request options, containing:</li>            <li class="level2">
+                            <p>options.asynchronous
+                                <span class="label boolean"></span></p>
+            trueIf false, the request synchronous.</li>            <li class="level2">
+                            <p>options.contentType
+                                <span class="label string"></span></p>
+            Content-type header to be sent. Defaults to 'application/x-www-form-urlencoded'</li>            <li class="level2">
+                            <p>options.cors
+                                <span class="label boolean"></span></p>
+            Flag to activate CORS. Set this to true if you're doing a cross-origin request</li>            <li class="level2">
+                            <p>options.validateCors
+                                <span class="label boolean"></span></p>
+            If this is set to `true`, perform a CORS request automatically based on the URL being cross-domain or not.</li>            <li class="level2">
+                            <p>options.delay
+                                <span class="label number"></span></p>
+            Artificial delay. If the request is completed faster than this delay, wait the remaining time before executing the callbacks</li>            <li class="level2">
+                            <p>options.evalJS
+                                <span class="label boolean"></span><span class="label string"></span></p>
+            trueIf the request Content-type header is application/json, evaluates the response and populates responseJSON. Use 'force' if you want to force the response evaluation, no matter what Content-type it's using.</li>            <li class="level2">
+                            <p>options.method
+                                <span class="label string"></span></p>
+            &#x27;POST&#x27;HTTP request method. POST by default.</li>            <li class="level2">
+                            <p>options.parameters
+                                <span class="label object"></span><span class="label string"></span></p>
+            Request parameters to be sent with the request</li>            <li class="level2">
+                            <p>options.postBody
+                                <span class="label string"></span></p>
+            POST request body. If not specified, it's filled with the contents from parameters</li>            <li class="level2">
+                            <p>options.requestHeaders
+                                <span class="label object"></span></p>
+            Key-value pairs for additional request headers</li>            <li class="level2">
+                            <p>options.sanitizeJSON
+                                <span class="label boolean"></span></p>
+            Flag to sanitize the content of responseText before evaluation</li>            <li class="level2">
+                            <p>options.timeout
+                                <span class="label number"></span></p>
+            Request timeout in seconds</li>            <li class="level2">
+                            <p>options.xhrProxy
+                                <span class="label string"></span></p>
+            URI for proxy service hosted on the same server as the web app, that can fetch documents from other domains. The service must pipe all input and output untouched (some input sanitization is allowed, like clearing cookies). e.g., requesting http://example.org/doc can become /proxy/http%3A%2F%2Fexample.org%2Fdoc The proxy service will be used for cross-domain requests, if set, else a network error is returned as exception.</li>            <li class="level2">
+                            <p>options.onComplete
+                                <span class="label function"></span></p>
+            Callback executed after the request is completed, regardless of what happened during the request.</li>            <li class="level2">
+                            <p>options.onCreate
+                                <span class="label function"></span></p>
+            Callback executed after object initialization but before the request is made</li>            <li class="level2">
+                            <p>options.onException
+                                <span class="label function"></span></p>
+            Callback executed if an exception occurs. Receives the exception as a parameter.</li>            <li class="level2">
+                            <p>options.onFailure
+                                <span class="label function"></span></p>
+            Callback executed if the request fails (requests with status codes different from 2xx)</li>            <li class="level2">
+                            <p>options.onHeaders
+                                <span class="label function"></span></p>
+            Callback executed when headers of the response arrive.</li>            <li class="level2">
+                            <p>options.onInit
+                                <span class="label function"></span></p>
+            Callback executed before any initialization</li>            <li class="level2">
+                            <p>options.onSuccess
+                                <span class="label function"></span></p>
+            Callback executed if the request is successful (requests with 2xx status codes)</li>            <li class="level2">
+                            <p>options.onTimeout
+                                <span class="label function"></span></p>
+            Callback executed if the request times out</li>        </ul>
+            <!--<h3>Samples</h3>-->		{% include js_samples/Ink_Net_Ajax_1.html %}
+            </section>    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-abort" class="box box-function">
+                <h1 class="fw-300 function-desc">.abort()
+            <i>method</i></h1><p class="text">Aborts the request if still running. No callbacks are called</p>
+            </section>    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-evalJSON" class="box box-function">
+                <h1 class="fw-300 function-desc">.evalJSON(strJSON, sanitize)
+            <i>method</i></h1><p class="text">Evaluates a given string as JSON</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>strJSON
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            String to be evaluated</li>            <li class="level1">
+                            <p>sanitize
+                                <span class="label mandatory"></span><span class="label boolean"></span></p>
+            Flag to sanitize the content</li>        </ul>
+            </section>    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-getAllHeaders" class="box box-function">
+                <h1 class="fw-300 function-desc">.getAllHeaders()
+            <i>method</i></h1><p class="text">Gets all the HTTP headers from the response</p>
+            </section>    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-getHeader" class="box box-function">
+                <h1 class="fw-300 function-desc">.getHeader(name)
+            <i>method</i></h1><p class="text">Gets an HTTP header from the response</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>name
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Header name</li>        </ul>
+            </section>    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-getResponse" class="box box-function">
+                <h1 class="fw-300 function-desc">.getResponse()
+            <i>method</i></h1><p class="text">Gets the ajax response object</p>
+            </section>    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-isJSON" class="box box-function">
+                <h1 class="fw-300 function-desc">.isJSON(str)
+            <i>method</i></h1><p class="text">Checks if a given string is valid JSON</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>str
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            String to be evaluated</li>        </ul>
+            </section>    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-load" class="box box-function">
+                <h1 class="fw-300 function-desc">.load(url, callback)
+            <i>method</i></h1><p class="text">Loads content from a given url through an XMLHttpRequest.<br><p>Shortcut function for simple AJAX use cases. Works with JSON, XML and plain text.</p></p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>url
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Request URL</li>            <li class="level1">
+                            <p>callback
+                                <span class="label mandatory"></span><span class="label function"></span></p>
+            Callback to be executed if the request is successful</li>        </ul>
+            <!--<h3>Samples</h3>-->		{% include js_samples/Ink_Net_Ajax_load.html %}
+            </section>    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-ping" class="box box-function">
+                <h1 class="fw-300 function-desc">.ping(url, callback)
+            <i>method</i></h1><p class="text">Loads content from a given url through an XMLHttpRequest.<br>Shortcut function for simple AJAX use cases.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>url
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Request url</li>            <li class="level1">
+                            <p>callback
+                                <span class="label mandatory"></span><span class="label function"></span></p>
+            Callback to be executed if the request is successful</li>        </ul>
+            </section>    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-runStateChange" class="box box-function">
+                <h1 class="fw-300 function-desc">.runStateChange()
+            <i>method</i></h1><p class="text">Executes the state changing phase of an ajax request</p>
+            </section>    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-setHeaders" class="box box-function">
+                <h1 class="fw-300 function-desc">.setHeaders()
+            <i>method</i></h1><p class="text">Set the necessary headers for an ajax request.</p>
+            </section>    <section id="Ink_Net_Ajax_1-Ink_Net_Ajax-setRequestHeader" class="box box-function">
+                <h1 class="fw-300 function-desc">.setRequestHeader(name, value)
+            <i>method</i></h1><p class="text">Sets a new request header for the next http request</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>name
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Header name.</li>            <li class="level1">
+                            <p>value
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            New header value.</li>        </ul>
+            </section>

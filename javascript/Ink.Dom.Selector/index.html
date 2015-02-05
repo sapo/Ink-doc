@@ -4,114 +4,74 @@ title: Ink.Dom.Selector_1
 description: CSS selector engine
 site_root:  ../
 ---
-    <section><p><i class="fa fa-leaf"></i> All samples are using <code>Ink.requireModules</code>, please read how to use it at <a href="/javascript/Ink/#Ink_1-Ink_1-requireModules">Ink.requireModules section</a></p>
-
-    <h2 class="fw-300 class-name">
+<section><p><i class="fa fa-leaf"></i> All samples are using <code>Ink.requireModules</code>, please read how to use it at <a href="/javascript/Ink/#Ink_1-Ink_1-requireModules">Ink.requireModules section</a></p>
+            <h2 class="fw-300 class-name">
         Ink.Dom.Selector <i>namespace</i>
-        
-    </h2><table class="props bottom-space"><caption>Functions</caption>
-        <thead>
-            <tr>
-                <th>Function name</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        
-        <tbody>
-            <tr>
-                <td>
-                    <a href="#Ink_Dom_Selector_1-Ink_Dom_Selector-matches">.matches(selector, matches)
-</a>
-                </td>
-                <td> Filters elements that match a CSS selector.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_Dom_Selector_1-Ink_Dom_Selector-matchesSelector">.matchesSelector(element, selector)
-</a>
-                </td>
-                <td> Checks if an element matches a given selector</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_Dom_Selector_1-Ink_Dom_Selector-select">.select(selector, [context], [results])
-</a>
-                </td>
-                <td> Alias for the Sizzle selector engine</td>
-            </tr></tbody>
-    </table>
-    
-</section>
-
-
-
-    <section id="Ink_Dom_Selector_1-Ink_Dom_Selector-matches" class="box box-function">
-    <h1 class="fw-300 function-desc">.matches(selector, matches)
-
-    <i>method</i></h1><p class="text">Filters elements that match a CSS selector.</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>selector
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                CSS selector to search for elements</li>
-            <li class="level1">
-                <p>matches
-                    <span class="label mandatory"></span><span class="label array"></span></p>
-                Elements to be 'matched' with</li>
-        </ul>
-
-<!--<h3>Samples</h3>-->
-		{% include js_samples/Ink_Dom_Selector_matches.html %}
-	</section>
-
-    <section id="Ink_Dom_Selector_1-Ink_Dom_Selector-matchesSelector" class="box box-function">
-    <h1 class="fw-300 function-desc">.matchesSelector(element, selector)
-
-    <i>method</i></h1><p class="text">Checks if an element matches a given selector</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>element
-                    <span class="label mandatory"></span><span class="label domelement"></span></p>
-                Element to test</li>
-            <li class="level1">
-                <p>selector
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                CSS selector to test the element with</li>
-        </ul>
-
-<!--<h3>Samples</h3>-->
-		{% include js_samples/Ink_Dom_Selector_matchesSelector.html %}
-	</section>
-
-    <section id="Ink_Dom_Selector_1-Ink_Dom_Selector-select" class="box box-function">
-    <h1 class="fw-300 function-desc">.select(selector, [context], [results])
-
-    <i>method</i></h1><p class="text">Alias for the Sizzle selector engine</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>selector
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                CSS selector to search for elements</li>
-            <li class="level1">
-                <p>context
-                    <span class="label domelement"></span></p>
-                By default the search is done in the document element. However, you can specify an element as search context</li>
-            <li class="level1">
-                <p>results
-                    <span class="label array"></span></p>
-                By default this is considered an empty array. But if you want to merge it with other searches you did, pass their result array through here.</li>
-        </ul>
-
-<!--<h3>Samples</h3>-->
-		{% include js_samples/Ink_Dom_Selector_select.html %}
-	</section>
-
-
-
-    
+            </h2><table class="props bottom-space"><caption>Functions</caption>
+                <thead>
+                    <tr>
+                        <th>Function name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>            <tr>
+                        <td>
+                            <a href="#Ink_Dom_Selector_1-Ink_Dom_Selector-matches">.matches(selector, matches)
+        </a>
+                        </td>
+                        <td> Filters elements that match a CSS selector.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Dom_Selector_1-Ink_Dom_Selector-matchesSelector">.matchesSelector(element, selector)
+        </a>
+                        </td>
+                        <td> Checks if an element matches a given selector</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Dom_Selector_1-Ink_Dom_Selector-select">.select(selector, [context], [results])
+        </a>
+                        </td>
+                        <td> Alias for the Sizzle selector engine</td>
+                    </tr></tbody>
+            </table>
+        </section>
+            <section id="Ink_Dom_Selector_1-Ink_Dom_Selector-matches" class="box box-function">
+                <h1 class="fw-300 function-desc">.matches(selector, matches)
+            <i>method</i></h1><p class="text">Filters elements that match a CSS selector.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>selector
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            CSS selector to search for elements</li>            <li class="level1">
+                            <p>matches
+                                <span class="label mandatory"></span><span class="label array"></span></p>
+            Elements to be 'matched' with</li>        </ul>
+            <!--<h3>Samples</h3>-->		{% include js_samples/Ink_Dom_Selector_matches.html %}
+            </section>    <section id="Ink_Dom_Selector_1-Ink_Dom_Selector-matchesSelector" class="box box-function">
+                <h1 class="fw-300 function-desc">.matchesSelector(element, selector)
+            <i>method</i></h1><p class="text">Checks if an element matches a given selector</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>element
+                                <span class="label mandatory"></span><span class="label domelement"></span></p>
+            Element to test</li>            <li class="level1">
+                            <p>selector
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            CSS selector to test the element with</li>        </ul>
+            <!--<h3>Samples</h3>-->		{% include js_samples/Ink_Dom_Selector_matchesSelector.html %}
+            </section>    <section id="Ink_Dom_Selector_1-Ink_Dom_Selector-select" class="box box-function">
+                <h1 class="fw-300 function-desc">.select(selector, [context], [results])
+            <i>method</i></h1><p class="text">Alias for the Sizzle selector engine</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>selector
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            CSS selector to search for elements</li>            <li class="level1">
+                            <p>context
+                                <span class="label domelement"></span></p>
+            By default the search is done in the document element. However, you can specify an element as search context</li>            <li class="level1">
+                            <p>results
+                                <span class="label array"></span></p>
+            By default this is considered an empty array. But if you want to merge it with other searches you did, pass their result array through here.</li>        </ul>
+            <!--<h3>Samples</h3>-->		{% include js_samples/Ink_Dom_Selector_select.html %}
+            </section>

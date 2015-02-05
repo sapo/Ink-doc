@@ -4,135 +4,90 @@ title: Ink.UI.Dropdown_1
 description: Dropdown menus
 site_root:  ../
 ---
-    <section><p><i class="fa fa-leaf"></i> All samples are using <code>Ink.requireModules</code>, please read how to use it at <a href="/javascript/Ink/#Ink_1-Ink_1-requireModules">Ink.requireModules section</a></p>
-
-    <h2 class="fw-300 class-name">
+<section><p><i class="fa fa-leaf"></i> All samples are using <code>Ink.requireModules</code>, please read how to use it at <a href="/javascript/Ink/#Ink_1-Ink_1-requireModules">Ink.requireModules section</a></p>
+            <h2 class="fw-300 class-name">
         Ink.UI.Dropdown <i>class</i>
-        
-    </h2><table class="props bottom-space">
-        <caption>Methods</caption>
-        <thead>
-            <tr>
-                <th>Method name</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        
-        <tbody>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_Dropdown_1-Ink_UI_Dropdown-Dropdown">new Dropdown(trigger, options)
-</a>
-                </td>
-                <td><span class="ink-label green">Constructor</span></td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_Dropdown_1-Ink_UI_Dropdown-dismiss">.dismiss([callHandler])
-</a>
-                </td>
-                <td> Closes the dropdown.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_Dropdown_1-Ink_UI_Dropdown-open">.open([callHandler])
-</a>
-                </td>
-                <td> Opens the dropdown</td>
-            </tr></tbody>
-    </table>
-    
-</section>
-
-
-
-    <section id="Ink_UI_Dropdown_1-Ink_UI_Dropdown-Dropdown" class="box box-function">
-    <h1 class="fw-300 function-desc">new Ink.UI.Dropdown(trigger, options)
-
-    </h1>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>trigger
-                    <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
-                Trigger Element</li>
-            <li class="level1">
-                <p>options
-                    <span class="label mandatory"></span><span class="label object"></span></p>
-                Options Object</li>
-            <li class="level2">
-                <p>options.target
-                    <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
-                Target of the dropdown action.</li>
-            <li class="level2">
-                <p>options.hoverOpen
-                    <span class="label number"></span></p>
-                The number of milliseconds you need to hover with the mouse before the dropdown opens.</li>
-            <li class="level2">
-                <p>options.dismissOnInsideClick
-                    <span class="label boolean"></span></p>
-                falseWhether to dismiss the dropdown when there's a click inside.</li>
-            <li class="level2">
-                <p>options.dismissOnOutsideClick
-                    <span class="label boolean"></span></p>
-                trueWhether to dismiss the dropdown when there's a click outside.</li>
-            <li class="level2">
-                <p>options.dismissAfter
-                    <span class="label number"></span></p>
-                When the mouse moves away from the dropdown, wait for `dismissAfter` milliseconds and only then dismiss.</li>
-            <li class="level2">
-                <p>options.onInsideClick
-                    <span class="label function"></span></p>
-                Called when there's a click inside the dropdown.</li>
-            <li class="level2">
-                <p>options.onOutsideClick
-                    <span class="label function"></span></p>
-                Called when there's a click outside the dropdown.</li>
-            <li class="level2">
-                <p>options.onOpen
-                    <span class="label function"></span></p>
-                Called when the dropdown is opened.</li>
-            <li class="level2">
-                <p>options.onDismiss
-                    <span class="label function"></span></p>
-                Called when the dropdown is dismissed.</li>
-        </ul>
-
-<!--<h3>Samples</h3>-->
-		{% include js_samples/Ink_UI_Dropdown_1.html %}
-	</section>
-
-    <section id="Ink_UI_Dropdown_1-Ink_UI_Dropdown-dismiss" class="box box-function">
-    <h1 class="fw-300 function-desc">.dismiss([callHandler])
-
-    <i>method</i></h1><p class="text">Closes the dropdown.</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>callHandler
-                    <span class="label boolean"></span></p>
-                falseWhether to call the onDismiss handler</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_UI_Dropdown_1-Ink_UI_Dropdown-open" class="box box-function">
-    <h1 class="fw-300 function-desc">.open([callHandler])
-
-    <i>method</i></h1><p class="text">Opens the dropdown</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>callHandler
-                    <span class="label boolean"></span></p>
-                falsecall onOpen handler</li>
-        </ul>
-
-</section>
-
-
-
-    
+            </h2><table class="props bottom-space">        <caption>Methods</caption>
+                <thead>
+                    <tr>
+                        <th>Method name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>            <tr>
+                        <td>
+                            <a href="#Ink_UI_Dropdown_1-Ink_UI_Dropdown-Dropdown">new Dropdown(trigger, options)
+        </a>
+                        </td>
+                        <td><span class="ink-label green">Constructor</span></td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_Dropdown_1-Ink_UI_Dropdown-dismiss">.dismiss([callHandler])
+        </a>
+                        </td>
+                        <td> Closes the dropdown.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_Dropdown_1-Ink_UI_Dropdown-open">.open([callHandler])
+        </a>
+                        </td>
+                        <td> Opens the dropdown</td>
+                    </tr></tbody>
+            </table>
+        </section>
+            <section id="Ink_UI_Dropdown_1-Ink_UI_Dropdown-Dropdown" class="box box-function">
+                <h1 class="fw-300 function-desc">new Ink.UI.Dropdown(trigger, options)
+            </h1>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>trigger
+                                <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
+            Trigger Element</li>            <li class="level1">
+                            <p>options
+                                <span class="label mandatory"></span><span class="label object"></span></p>
+            Options Object</li>            <li class="level2">
+                            <p>options.target
+                                <span class="label mandatory"></span><span class="label element"></span><span class="label string"></span></p>
+            Target of the dropdown action.</li>            <li class="level2">
+                            <p>options.hoverOpen
+                                <span class="label number"></span></p>
+            The number of milliseconds you need to hover with the mouse before the dropdown opens.</li>            <li class="level2">
+                            <p>options.dismissOnInsideClick
+                                <span class="label boolean"></span></p>
+            falseWhether to dismiss the dropdown when there's a click inside.</li>            <li class="level2">
+                            <p>options.dismissOnOutsideClick
+                                <span class="label boolean"></span></p>
+            trueWhether to dismiss the dropdown when there's a click outside.</li>            <li class="level2">
+                            <p>options.dismissAfter
+                                <span class="label number"></span></p>
+            When the mouse moves away from the dropdown, wait for `dismissAfter` milliseconds and only then dismiss.</li>            <li class="level2">
+                            <p>options.onInsideClick
+                                <span class="label function"></span></p>
+            Called when there's a click inside the dropdown.</li>            <li class="level2">
+                            <p>options.onOutsideClick
+                                <span class="label function"></span></p>
+            Called when there's a click outside the dropdown.</li>            <li class="level2">
+                            <p>options.onOpen
+                                <span class="label function"></span></p>
+            Called when the dropdown is opened.</li>            <li class="level2">
+                            <p>options.onDismiss
+                                <span class="label function"></span></p>
+            Called when the dropdown is dismissed.</li>        </ul>
+            <!--<h3>Samples</h3>-->		{% include js_samples/Ink_UI_Dropdown_1.html %}
+            </section>    <section id="Ink_UI_Dropdown_1-Ink_UI_Dropdown-dismiss" class="box box-function">
+                <h1 class="fw-300 function-desc">.dismiss([callHandler])
+            <i>method</i></h1><p class="text">Closes the dropdown.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>callHandler
+                                <span class="label boolean"></span></p>
+            falseWhether to call the onDismiss handler</li>        </ul>
+            </section>    <section id="Ink_UI_Dropdown_1-Ink_UI_Dropdown-open" class="box box-function">
+                <h1 class="fw-300 function-desc">.open([callHandler])
+            <i>method</i></h1><p class="text">Opens the dropdown</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>callHandler
+                                <span class="label boolean"></span></p>
+            falsecall onOpen handler</li>        </ul>
+            </section>
