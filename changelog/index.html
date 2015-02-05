@@ -6,6 +6,40 @@ site_root:  ../
 ---
 
 <section class="no-padding half-top-space">
+    <h1 class="fw-300">3.1.3</h1>
+    <p><time>February 05, 2015</time></p>
+
+    <p class="clearfix">
+        <a href="{{site.download_url}}3.1.3/ink-3.1.3.zip" class="ink-button black">Download</a>
+        <a href="{{site.download_src_url}}3.1.3.zip" class="ink-button black">Download with source</a>
+    </p>
+
+    <h2 class="fw-300">CSS</h2>
+
+    <ul>
+        <li>Merges <a href="https://github.com/sapo/Ink/pull/422">#422</a></li>
+        <li>Fixes non-aliased fonts in Windows by rolling back Roboto</li>
+    </ul>
+
+    <h2 class="fw-300">JS</h2>
+
+    <ul>
+        <li>Ink.UI.Table fixed in Internet Explorer</li>
+        <li>Ink.Net.JsonP: abort() method added, which allows you to cancel requests and ignore responses.</li>
+        <li>Prevent a tab change in Ink.UI.Tabs when the user is clicking the active tab. This avoids an annoying scroll.</li>
+        <li>Removed a resize event handler on Tabs, which added the “menu horizontal” classes to the menu on small layouts. Use CSS!</li>
+        <li>Fix bug when swiping off of sides of carousel</li>
+        <li>Added validateCors option to Ink.Net.Ajax, which adds CORS headers only if necessary.</li>
+        <li>Tooltips are able to be triggered with keyboard, through focus events.</li>
+        <li>Added better keyboard focus support to Drawer</li>
+        <li>FormValidator_2:  ‘matches’ now works together with ‘required’ so that an empty  confirmation field is only valid if the matched field is not required.</li>
+        <li>FormValidator_2: Fixed a problem with validating ‘matches’ fields, in that they weren’t validated if they were empty.</li>
+        <li>FormValidator_2 is now in autoload. Now you only need to add the .ink-formvalidator class to create it!</li>
+    </ul>
+</section>
+
+
+<section>
     <h1 class="fw-300">3.1.2</h1>
     <p><time>December 18, 2014</time></p>
 
@@ -21,7 +55,7 @@ site_root:  ../
     </ul>
 </section>
 
-<section class="no-padding half-top-space">
+<section>
     <h1 class="fw-300">3.1.1</h1>
     <p><time>October 14, 2014</time></p>
 
