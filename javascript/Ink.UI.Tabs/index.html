@@ -9,17 +9,17 @@ site_root:  ../
     <h2 class="fw-300 class-name">
         Ink.UI.Tabs <i>class</i>
         
-    </h2><p>The Tabs Component offers a simple way to build a tab-separated layout, allowing you to offer multiple content in the same space with intuitive navigation.
+    </h2><p>The Tabs Component offers a simple way to build a tab-separated layout, allowing you to offer multiple content panes in the same space with intuitive navigation.
 This component requires your markup to have:</p>
 <ul>
-<li>A container element (this is what you call the Ink.UI.Tabs constructor on), containing everything.</li>
+<li>A container element (this is what you call the Ink.UI.Tabs constructor on), containing everything below.</li>
 <li>An element with the <code>tabs-nav</code> class, to contain links.</li>
 <li>Your links with <code>href=&quot;#ID_OF_SECTION&quot;</code></li>
 <li>Your sections with the corresponding <code>id</code> attributes and the <code>tabs-content</code> class.</li>
 <li>The content for each section.</li>
 </ul>
-<p>When the user clicks in the links inside <code>tabs-nav</code>, the tab with the corresponding ID is then activated. The active tab when the tab component is initialized has its hash in the browser URL. If there is no hash, then the <code>active</code> option kicks in. Otherwise, Tabs will fall back to showing the tab corresponding to the first link.
-You can disable some (or all) tabs by passing an array for the <code>disabled</code> option.</p>
+<p>When the user clicks in the links inside <code>tabs-nav</code>, the tab with the corresponding ID is then activated. The active tab when the tab component is initialized has its hash in the browser URL. If there is no hash, then the <code>active</code> option kicks in. Otherwise, Tabs will fall back to showing the tab corresponding to the first link.</p>
+<p>You can disable some (or all) tabs by passing an array for the <code>disabled</code> option, or by adding the <code>ink-disabled</code> class to tab links.</p>
 <table class="props bottom-space">
         <caption>Methods</caption>
         <thead>
@@ -106,43 +106,39 @@ You can disable some (or all) tabs by passing an array for the <code>disabled</c
             <li class="level1">
                 <p>options
                     <span class="label object"></span></p>
-                Options</li>
+                Options object, containing:</li>
             <li class="level2">
                 <p>options.preventUrlChange
                     <span class="label boolean"></span></p>
-                Flag that determines if follows the link on click or stops the event</li>
+                falseFlag that determines if follows the link on click or stops the event</li>
             <li class="level2">
                 <p>options.active
                     <span class="label string"></span></p>
-                ID of the tab to activate on creation</li>
+                ID of the tab to activate on creation if the window hash is not already a tab ID.</li>
             <li class="level2">
                 <p>options.disabled
                     <span class="label array"></span></p>
-                IDs of the tabs that will be disabled on creation</li>
+                []of the tabs that will be disabled on creation.</li>
             <li class="level2">
                 <p>options.onBeforeChange
                     <span class="label function"></span></p>
-                Callback to be executed before changing tabs</li>
+                Callback to be executed before changing tabs.</li>
             <li class="level2">
                 <p>options.onChange
                     <span class="label function"></span></p>
-                Callback to be executed after changing tabs</li>
-            <li class="level2">
-                <p>options.menuSelector
-                    <span class="label string"></span></p>
-                &#x27;.tabs-nav&#x27;Selector to find the menu element</li>
-            <li class="level2">
-                <p>options.contentSelector
-                    <span class="label string"></span></p>
-                &#x27;.tabs-content&#x27;Selector to find the menu element</li>
-            <li class="level2">
-                <p>options.tabSelector
-                    <span class="label string"></span></p>
-                &#x27;.tabs-tab&#x27;Selector to find the menu element</li>
+                Callback to be executed after changing tabs.</li>
             <li class="level2">
                 <p>options.triggerEventsOnLoad
                     <span class="label boolean"></span></p>
-                Trigger the above events when the page is loaded.</li>
+                trueCall the above callbacks after this component is created.</li>
+            <li class="level2">
+                <p>options.menuSelector
+                    <span class="label string"></span></p>
+                &#x27;.tabs-nav&#x27;Selector to find your tab links.</li>
+            <li class="level2">
+                <p>options.contentSelector
+                    <span class="label string"></span></p>
+                &#x27;.tabs-content&#x27;Selector to find your tab content panes.</li>
         </ul>
 
 <!--<h3>Samples</h3>-->

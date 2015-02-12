@@ -91,7 +91,21 @@ site_root:  ../
             </tr>
             <tr>
                 <td>
-                    <a href="#Ink_UI_Pagination_1-Ink_UI_Pagination-setCurrent">.setCurrent(nr, [isRelative])
+                    <a href="#Ink_UI_Pagination_1-Ink_UI_Pagination-next">.next([wrap])
+</a>
+                </td>
+                <td> Navigates to next item</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#Ink_UI_Pagination_1-Ink_UI_Pagination-previous">.previous([wrap])
+</a>
+                </td>
+                <td> Navigates to the previous item</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#Ink_UI_Pagination_1-Ink_UI_Pagination-setCurrent">.setCurrent(nr, [isRelative], [wrap])
 </a>
                 </td>
                 <td> Sets the current page. First page is 0.</td>
@@ -315,8 +329,38 @@ site_root:  ../
 
 </section>
 
+    <section id="Ink_UI_Pagination_1-Ink_UI_Pagination-next" class="box box-function">
+    <h1 class="fw-300 function-desc">.next([wrap])
+
+    <i>method</i></h1><p class="text">Navigates to next item</p>
+        <h3>Accepts</h3>
+        
+        <ul class="params">
+            <li class="level1">
+                <p>wrap
+                    <span class="label boolean"></span></p>
+                falseSet this to true if you want to go to the first item when going after the last item.</li>
+        </ul>
+
+</section>
+
+    <section id="Ink_UI_Pagination_1-Ink_UI_Pagination-previous" class="box box-function">
+    <h1 class="fw-300 function-desc">.previous([wrap])
+
+    <i>method</i></h1><p class="text">Navigates to the previous item</p>
+        <h3>Accepts</h3>
+        
+        <ul class="params">
+            <li class="level1">
+                <p>wrap
+                    <span class="label boolean"></span></p>
+                falseSet this to true if you want to go to the last item when going before the first item.</li>
+        </ul>
+
+</section>
+
     <section id="Ink_UI_Pagination_1-Ink_UI_Pagination-setCurrent" class="box box-function">
-    <h1 class="fw-300 function-desc">.setCurrent(nr, [isRelative])
+    <h1 class="fw-300 function-desc">.setCurrent(nr, [isRelative], [wrap])
 
     <i>method</i></h1><p class="text">Sets the current page. First page is 0.</p>
         <h3>Accepts</h3>
@@ -330,6 +374,10 @@ site_root:  ../
                 <p>isRelative
                     <span class="label boolean"></span></p>
                 falseIf you set this to `true`, the function will perform a relative change. (example: setCurrent(1) will move to the next page, while setCurrent(-1) will move to the previous page)</li>
+            <li class="level1">
+                <p>wrap
+                    <span class="label boolean"></span></p>
+                falseSet this to true to wrap to the first page when moving past the last, and to wrap to the last page when moving before the first one.</li>
         </ul>
 
 </section>

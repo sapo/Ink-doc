@@ -144,8 +144,16 @@ internally.</p>
         <h2 class="fw-300 class-name">
         FormValidator.validationFunctions <i>namespace</i>
         
-    </h2><p>Validation Functions to be used</p>
-<p>Some functions are a port from PHP, others are the &#39;best&#39; solutions available</p>
+    </h2><p>Validation Functions used in the rules (data-rules) option to FormValidator_2.</p>
+<p>This option is a string with a special syntax: <code>function_name|function2_name|...</code>. Optionally you can pass parameters to these methods using square brackets (<code>[]</code>)</p>
+<p>For instance:</p>
+<pre><code>data-rules=&quot;required|numeric[.,2]|max_length[8]&quot;
+</code></pre><p>Meaning:</p>
+<ul>
+<li>Required field;</li>
+<li>Number in which the decimal separator is a dot (.) and has at most 2 decimal places;</li>
+<li>Field with at most 8 characters;</li>
+</ul>
 <table class="props bottom-space">
         <caption>Methods</caption>
         <thead>
