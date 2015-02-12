@@ -62,3 +62,37 @@
 {{ demo_code }}
 {% endhighlight %}
 
+
+<h3>How to acquire data from remote endpoints via AJAX</h3>
+
+<p>First, set the `endpoint` option to a URL.</p>
+
+<p>Then, an AJAX request to that URL is initiated, with the parameters "sortOrder" and "sortField" set to the order ('asc' or 'desc') and the field which is being sorted by, `rows_per_page` indicating how many rows each page should have, and `page` indicating what page we are on right now.</p>
+
+<p>If your endpoint does not support the above format, you can change the AJAX request URL by passing a `createEndpointURL` option, which is a function taking `(endpoint, sort /*{ order, field }*/, page /*{ size, page }*/)` and returning the AJAX request URL.</p>
+
+
+<h3>How to massage remote data for Table use</h3>
+
+<p>When data comes from a HTTP endpoint, it almost surely does not conform to what Table expects. You need to massage it a bit so that Table may consume it.</p>
+
+<p>Below are the names of the options you are supposed to register, what they are called with, and what they are supposed to return.</p>
+
+{% highlight javascript %}
+// remoteData is what came from the endpoint.
+
+// By default, processJSONHeaders will look at the keys in the first field of the response
+var tableHeaders = options.processJSONHeaders(remoteData);  // ['Name of column 1', 'Name of column 2', 'Name of column 3']
+
+// By default, processJSONRows will return the "rows" attribute of your JSON response object. If the response is an array, it returns that array.
+var tableRows = options.processJSONRows(remoteData);  // Array of objects like this: { 'Name of column 1': 'Field 1', 'Name of column 2': 'Field 2', ... }
+
+// By default, it returns the `totalRows` or `length` attribute of your JSON response object.
+var rowCount = options.processJSONTotalRows(remoteData);  // The amount of total rows there is (this can't be just tableRows.length because that refers to this page only).
+
+// Optional:
+// By default, processJSONField returns just what was passed to it.
+var eachField = options.processJSONField['Name of column 1'](fieldData, columnName, rowIndex);  // A DOM Element or a string or a number.
+{% endhighlight %}
+
+
