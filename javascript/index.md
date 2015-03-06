@@ -39,7 +39,7 @@ If you want, you can disable this behaviour. Just add `data-autoload="false"` to
 
 ## A note on option names (`data-option-name` vs `optionName`)
 
-All configuration options, except callback functions, are available as data-attributes but are prefixed with `data-` and are written in lowercase and hyphen separated: `someOption` is the same as `data-some-option`.
+All configuration options, except callback functions, are available as data-attributes but are prefixed with `data-` and are written in lowercase and hyphen separated: `someOption` (as passed in javascript) is the same as `data-some-option` (as passed in HTML).
 
 
 ## Using these components with Javascript instead of autoload
@@ -1897,6 +1897,8 @@ You can visit [the Sticky API docs](/javascript/Ink.UI.Sticky/) to find out abou
 TODO do Table docs
 
 
+-------------
+
 
 <h2 id="Ink.UI.Tabs_1">
     Tabs
@@ -2491,8 +2493,69 @@ You can visit [the Tooltip API docs](/javascript/Ink.UI.Tooltip/) to find out ab
 -------------
 
 
-## TreeView
-TODO do TreeView docs
+<h2 id="Ink.UI.TreeView">
+    TreeView
+    <a class="fa fa-paragraph para-link" href="#Ink.UI.TreeView_1"></a>
+</h2>
+
+
+Shows elements in a tree view whose nodes can be expanded and contracted.
+
+A TreeView consists of "nodes" and "children", which are elements which have child nodes.
+
+### TreeView examples
+
+#### Simple TreeView
+
+{% capture TreeView %}
+<ul class="ink-tree-view">
+    <li data-open="true">
+        <a href="#">root</a>
+        <ul>
+            <li><a href="#">child 1</a></li>
+            <li>
+                <a href="#">child 2</a>
+                <ul>
+                    <li><a href="#">grandchild 2a</a></li>
+                    <li>
+                        <a href="#">grandchild 2b</a>
+                        <ul>
+                            <li><a href="#">grandgrandchild 1bA</a></li>
+                            <li><a href="#">grandgrandchild 1bB</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">child 3</a></li>
+        </ul>
+    </li>
+</ul>
+{% endcapture %}
+
+<p class="example-title">Demo</p>
+{{ TreeView }}
+
+<p class="example-title">Code</p>
+{% highlight html %}
+{{ TreeView }}
+{% endhighlight %}
+
+
+### TreeView options
+
+ * `data-node=".node"` - Make tree nodes be elements with the `.node` class instead of any `li` element.
+ * `data-children=".cont"` - Make the children containers be elements with the `.cont` class.
+ * `data-parent-class="i-am-parent"` - Add the `.i-am-parent` class to nodes which have children.
+ * `data-open-class="fa fa-check-circle"` - Add the `.fa-check-circle`, `.fa` classes to the icon when nodes are open. Use this to override the default icons.
+ * `data-closed-class="fa-circle"` - Add the `.fa-circle`, `.fa` classes to the icon when nodes are closed. Use this to override the default icons.
+ * `data-hide-class="invisible"` - Add the `.invisible` class to "children" elements to when they are hidden. Defaults to `hide-all`.
+ * `data-icon-tag="span"` - Use a `span` instead of an `i` for the icon.
+
+
+### Advanced TreeView stuff:
+
+You can visit [the TreeView API docs](/javascript/Ink.UI.TreeView/) to find out about Javascript-only options, javascript methods, and how to create TreeViews using Javascript
+
 
 
 <script>
