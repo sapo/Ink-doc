@@ -2722,7 +2722,7 @@ You can visit [the Tooltip API docs](/javascript/Ink.UI.Tooltip/) to find out ab
 -------------
 
 
-<h2 id="Ink.UI.TreeView">
+<h2 id="Ink.UI.TreeView_1">
     TreeView
     <a class="fa fa-paragraph para-link" href="#Ink.UI.TreeView_1"></a>
 </h2>
