@@ -403,8 +403,88 @@ You can visit [the DatePicker API docs](/javascript/Ink.UI.DatePicker/) to find 
 
 
 
-## Draggable
-TODO do Draggable docs
+<h2 id="Ink.UI.Draggable_1">
+    Draggable
+    <a class="fa fa-paragraph para-link" href="#Ink.UI.Draggable_1"></a>
+</h2>
+
+Draggable is a component which works with [Droppable](#Ink.UI.Droppable_1).
+
+
+### Draggable Examples
+
+#### Basic example
+
+Drag some draggables around!
+
+{% capture Draggable %}
+<span class="ink-label ink-draggable blue">Draggable 1</span>
+<span class="ink-label ink-draggable green">Draggable 2</span>
+<span class="ink-label ink-draggable orange">Draggable 3</span>
+{% endcapture %}
+
+<p class="example-title">Demo</p>
+<div>
+{{ Draggable }}
+</div>
+
+<p class="example-title">Code</p>
+{% highlight html %}
+{{ Draggable }}
+{% endhighlight %}
+
+
+#### Constraints
+
+These Draggables can't move freely, they're constrained inside certain boundaries.
+
+{% capture Draggable %}
+<div id="draggable-constraint" class="example" style="min-height: 300px">
+    <span class="ink-label ink-draggable blue"
+            data-constraint-elm="#draggable-constraint">
+        Drag me inside the box
+    </span>
+</div>
+{% endcapture %}
+
+<p class="example-title">Demo</p>
+<div>
+{{ Draggable }}
+</div>
+
+<p class="example-title">Code</p>
+{% highlight html %}
+{{ Draggable }}
+{% endhighlight %}
+
+
+
+### Draggable options
+
+ * `data-constraint="<vertical, horizontal or both>"` - Constrain Draggable movement in an axis. None by default. Can be `vertical`, `horizontal`, or `both`. By default movement is not constrained.
+ * `data-constraint-elm="#my-div"` - Only drag inside `#my-div`. Make sure that element has a `min-height` to avoid weird behaviour.
+ * `data-handle=".drag-here"` - The element with the `.drag-here` class will be used as a handle for dragging.
+ * `data-revert="true"` - Revert the draggable to its original position when dropped.
+ * `data-cursor="pointer"` - Set the mouse to `pointer` while hovering this Draggable, instead of `move`. Valid options here are the values of the [CSS `cursor` property](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor?redirectlocale=en-US&redirectslug=CSS%2Fcursor#Values).
+ * `data-z-index="100"` - Set the z-index to 100 while dragging.
+ * `data-fps="12"` - Move things at most 12 times per second. Use this to limit the CPU resources needed to perfrom a drag action.
+ * `data-mouse-anchor="<anchor>"` - Anchor for the drag. Can be one of: `"left"`, `"center"`, `"right"`, `"top"`, `"center"`, `"bottom"`.
+ * `data-drag-class="im-dragging"` - Add the `.im-dragging` class when this draggable is being dragged.
+ * `data-skip-children="false"` - Dragging children of this element doesn't count.
+
+#### Movement constraints
+
+If you set a `data-constraint` or `data-constraint-elm` option (see above), these can be used to determine how far from the constraint areas the Draggable can move. Try them out:
+
+ * `data-top="10"` - Always stay 10px away from the top.
+ * `data-right="10"` - Always stay 10px away from the right.
+ * `data-bottom="10"` - Always stay 10px away from the bottom.
+ * `data-left="10"` - Always stay 10px away from the left.
+
+
+### Advanced Draggable stuff:
+
+You can visit [the Draggable API docs](/javascript/Ink.UI.Draggable/) to find out about Javascript-only options, javascript methods, and how to create Draggables using Javascript
 
 
 
@@ -885,15 +965,6 @@ You can see more validation rules, as well as a more in-depth description of eac
 ### Advanced FormValidator_2 stuff:
 
 You can visit [the FormValidator_2 API docs](/javascript/Ink.UI.FormValidator.2/) to find out about Javascript-only options, javascript methods, and how to use FormValidator using Javascript.
-
-
-
--------------
-
-
-
-## ImageQuery
-TODO do ImageQuery docs
 
 
 
@@ -2050,12 +2121,6 @@ Just add `data-bottom-element="#bottom-element` and Sticky will avoid going belo
 You can visit [the Sticky API docs](/javascript/Ink.UI.Sticky/) to find out about Javascript-only options, javascript methods, and how to create Stickies using Javascript
 
 
--------------
-
-
-## Table
-TODO do Table docs
-
 
 -------------
 
@@ -2514,7 +2579,9 @@ Hover these labels:
 {% endcapture %}
 
 <p class="example-title">Demo</p>
+<div>
 {{ Tooltip }}
+</div>
 
 <p class="example-title">Code</p>
 {% highlight html %}
@@ -2534,9 +2601,7 @@ You can set the tooltip's inner HTML by using `data-tip-html="(my html)"`.
 {% endcapture %}
 
 <p class="example-title">Demo</p>
-<div>
 {{ Tooltip }}
-</div>
 
 <p class="example-title">Code</p>
 {% highlight html %}
