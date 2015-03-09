@@ -544,16 +544,176 @@ You can visit [the Drawer API docs](/javascript/Ink.UI.Drawer/) to find out abou
 
 
 
+
 -------------
 
 
 
-## Dropdown
-TODO do Dropdown docs
+<h2 id="Ink.UI.Dropdown_1">
+    Dropdown
+    <a class="fa fa-paragraph para-link" href="#Ink.UI.Dropdown_1"></a>
+</h2>
 
 
-## Droppable
-TODO do Droppable docs
+Dropdown is designed to add dropdown menus. They are a simplified version of Toggle, which is much more complex, and they work better with nested menus without a lot of the hassle which goes into creating them using Toggle.
+
+It also includes some mouse-away logic, so as to avoid the dropdown being open forever if your mouse moves away from the dropdown. This is activated using `data-dismiss-after="<s>"` where `s` is your time in seconds which it is supposed to stay open.
+
+
+### Dropdown Examples
+
+#### Basic example
+
+This is a simple Dropdown menu.
+
+{% capture Dropdown %}
+<div class="ink-dropdown" data-target="#my-menu-dropdown">
+    <button class="ink-button">Dropdown</button>
+    <ul id="my-menu-dropdown" class="dropdown-menu">
+        <li class="heading">I am a heading</li>
+        <li class="separator-above"><a href="#">Option</a></li>
+        <li><a href="#">Option</a></li>
+        <li class="separator-above disabled"><a href="#">Disabled option</a></li>
+    </ul>
+</div>
+{% endcapture %}
+
+<p class="example-title">Demo</p>
+{{ Dropdown }}
+
+<p class="example-title">Code</p>
+{% highlight html %}
+{{ Dropdown }}
+{% endhighlight %}
+
+
+
+#### Dismiss automatically when mouse moves away.
+
+By adding the `data-dismiss-after="<s>"` option, the Dropdown will go away automatically after `s` seconds pass.
+
+Here we hide it after 2 seconds.
+
+{% capture Dropdown %}
+<div class="ink-dropdown" data-target="#my-menu-dropdown-2" data-dismiss-after="2">
+    <button class="ink-button">Dropdown</button>
+    <ul id="my-menu-dropdown-2" class="dropdown-menu">
+        <li class="disabled"><a href="#">Disabled option</a></li>
+    </ul>
+</div>
+{% endcapture %}
+
+<p class="example-title">Demo</p>
+{{ Dropdown }}
+
+<p class="example-title">Code</p>
+{% highlight html %}
+{{ Dropdown }}
+{% endhighlight %}
+
+
+### Dropdown options
+
+ * `data-target="#my-menu"` - Make `#my-menu` the `ul` which this Dropdown opens.
+ * `data-hover-open="<seconds>"` - The number of seconds you need to hover with the mouse before the dropdown opens.
+ * `data-dismiss-after="<seconds>"` - When the mouse moves away from the dropdown, wait for `seconds` seconds and then dismiss.
+ * `data-dismiss-on-inside-click="true"` - Dismiss the dropdown when there's a click inside.
+ * `data-dismiss-on-outside-click="false"` - Do not dismiss the dropdown when there's a click outside.
+
+
+### Advanced Dropdown stuff:
+
+You can visit [the Dropdown API docs](/javascript/Ink.UI.Dropdown/) to find out about Javascript-only options, javascript methods, and how to create Dropdowns using Javascript
+
+
+
+-------------
+
+
+
+<h2 id="Ink.UI.Droppable_1">
+    Droppable
+    <a class="fa fa-paragraph para-link" href="#Ink.UI.Dropdown_1"></a>
+</h2>
+
+
+The Droppable is a dropping area for [Draggable](#Ink.UI.Draggable_1)s. It's useful to create shopping carts, playlists, and other things which rely on dragging and dropping action.
+
+### Droppable Examples
+
+#### Simple Droppables
+
+Let's drag a couple of Draggables into a droppable!
+
+{% capture Droppable %}
+<p>A droppable</p>
+<ul class="ink-droppable droppable-2" data-on-drop="move">
+</ul>
+
+<p>A couple of draggables</p>
+<li class="ink-label ink-draggable blue">Draggable 1</li>
+<li class="ink-label ink-draggable green">Draggable 2</li>
+<li class="ink-label ink-draggable orange">Draggable 3</li>
+{% endcapture %}
+
+<p class="example-title">Demo</p>
+<div>
+{{ Droppable }}
+</div>
+
+<p class="example-title">Code</p>
+{% highlight html %}
+{{ Droppable }}
+{% endhighlight %}
+
+
+
+#### Acceptance
+
+You can choose what Draggables get dropped in your droppable! Here we see only green Draggables accepted in a Droppable.
+
+{% capture Droppable %}
+<p>Drop only green things here:</p>
+<ul class="ink-droppable droppable-1" data-accept=".green" data-on-drop="move">
+</ul>
+
+<p>A couple of draggables</p>
+<li class="ink-label ink-draggable green">Draggable 1</li>
+<li class="ink-label ink-draggable green">Draggable 2</li>
+<li class="ink-label ink-draggable red">Draggable 3</li>
+{% endcapture %}
+
+<p class="example-title">Demo</p>
+<div>
+{{ Droppable }}
+</div>
+
+<p class="example-title">Code</p>
+{% highlight html %}
+{{ Droppable }}
+{% endhighlight %}
+
+
+
+### Droppable options
+
+ * `data-hover-class="hoverin"` - Add the `.hoverin` class when a Draggable and hovering this droppable.
+ * `data-accept=".only-these-draggables"` - Accept only elements with the class `.only-these-draggables`.
+
+#### Drop behaviour options
+
+These options can be further customized using javascript. Without javascript, though, there are already a few pre-made actions.
+
+These actions are `"move"` and `"copy"`, which move or copy the draggable element into this draggable, or `"revert"`, which puts the draggable right back where it came from..
+
+ * `data-on-drop="<move copy or revert>"` - When an element is dropped, move or copy it here, or revert it to where it came from.
+ * `data-on-hover="<move copy or revert>"` - When an element is hovering the droppable, move or copy it here, or revert it to where it came from.
+ * `data-on-drop-out="<move copy or revert>"` - When a Draggable is dropped outside of this droppable, move or copy it here, or revert it to where it came from.
+
+
+### Advanced Droppable stuff:
+
+You can visit [the Droppable API docs](/javascript/Ink.UI.Droppable/) to find out about Javascript-only options, javascript methods, and how to create Droppables using Javascript
 
 
 
@@ -2374,7 +2534,9 @@ You can set the tooltip's inner HTML by using `data-tip-html="(my html)"`.
 {% endcapture %}
 
 <p class="example-title">Demo</p>
+<div>
 {{ Tooltip }}
+</div>
 
 <p class="example-title">Code</p>
 {% highlight html %}
@@ -2416,32 +2578,32 @@ You can replace the tooltip structure (the rounded rectangle with the triangle a
 Hover these labels:
 
 {% capture Tooltip %}
-<p class="ink-tooltip">
+<p class="ink-tooltip"
     data-tip-where="up"
     data-tip-text="up">
     Using <code>data-tip-where="up"</code> (default)
 </p>
-<p class="ink-tooltip">
+<p class="ink-tooltip"
     data-tip-where="down"
     data-tip-text="down">
     Using <code>data-tip-where="down"</code>
 </p>
-<p class="ink-tooltip">
+<p class="ink-tooltip"
     data-tip-where="left"
     data-tip-text="left">
     Using <code>data-tip-where="left"</code>
 </p>
-<p class="ink-tooltip">
+<p class="ink-tooltip"
     data-tip-where="right"
     data-tip-text="right">
     Using <code>data-tip-where="right"</code>
 </p>
-<p class="ink-tooltip">
+<p class="ink-tooltip"
     data-tip-where="mousemove"
     data-tip-text="mousemove">
     Using <code>data-tip-where="mousemove"</code>
 </p>
-<p class="ink-tooltip">
+<p class="ink-tooltip"
     data-tip-where="mousefix"
     data-tip-text="mousefix">
     Using <code>data-tip-where="mousefix"</code>
@@ -2449,7 +2611,9 @@ Hover these labels:
 {% endcapture %}
 
 <p class="example-title">Demo</p>
+<div>
 {{ Tooltip }}
+</div>
 
 <p class="example-title">Code</p>
 {% highlight html %}
@@ -2602,6 +2766,18 @@ Ink.requireModules(['Ink.UI.SmoothScroller_1', 'Ink.Dom.Css_1', 'Ink.Autoload_1'
 Ink.requireModules(['Ink.UI.LazyLoad_1'], function (LazyLoad) {
     for (var i = 0; i < Ink.ss('.ink-lazyload').length; i++) {
         new LazyLoad(Ink.ss('.ink-lazyload')[i])
+    }
+})
+// TODO push autoloading LazyLoad to production
+Ink.requireModules(['Ink.UI.Draggable_1'], function (Draggable) {
+    for (var i = 0; i < Ink.ss('.ink-draggable').length; i++) {
+        new Draggable(Ink.ss('.ink-draggable')[i], Ink.ss('.ink-draggable')[i].dataset)
+    }
+})
+// TODO push autoloading Draggable to production
+Ink.requireModules(['Ink.UI.Droppable_1'], function (Droppable) {
+    for (var i = 0; i < Ink.ss('.ink-droppable').length; i++) {
+        Droppable.add(Ink.ss('.ink-droppable')[i], Ink.ss('.ink-droppable')[i].dataset)
     }
 })
 </script>
