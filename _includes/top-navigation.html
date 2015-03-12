@@ -14,7 +14,7 @@
             {% for section in site.sections %}
             {% assign section_uri = section.title | downcase | replace:' ','-' %}
             <li{% if current_section[1] == section_uri %} class="active"{% endif %}>
-                <a href="{{ site.url }}{{ section.title | downcase | replace:' ','-' }}/" title="{{ section.title }}">{{ section.title }}</a>
+                <a href="{{ site.url }}{{ section.url}}/" title="{{ section.title }}">{{ section.title }}</a>
             </li>
             {% endfor %}
         </ul>

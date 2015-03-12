@@ -9,7 +9,7 @@
         {% assign section_uri = section.title | downcase | replace:' ','-' %}
 
         <li{% if current_section[1] == section_uri %} class="active"{% endif %}>
-            <a href="{{ site.url }}{{ section.title | downcase | replace:' ','-' }}/" title="{{ section.title }}">{{ section.title }}</a>
+            <a href="{{ site.url }}{{ section.url }}/" title="{{ section.title }}">{{ section.title }}</a>
         </li>
         {% endfor %}
 
@@ -18,7 +18,7 @@
         {% for component in section.components %}
         <li class="heading">{{ component.title }}{% if component.topics %}
             {% for topic in component.topics %}
-              <li><a href="{{ site.url }}{{ section.title | downcase | replace: ' ','-' }}/{{ topic.title | replace: ' ','-' }}" title="{{ topic.title }}">{{ topic.title }}</a></li>{% endfor %}
+              <li><a href="{{ site.url }}{{ section.url }}/{{ topic.title | replace: ' ','-' }}" title="{{ topic.title }}">{{ topic.title }}</a></li>{% endfor %}
             {% endif %}
         </li>
         {% endfor %}
