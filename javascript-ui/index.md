@@ -2826,23 +2826,3 @@ Ink.requireModules(['Ink.UI.SmoothScroller_1', 'Ink.Dom.Css_1', 'Ink.Autoload_1'
 <!-- This is the only page in the docs that needs autoload -->
 <script type="text/javascript" src="http://fastly.ink.sapo.pt/{{ site.version }}/js/autoload.js"></script>
 
-<script>
-// TODO push autoloading LazyLoad to production
-Ink.requireModules(['Ink.UI.LazyLoad_1'], function (LazyLoad) {
-    for (var i = 0; i < Ink.ss('.ink-lazyload').length; i++) {
-        new LazyLoad(Ink.ss('.ink-lazyload')[i])
-    }
-})
-// TODO push autoloading LazyLoad to production
-Ink.requireModules(['Ink.UI.Draggable_1'], function (Draggable) {
-    for (var i = 0; i < Ink.ss('.ink-draggable').length; i++) {
-        new Draggable(Ink.ss('.ink-draggable')[i], Ink.ss('.ink-draggable')[i].dataset)
-    }
-})
-// TODO push autoloading Draggable to production
-Ink.requireModules(['Ink.UI.Droppable_1'], function (Droppable) {
-    for (var i = 0; i < Ink.ss('.ink-droppable').length; i++) {
-        Droppable.add(Ink.ss('.ink-droppable')[i], Ink.ss('.ink-droppable')[i].dataset)
-    }
-})
-</script>
