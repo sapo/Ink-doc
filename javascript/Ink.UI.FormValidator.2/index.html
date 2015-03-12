@@ -7,557 +7,384 @@ site_root:  ../
 <section><p><i class="fa fa-leaf"></i> All samples are using <code>Ink.requireModules</code>, please read how to use it at <a href="/javascript/Ink/#Ink_1-Ink_1-requireModules">Ink.requireModules section</a></p>
             <h2 class="fw-300 class-name">
         FormValidator.FormElement <i>class</i>
-        
-    </h2><p>A FormElement represents a single form element to be validated.</p>
-<p>It is constructed with a DOM form element, and options.</p>
-<p>This class contains methods to parse rules and apply them to its element,
-and also formats the error messages to be displayed in case of an error.</p>
-<p>You don&#39;t normally call &quot;new FormElement&quot; yourself. This is done
-internally.</p>
-<table class="props bottom-space">
-        <caption>Methods</caption>
-        <thead>
-            <tr>
-                <th>Method name</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        
-        <tbody>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-FormElement">new FormElement(element, options)
-</a>
-                </td>
-                <td><span class="ink-label green">Constructor</span></td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-getElement">.getElement()
-</a>
-                </td>
-                <td> Gets the DOM element related to the instance.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-getErrors">.getErrors()
-</a>
-                </td>
-                <td> Gets the constructed errors&#39; object.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-getFormElements">.getFormElements()
-</a>
-                </td>
-                <td> Gets other elements in the same form.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-getValue">.getValue()
-</a>
-                </td>
-                <td> Gets an element&#39;s value</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-validate">.validate()
-</a>
-                </td>
-                <td> Validates the element based on the rules defined.</td>
-            </tr></tbody>
-    </table>
-    
-</section>
-
-
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-FormElement" class="box box-function">
-    <h1 class="fw-300 function-desc">new FormValidator.FormElement(element, options)
-
-    </h1>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>element
-                    <span class="label mandatory"></span><span class="label element"></span></p>
-                DOM Element</li>
-            <li class="level1">
-                <p>options
-                    <span class="label mandatory"></span><span class="label object"></span></p>
-                Object with configuration options</li>
-            <li class="level2">
-                <p>options.label
-                    <span class="label string"></span></p>
-                Label for this element. It is used in the error message. If not specified, the text in the `label` tag in the control-group is used.</li>
-            <li class="level2">
-                <p>options.rules
-                    <span class="label string"></span></p>
-                Rules string to be parsed.</li>
-            <li class="level2">
-                <p>options.form
-                    <span class="label mandatory"></span><span class="label formvalidator"></span></p>
-                FormValidator instance.</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-getElement" class="box box-function">
-    <h1 class="fw-300 function-desc">.getElement()
-
-    <i>method</i></h1><p class="text">Gets the DOM element related to the instance.</p>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-getErrors" class="box box-function">
-    <h1 class="fw-300 function-desc">.getErrors()
-
-    <i>method</i></h1><p class="text">Gets the constructed errors&#39; object.</p>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-getFormElements" class="box box-function">
-    <h1 class="fw-300 function-desc">.getFormElements()
-
-    <i>method</i></h1><p class="text">Gets other elements in the same form.</p>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-getValue" class="box box-function">
-    <h1 class="fw-300 function-desc">.getValue()
-
-    <i>method</i></h1><p class="text">Gets an element&#39;s value</p>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-validate" class="box box-function">
-    <h1 class="fw-300 function-desc">.validate()
-
-    <i>method</i></h1><p class="text">Validates the element based on the rules defined.<br>It parses the rules defined in the _options.rules property.</p>
-
-</section>
-
-
-
-        <h2 class="fw-300 class-name">
+            </h2><p>A FormElement represents a single form element to be validated.</p>
+        <p>It is constructed with a DOM form element, and options.</p>
+        <p>This class contains methods to parse rules and apply them to its element,
+        and also formats the error messages to be displayed in case of an error.</p>
+        <p>You don&#39;t normally call &quot;new FormElement&quot; yourself. This is done
+        internally.</p>
+        <table class="props bottom-space">        <caption>Methods</caption>
+                <thead>
+                    <tr>
+                        <th>Method name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-FormElement">new FormElement(element, options)
+        </a>
+                        </td>
+                        <td><span class="ink-label green">Constructor</span></td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-getElement">.getElement()
+        </a>
+                        </td>
+                        <td> Gets the DOM element related to the instance.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-getErrors">.getErrors()
+        </a>
+                        </td>
+                        <td> Gets the constructed errors&#39; object.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-getFormElements">.getFormElements()
+        </a>
+                        </td>
+                        <td> Gets other elements in the same form.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-getValue">.getValue()
+        </a>
+                        </td>
+                        <td> Gets an element&#39;s value</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-validate">.validate()
+        </a>
+                        </td>
+                        <td> Validates the element based on the rules defined.</td>
+                    </tr></tbody>
+            </table>
+        </section>
+            <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-FormElement" class="box box-function">
+                <h1 class="fw-300 function-desc">new FormValidator.FormElement(element, options)
+            </h1>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>element
+                                <span class="label mandatory"></span><span class="label element"></span></p>
+            DOM Element</li>            <li class="level1">
+                            <p>options
+                                <span class="label mandatory"></span><span class="label object"></span></p>
+            Object with configuration options</li>            <li class="level2">
+                            <p>options.label
+                                <span class="label string"></span></p>
+            Label for this element. It is used in the error message. If not specified, the text in the `label` tag in the control-group is used.</li>            <li class="level2">
+                            <p>options.rules
+                                <span class="label string"></span></p>
+            Rules string to be parsed.</li>            <li class="level2">
+                            <p>options.form
+                                <span class="label mandatory"></span><span class="label formvalidator"></span></p>
+            FormValidator instance.</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-getElement" class="box box-function">
+                <h1 class="fw-300 function-desc">.getElement()
+            <i>method</i></h1><p class="text">Gets the DOM element related to the instance.</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-getErrors" class="box box-function">
+                <h1 class="fw-300 function-desc">.getErrors()
+            <i>method</i></h1><p class="text">Gets the constructed errors&#39; object.</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-getFormElements" class="box box-function">
+                <h1 class="fw-300 function-desc">.getFormElements()
+            <i>method</i></h1><p class="text">Gets other elements in the same form.</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-getValue" class="box box-function">
+                <h1 class="fw-300 function-desc">.getValue()
+            <i>method</i></h1><p class="text">Gets an element&#39;s value</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-validate" class="box box-function">
+                <h1 class="fw-300 function-desc">.validate()
+            <i>method</i></h1><p class="text">Validates the element based on the rules defined.<br>It parses the rules defined in the _options.rules property.</p>
+            </section>            <h2 class="fw-300 class-name">
         FormValidator.validationFunctions <i>namespace</i>
-        
-    </h2><p>Validation Functions to be used</p>
-<p>Some functions are a port from PHP, others are the &#39;best&#39; solutions available</p>
-<table class="props bottom-space">
-        <caption>Methods</caption>
-        <thead>
-            <tr>
-                <th>Method name</th>
-                <th>Description</th>
-            </tr>
-        </thead>
-        
-        <tbody>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-alpha">.alpha(supportSpaces)
-</a>
-                </td>
-                <td> Checks if a value only contains alphabetical values.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-alpha_dash">.alpha_dash()
-</a>
-                </td>
-                <td> Checks if a value contains only alphabetical, dash or underscore characteres.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-alpha_numeric">.alpha_numeric()
-</a>
-                </td>
-                <td> Checks if a value contains only alphabetical or numerical characters.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-color">.color()
-</a>
-                </td>
-                <td> Checks if a value is a valid color.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-credit_card">.credit_card(cardType)
-</a>
-                </td>
-                <td> Checks if a value is a valid credit card.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-date">.date(format)
-</a>
-                </td>
-                <td> Checks if a value is a valid date.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-decimal">.decimal(decimalSeparator, [decimalPlaces], [leftDigits])
-</a>
-                </td>
-                <td> Checks if a value is a valid decimal number.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-digit">.digit()
-</a>
-                </td>
-                <td> Checks if a value is a single digit.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-email">.email()
-</a>
-                </td>
-                <td> Checks if a value is a valid email address</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-exact_length">.exact_length(exactSize)
-</a>
-                </td>
-                <td> Checks if a value has an exact length</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-integer">.integer(positive)
-</a>
-                </td>
-                <td> Checks if a value is a valid integer.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-ip">.ip(ipType)
-</a>
-                </td>
-                <td> Checks if a value is a valid IP. Supports ipv4 and ipv6</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-max_length">.max_length(maxSize)
-</a>
-                </td>
-                <td> Checks if a value has a maximum length</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-min_length">.min_length(minSize)
-</a>
-                </td>
-                <td> Checks if a value has a minimum length</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-numeric">.numeric(decimalSeparator, [decimalPlaces], [leftDigits])
-</a>
-                </td>
-                <td> Checks if a value is a numeric value.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-phone">.phone(phoneType)
-</a>
-                </td>
-                <td> Checks if a value is a valid phone number.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-range">.range(minValue, maxValue, [multipleOf])
-</a>
-                </td>
-                <td> Checks if a value is in a specific range of values.</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-required">.required()
-</a>
-                </td>
-                <td> Checks if a value is defined and not empty</td>
-            </tr>
-            <tr>
-                <td>
-                    <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-url">.url(fullCheck)
-</a>
-                </td>
-                <td> Checks if a value has a valid URL</td>
-            </tr></tbody>
-    </table>
-    
-</section>
-
-
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-alpha" class="box box-function">
-    <h1 class="fw-300 function-desc">.alpha(supportSpaces)
-
-    <i>method</i></h1><p class="text">Checks if a value only contains alphabetical values.</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>supportSpaces
-                    <span class="label mandatory"></span><span class="label boolean"></span></p>
-                Allow whitespace</li>
+            </h2><p>Validation Functions used in the rules (data-rules) option to FormValidator_2.</p>
+        <p>This option is a string with a special syntax: <code>function_name|function2_name|...</code>. Optionally you can pass parameters to these methods using square brackets (<code>[]</code>)</p>
+        <p>For instance:</p>
+        <pre><code>data-rules=&quot;required|numeric[.,2]|max_length[8]&quot;
+        </code></pre><p>Meaning:</p>
+        <ul>
+        <li>Required field;</li>
+        <li>Number in which the decimal separator is a dot (.) and has at most 2 decimal places;</li>
+        <li>Field with at most 8 characters;</li>
         </ul>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-alpha_dash" class="box box-function">
-    <h1 class="fw-300 function-desc">.alpha_dash()
-
-    <i>method</i></h1><p class="text">Checks if a value contains only alphabetical, dash or underscore characteres.</p>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-alpha_numeric" class="box box-function">
-    <h1 class="fw-300 function-desc">.alpha_numeric()
-
-    <i>method</i></h1><p class="text">Checks if a value contains only alphabetical or numerical characters.</p>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-color" class="box box-function">
-    <h1 class="fw-300 function-desc">.color()
-
-    <i>method</i></h1><p class="text">Checks if a value is a valid color.</p>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-credit_card" class="box box-function">
-    <h1 class="fw-300 function-desc">.credit_card(cardType)
-
-    <i>method</i></h1><p class="text">Checks if a value is a valid credit card.</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>cardType
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                Type of credit card to be validated. The card types available are in the Ink.Util.Validator class.</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-date" class="box box-function">
-    <h1 class="fw-300 function-desc">.date(format)
-
-    <i>method</i></h1><p class="text">Checks if a value is a valid date.</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>format
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                Specific format of the date.</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-decimal" class="box box-function">
-    <h1 class="fw-300 function-desc">.decimal(decimalSeparator, [decimalPlaces], [leftDigits])
-
-    <i>method</i></h1><p class="text">Checks if a value is a valid decimal number.</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>decimalSeparator
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                Character that splits the integer part from the decimal one. By default is '.'.</li>
-            <li class="level1">
-                <p>decimalPlaces
-                    <span class="label string"></span></p>
-                Maximum number of digits that the decimal part must have.</li>
-            <li class="level1">
-                <p>leftDigits
-                    <span class="label string"></span></p>
-                Maximum number of digits that the integer part must have, when provided.</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-digit" class="box box-function">
-    <h1 class="fw-300 function-desc">.digit()
-
-    <i>method</i></h1><p class="text">Checks if a value is a single digit.</p>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-email" class="box box-function">
-    <h1 class="fw-300 function-desc">.email()
-
-    <i>method</i></h1><p class="text">Checks if a value is a valid email address</p>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-exact_length" class="box box-function">
-    <h1 class="fw-300 function-desc">.exact_length(exactSize)
-
-    <i>method</i></h1><p class="text">Checks if a value has an exact length</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>exactSize
-                    <span class="label mandatory"></span><span class="label string"></span><span class="label number"></span></p>
-                Exact number of characters.</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-integer" class="box box-function">
-    <h1 class="fw-300 function-desc">.integer(positive)
-
-    <i>method</i></h1><p class="text">Checks if a value is a valid integer.</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>positive
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                Flag that specifies if the integer is must be positive (unsigned).</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-ip" class="box box-function">
-    <h1 class="fw-300 function-desc">.ip(ipType)
-
-    <i>method</i></h1><p class="text">Checks if a value is a valid IP. Supports ipv4 and ipv6</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>ipType
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                Type of IP to be validated. The values are: ipv4, ipv6. By default is ipv4.</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-max_length" class="box box-function">
-    <h1 class="fw-300 function-desc">.max_length(maxSize)
-
-    <i>method</i></h1><p class="text">Checks if a value has a maximum length</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>maxSize
-                    <span class="label mandatory"></span><span class="label string"></span><span class="label number"></span></p>
-                Maximum number of characters.</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-min_length" class="box box-function">
-    <h1 class="fw-300 function-desc">.min_length(minSize)
-
-    <i>method</i></h1><p class="text">Checks if a value has a minimum length</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>minSize
-                    <span class="label mandatory"></span><span class="label string"></span><span class="label number"></span></p>
-                Minimum number of characters.</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-numeric" class="box box-function">
-    <h1 class="fw-300 function-desc">.numeric(decimalSeparator, [decimalPlaces], [leftDigits])
-
-    <i>method</i></h1><p class="text">Checks if a value is a numeric value.</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>decimalSeparator
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                Checks if it's a valid decimal. Otherwise checks if it's a valid integer.</li>
-            <li class="level1">
-                <p>decimalPlaces
-                    <span class="label string"></span></p>
-                Maximum number of digits the decimal part must have.</li>
-            <li class="level1">
-                <p>leftDigits
-                    <span class="label string"></span></p>
-                Maximum number of digits the integer part must have, when provided.</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-phone" class="box box-function">
-    <h1 class="fw-300 function-desc">.phone(phoneType)
-
-    <i>method</i></h1><p class="text">Checks if a value is a valid phone number.<br>Supports several countries, based in the Ink.Util.Validator class.</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>phoneType
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                Country's initials to specify the type of phone number to be validated. Ex: 'AO'.</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-range" class="box box-function">
-    <h1 class="fw-300 function-desc">.range(minValue, maxValue, [multipleOf])
-
-    <i>method</i></h1><p class="text">Checks if a value is in a specific range of values.<br>The parameters after the first one are used to specify the range, and are similar in function to python&#39;s range() function.</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>minValue
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                Left limit of the range.</li>
-            <li class="level1">
-                <p>maxValue
-                    <span class="label mandatory"></span><span class="label string"></span></p>
-                Right limit of the range.</li>
-            <li class="level1">
-                <p>multipleOf
-                    <span class="label string"></span></p>
-                In case you want numbers that are only multiples of another number.</li>
-        </ul>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-required" class="box box-function">
-    <h1 class="fw-300 function-desc">.required()
-
-    <i>method</i></h1><p class="text">Checks if a value is defined and not empty</p>
-
-</section>
-
-    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-url" class="box box-function">
-    <h1 class="fw-300 function-desc">.url(fullCheck)
-
-    <i>method</i></h1><p class="text">Checks if a value has a valid URL</p>
-        <h3>Accepts</h3>
-        
-        <ul class="params">
-            <li class="level1">
-                <p>fullCheck
-                    <span class="label mandatory"></span><span class="label boolean"></span></p>
-                Flag to validate a full url (with the protocol).</li>
-        </ul>
-
-</section>
-
-
-
-        <h2 class="fw-300 class-name">
+        <table class="props bottom-space">        <caption>Methods</caption>
+                <thead>
+                    <tr>
+                        <th>Method name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-alpha">.alpha(supportSpaces)
+        </a>
+                        </td>
+                        <td> Checks if a value only contains alphabetical values.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-alpha_dash">.alpha_dash()
+        </a>
+                        </td>
+                        <td> Checks if a value contains only alphabetical, dash or underscore characteres.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-alpha_numeric">.alpha_numeric()
+        </a>
+                        </td>
+                        <td> Checks if a value contains only alphabetical or numerical characters.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-color">.color()
+        </a>
+                        </td>
+                        <td> Checks if a value is a valid color.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-credit_card">.credit_card(cardType)
+        </a>
+                        </td>
+                        <td> Checks if a value is a valid credit card.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-date">.date(format)
+        </a>
+                        </td>
+                        <td> Checks if a value is a valid date.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-decimal">.decimal(decimalSeparator, [decimalPlaces], [leftDigits])
+        </a>
+                        </td>
+                        <td> Checks if a value is a valid decimal number.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-digit">.digit()
+        </a>
+                        </td>
+                        <td> Checks if a value is a single digit.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-email">.email()
+        </a>
+                        </td>
+                        <td> Checks if a value is a valid email address</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-exact_length">.exact_length(exactSize)
+        </a>
+                        </td>
+                        <td> Checks if a value has an exact length</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-integer">.integer(positive)
+        </a>
+                        </td>
+                        <td> Checks if a value is a valid integer.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-ip">.ip(ipType)
+        </a>
+                        </td>
+                        <td> Checks if a value is a valid IP. Supports ipv4 and ipv6</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-matches">.matches(fieldToCompare)
+        </a>
+                        </td>
+                        <td> Checks if a value matches the value of a different field.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-max_length">.max_length(maxSize)
+        </a>
+                        </td>
+                        <td> Checks if a value has a maximum length</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-min_length">.min_length(minSize)
+        </a>
+                        </td>
+                        <td> Checks if a value has a minimum length</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-numeric">.numeric(decimalSeparator, [decimalPlaces], [leftDigits])
+        </a>
+                        </td>
+                        <td> Checks if a value is a numeric value.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-phone">.phone(phoneType)
+        </a>
+                        </td>
+                        <td> Checks if a value is a valid phone number.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-range">.range(minValue, maxValue, [multipleOf])
+        </a>
+                        </td>
+                        <td> Checks if a value is in a specific range of values.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-required">.required()
+        </a>
+                        </td>
+                        <td> Checks if a value is defined and not empty</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_validationFunctions-url">.url(fullCheck)
+        </a>
+                        </td>
+                        <td> Checks if a value has a valid URL</td>
+                    </tr></tbody>
+            </table>
+        </section>
+            <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-alpha" class="box box-function">
+                <h1 class="fw-300 function-desc">.alpha(supportSpaces)
+            <i>method</i></h1><p class="text">Checks if a value only contains alphabetical values.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>supportSpaces
+                                <span class="label mandatory"></span><span class="label boolean"></span></p>
+            Allow whitespace</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-alpha_dash" class="box box-function">
+                <h1 class="fw-300 function-desc">.alpha_dash()
+            <i>method</i></h1><p class="text">Checks if a value contains only alphabetical, dash or underscore characteres.</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-alpha_numeric" class="box box-function">
+                <h1 class="fw-300 function-desc">.alpha_numeric()
+            <i>method</i></h1><p class="text">Checks if a value contains only alphabetical or numerical characters.</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-color" class="box box-function">
+                <h1 class="fw-300 function-desc">.color()
+            <i>method</i></h1><p class="text">Checks if a value is a valid color.</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-credit_card" class="box box-function">
+                <h1 class="fw-300 function-desc">.credit_card(cardType)
+            <i>method</i></h1><p class="text">Checks if a value is a valid credit card.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>cardType
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Type of credit card to be validated. The card types available are in the Ink.Util.Validator class.</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-date" class="box box-function">
+                <h1 class="fw-300 function-desc">.date(format)
+            <i>method</i></h1><p class="text">Checks if a value is a valid date.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>format
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Specific format of the date.</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-decimal" class="box box-function">
+                <h1 class="fw-300 function-desc">.decimal(decimalSeparator, [decimalPlaces], [leftDigits])
+            <i>method</i></h1><p class="text">Checks if a value is a valid decimal number.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>decimalSeparator
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Character that splits the integer part from the decimal one. By default is '.'.</li>            <li class="level1">
+                            <p>decimalPlaces
+                                <span class="label string"></span></p>
+            Maximum number of digits that the decimal part must have.</li>            <li class="level1">
+                            <p>leftDigits
+                                <span class="label string"></span></p>
+            Maximum number of digits that the integer part must have, when provided.</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-digit" class="box box-function">
+                <h1 class="fw-300 function-desc">.digit()
+            <i>method</i></h1><p class="text">Checks if a value is a single digit.</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-email" class="box box-function">
+                <h1 class="fw-300 function-desc">.email()
+            <i>method</i></h1><p class="text">Checks if a value is a valid email address</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-exact_length" class="box box-function">
+                <h1 class="fw-300 function-desc">.exact_length(exactSize)
+            <i>method</i></h1><p class="text">Checks if a value has an exact length</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>exactSize
+                                <span class="label mandatory"></span><span class="label string"></span><span class="label number"></span></p>
+            Exact number of characters.</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-integer" class="box box-function">
+                <h1 class="fw-300 function-desc">.integer(positive)
+            <i>method</i></h1><p class="text">Checks if a value is a valid integer.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>positive
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Flag that specifies if the integer is must be positive (unsigned).</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-ip" class="box box-function">
+                <h1 class="fw-300 function-desc">.ip(ipType)
+            <i>method</i></h1><p class="text">Checks if a value is a valid IP. Supports ipv4 and ipv6</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>ipType
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Type of IP to be validated. The values are: ipv4, ipv6. By default is ipv4.</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-matches" class="box box-function">
+                <h1 class="fw-300 function-desc">.matches(fieldToCompare)
+            <i>method</i></h1><p class="text">Checks if a value matches the value of a different field.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>fieldToCompare
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Name or ID of the field to compare.</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-max_length" class="box box-function">
+                <h1 class="fw-300 function-desc">.max_length(maxSize)
+            <i>method</i></h1><p class="text">Checks if a value has a maximum length</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>maxSize
+                                <span class="label mandatory"></span><span class="label string"></span><span class="label number"></span></p>
+            Maximum number of characters.</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-min_length" class="box box-function">
+                <h1 class="fw-300 function-desc">.min_length(minSize)
+            <i>method</i></h1><p class="text">Checks if a value has a minimum length</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>minSize
+                                <span class="label mandatory"></span><span class="label string"></span><span class="label number"></span></p>
+            Minimum number of characters.</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-numeric" class="box box-function">
+                <h1 class="fw-300 function-desc">.numeric(decimalSeparator, [decimalPlaces], [leftDigits])
+            <i>method</i></h1><p class="text">Checks if a value is a numeric value.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>decimalSeparator
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Checks if it's a valid decimal. Otherwise checks if it's a valid integer.</li>            <li class="level1">
+                            <p>decimalPlaces
+                                <span class="label string"></span></p>
+            Maximum number of digits the decimal part must have.</li>            <li class="level1">
+                            <p>leftDigits
+                                <span class="label string"></span></p>
+            Maximum number of digits the integer part must have, when provided.</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-phone" class="box box-function">
+                <h1 class="fw-300 function-desc">.phone(phoneType)
+            <i>method</i></h1><p class="text">Checks if a value is a valid phone number.<br>Supports several countries, based in the Ink.Util.Validator class.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>phoneType
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Country's initials to specify the type of phone number to be validated. Ex: 'AO'.</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-range" class="box box-function">
+                <h1 class="fw-300 function-desc">.range(minValue, maxValue, [multipleOf])
+            <i>method</i></h1><p class="text">Checks if a value is in a specific range of values.<br>The parameters after the first one are used to specify the range, and are similar in function to python&#39;s range() function.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>minValue
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Left limit of the range.</li>            <li class="level1">
+                            <p>maxValue
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Right limit of the range.</li>            <li class="level1">
+                            <p>multipleOf
+                                <span class="label string"></span></p>
+            In case you want numbers that are only multiples of another number.</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-required" class="box box-function">
+                <h1 class="fw-300 function-desc">.required()
+            <i>method</i></h1><p class="text">Checks if a value is defined and not empty</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_validationFunctions-url" class="box box-function">
+                <h1 class="fw-300 function-desc">.url(fullCheck)
+            <i>method</i></h1><p class="text">Checks if a value has a valid URL</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>fullCheck
+                                <span class="label mandatory"></span><span class="label boolean"></span></p>
+            Flag to validate a full url (with the protocol).</li>        </ul>
+            </section>            <h2 class="fw-300 class-name">
         FormValidator_2 <i>class</i>
             </h2><table class="props bottom-space">        <caption>Methods</caption>
                 <thead>

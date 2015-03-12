@@ -46,6 +46,12 @@ site_root:  ../
                         <td> Checks if an email address is valid</td>
                     </tr>            <tr>
                         <td>
+                            <a href="#Ink_Util_Validator_1-Ink_Util_Validator_1-getEANCheckDigit">.getEANCheckDigit(digits)
+        </a>
+                        </td>
+                        <td> Get the check digit of an EAN code without a check digit.</td>
+                    </tr>            <tr>
+                        <td>
                             <a href="#Ink_Util_Validator_1-Ink_Util_Validator_1-isAOPhone">.isAOPhone(phone)
         </a>
                         </td>
@@ -74,6 +80,12 @@ site_root:  ../
         </a>
                         </td>
                         <td> Checks if a date is valid in a given format</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Util_Validator_1-Ink_Util_Validator_1-isEAN">.isEAN(code, [eanType])
+        </a>
+                        </td>
+                        <td> Validate an <a href="https://en.wikipedia.org/wiki/International_Article_Number_%28EAN%29">EAN barcode</a> string.</td>
                     </tr>            <tr>
                         <td>
                             <a href="#Ink_Util_Validator_1-Ink_Util_Validator_1-isIP">.isIP(value, ipType)
@@ -193,6 +205,14 @@ site_root:  ../
                                 <span class="label mandatory"></span><span class="label string"></span></p>
             String containing the e-mail.</li>        </ul>
             <!--<h3>Samples</h3>-->		{% include js_samples/Ink_Util_Validator_mail.html %}
+            </section>    <section id="Ink_Util_Validator_1-Ink_Util_Validator_1-getEANCheckDigit" class="box box-function">
+                <h1 class="fw-300 function-desc">.getEANCheckDigit(digits)
+            <i>method</i></h1><p class="text">Get the check digit of an EAN code without a check digit.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>digits
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            The remaining digits, out of which the check digit is calculated.</li>        </ul>
             </section>    <section id="Ink_Util_Validator_1-Ink_Util_Validator_1-isAOPhone" class="box box-function">
                 <h1 class="fw-300 function-desc">.isAOPhone(phone)
             <i>method</i></h1><p class="text">Checks if a phone is valid in Angola</p>        <h3>Accepts</h3>
@@ -244,6 +264,17 @@ site_root:  ../
                                 <span class="label mandatory"></span><span class="label string"></span></p>
             Date string</li>        </ul>
             <!--<h3>Samples</h3>-->		{% include js_samples/Ink_Util_Validator_isDate.html %}
+            </section>    <section id="Ink_Util_Validator_1-Ink_Util_Validator_1-isEAN" class="box box-function">
+                <h1 class="fw-300 function-desc">.isEAN(code, [eanType])
+            <i>method</i></h1><p class="text">Validate an <a href="https://en.wikipedia.org/wiki/International_Article_Number_%28EAN%29">EAN barcode</a> string.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>code
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            The code containing the EAN</li>            <li class="level1">
+                            <p>eanType
+                                </p>
+            &#x27;ean-13&#x27;Select your EAN type. For now, only ean-13 is supported, and it's the default.</li>        </ul>
             </section>    <section id="Ink_Util_Validator_1-Ink_Util_Validator_1-isIP" class="box box-function">
                 <h1 class="fw-300 function-desc">.isIP(value, ipType)
             <i>method</i></h1><p class="text">Checks if the value is a valid IP.</p>        <h3>Accepts</h3>
