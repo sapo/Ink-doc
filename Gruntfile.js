@@ -182,12 +182,36 @@ module.exports = function(grunt) {
           config: '_config.yml'
         }
       }
+    },
+    bump : {
+      options: {
+        files: [
+          '_config.yml',
+          '_includes/inkdoctemplates/ink/index.hbs',
+          'javascript/index.html',
+          'cookbook/*.html',
+          '!cookbook/index.html'
+        ],
+        push: false,
+        commit: false,
+        tagName: '%VERSION%',
+        globalReplace: true,
+        regExp: new RegExp(
+          '([\'|\"|@]?version[\'|\"]?[ ]*:?[ ]*[\'|\"]?|'+
+            'http://(?:fastly|cdn).ink.sapo.pt/' +
+          ')' +
+          '(\\d+\\.\\d+\\.\\d+(-' +
+          '\\.\\d+)?(-\\d+)?)[\\d||A-a|.|-]*([\'|\"]?)', 'i'),
+        createTag: false,
+        commitFiles: []
+      }  
     }
 
   });
 
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-bump');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-copy');
