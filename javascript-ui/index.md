@@ -2147,7 +2147,7 @@ A simple Tabs component, with tabs on top and two sections.
 
 {% capture Tabs %}
 <!-- replace 'top' with 'bottom', 'left' or 'right' to reposition navigation -->
-<div class="ink-tabs top">
+<div class="ink-tabs top" data-prevent-url-change="true">
     <!-- If you're using 'bottom' positioning, put this div AFTER the content. -->
     <ul class="tabs-nav">
         <li><a class="tabs-tab" href="#home">Home</a></li>
@@ -2184,7 +2184,7 @@ A simple Tabs component, with tabs on top and two sections.
 This example shows you how to change the position of the tabs to have them hanging from the left by adding the `.left` class to the `.ink-tabs` element. You can also use `"top"` (shown above), `"bottom"`, or `"right"`.
 
 {% capture Tabs %}
-<div class="ink-tabs left">
+<div class="ink-tabs left" data-prevent-url-change="true">
     <!-- If you're using 'bottom' positioning, put this div AFTER the content. -->
     <ul class="tabs-nav">
         <li><a class="tabs-tab" href="#home2">Home</a></li>
@@ -2221,7 +2221,7 @@ This example shows you how to change the position of the tabs to have them hangi
 The `li` containing the tab gets the `.active` class when it is active. You can use that as a CSS hook to style the active tab differently. `.tabs-content` also gets the `.active` class when it's active.
 
 {% capture Tabs %}
-<div class="ink-tabs top style-hook-example">
+<div class="ink-tabs top style-hook-example" data-prevent-url-change="true">
     <!-- If you're using 'bottom' positioning, put this div AFTER the content. -->
     <ul class="tabs-nav">
         <li><a class="tabs-tab" href="#home3">Home</a></li>
