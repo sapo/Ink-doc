@@ -1098,7 +1098,7 @@ It plays well with the `.ink-dismiss` class (the [Close](#Close) element). An el
 
 #### Open a simple modal
 
-The images below will only load when you scroll
+Click the button to open a modal
 
 {% capture Modal %}
 <div class="ink-shade fade">
