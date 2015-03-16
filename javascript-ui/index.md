@@ -907,6 +907,44 @@ Here's how FormValidator deals with `<input type="radio">` and `<input type="che
 {% endhighlight %}
 
 
+#### Custom error message strings
+
+To issue a custom error message for that input, add a data-error attribute to the element
+
+{% capture FormValidator_2 %}
+<form class="ink-form ink-formvalidator column-group" method="post" action="#">
+    <div class="all-50 small-100 tiny-100">
+        <div class="control-group required">
+            <p class="label">An offer you cannot refuse.</p>
+            <ul class="control unstyled">
+                <li>
+                    <input type="radio" name="accept-offer" id="accept-offer-2-id" value="1" data-rules="required" data-label="Accept Offer" data-error="You messing with me?" />
+                    <label for="accept-offer-2-id">Okay!</label>
+                </li>
+                <li>
+                    <input type="radio" name="accept-offer" id="refuse-offer-2-id" value="2" />
+                    <label for="refuse-offer-2-id">No, thanks.</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <input type="submit" name="sub" value="Submit" class="ink-button success" />
+</form>
+{% endcapture %}
+
+<p class="example-title">Demo</p>
+{{ FormValidator_2 }}
+
+**Note: The `required` class is related to the [Form UI Element](http://ink.sapo.pt/ui-elements/forms/). it doesn't affect the FormValidator's behaviour.**
+
+<p class="example-title">Code</p>
+{% highlight html %}
+{{ FormValidator_2 }}
+{% endhighlight %}
+
+
+
+
 ### FormValidator_2 options for each input
 
 After adding the `.ink-formvalidator` class to your FormValidator, add these data-attributes to your form inputs (input, select, textarea...) to configure how they are validated.
