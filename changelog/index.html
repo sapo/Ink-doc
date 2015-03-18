@@ -5,7 +5,35 @@ description: Track Ink's latest changes
 site_root:  ../
 ---
 
+
 <section class="no-padding half-top-space">
+    <h1 class="fw-300">3.1.5</h1>
+    <p><time>March 18, 2015</time></p>
+
+    <p class="clearfix">
+        <a href="{{site.download_url}}3.1.5/ink-3.1.5.zip" class="ink-button black">Download</a>
+        <a href="{{site.download_src_url}}3.1.5.zip" class="ink-button black">Download with source</a>
+    </p>
+
+    <h2 class="fw-300">JS</h2>
+
+    <ul>
+        <li>Merges <a href="https://github.com/sapo/Ink/pull/417">#417</a></li>
+        <li>Adds LazyLoad to Autoload with the .ink-lazyload class</li>
+        <li>Add loadedClass (data-loaded-class="class-name") option to put classes in LazyLoaded elements when they are loaded so they can be styled.</li>
+        <li>Adds TL phones to Ink.Util.Validator</li>
+        <li>Adds EAN validation to Ink.Util.Validator and Ink.UI.FormValidator_2</li>
+        <li>Fixes multiple onInViewport callbacks in Ink.UI.LazyLoad_1</li>
+        <li>Make FormValidator's "matches" rule match form elements without a [rules] attribute, because those may not be validated.</li>
+        <li>Modal now uses Flex and VH/VH CSS dimensions remove or lighten the necessity for javascript layout. It is more smooth and a lot faster too! It gracefully degrades into using some javascript layout, or fully rely on it, on older browsers.</li>
+        <li>Toggle will now pass <code>(newState, { element })</code> as arguments to the onChangeState callback, instead of just the new state</li>
+        <li>DatePicker bugfixes</li>
+        <li>when isAccordion, the closeOnClick option of a toggle will default to false.</li>
+        <li>DatePicker lang option, to set the language to Portuguese easily, and an Ink.Util.I18n instance to help create more languages.</li>
+    </ul>
+</section>
+
+<section>
     <h1 class="fw-300">3.1.4</h1>
     <p><time>February 12, 2015</time></p>
 
@@ -19,7 +47,6 @@ site_root:  ../
     <ul>
         <li>Fixes a bug where the breakpoint dependent grid gutter, i.e. .small-gutters, classes in flex box where being miscalculated.</li>
     </ul>
-
 </section>
 
 <section>
