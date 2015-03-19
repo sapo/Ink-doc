@@ -34,6 +34,18 @@ site_root:  ../
                         <td> Gets the currently selected date as a JavaScript date.</td>
                     </tr>            <tr>
                         <td>
+                            <a href="#Ink_UI_DatePicker_1-Ink_UI_DatePicker-getI18n">.getI18n()
+        </a>
+                        </td>
+                        <td> Get my I18n instance with the calendar text</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_DatePicker_1-Ink_UI_DatePicker-getLanguage">.getLanguage()
+        </a>
+                        </td>
+                        <td> Gets the language code string (pt_PT or en_US for example) currently in use.</td>
+                    </tr>            <tr>
+                        <td>
                             <a href="#Ink_UI_DatePicker_1-Ink_UI_DatePicker-isMonthRendered">.isMonthRendered()
         </a>
                         </td>
@@ -44,6 +56,18 @@ site_root:  ../
         </a>
                         </td>
                         <td> This method allows the user to set the DatePicker&#39;s date on run-time.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_DatePicker_1-Ink_UI_DatePicker-setI18n">.setI18n(i18n)
+        </a>
+                        </td>
+                        <td> Set my I18n instance with the calendar text</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_DatePicker_1-Ink_UI_DatePicker-setLanguage">.setLanguage(language)
+        </a>
+                        </td>
+                        <td> Set the language to the given language code</td>
                     </tr>            <tr>
                         <td>
                             <a href="#Ink_UI_DatePicker_1-Ink_UI_DatePicker-show">.show()
@@ -64,15 +88,12 @@ site_root:  ../
                             <p>options
                                 <span class="label object"></span></p>
             Options</li>            <li class="level2">
+                            <p>options.lang
+                                <span class="label string"></span></p>
+            Set the language of this Ink.Util.I18n instance. pt_PT and en_US are available, but using getI18n().append({ lang_CODE: {...} }) you can create your own language.</li>            <li class="level2">
                             <p>options.autoOpen
                                 <span class="label boolean"></span></p>
-            Flag to automatically open the datepicker.</li>            <li class="level2">
-                            <p>options.cleanText
-                                <span class="label string"></span></p>
-            Text for the clean button. Defaults to 'Clear'.</li>            <li class="level2">
-                            <p>options.closeText
-                                <span class="label string"></span></p>
-            Text for the close button. Defaults to 'Close'.</li>            <li class="level2">
+            Flag to automatically open the datepicker.  *</li>            <li class="level2">
                             <p>options.cssClass
                                 <span class="label string"></span></p>
             CSS class to be applied on the datepicker</li>            <li class="level2">
@@ -97,15 +118,6 @@ site_root:  ../
                             <p>options.format
                                 <span class="label string"></span></p>
             Date format string</li>            <li class="level2">
-                            <p>options.month
-                                <span class="label object"></span></p>
-            Hash of month names. Defaults to english month names. January is 1.</li>            <li class="level2">
-                            <p>options.nextLinkText
-                                <span class="label string"></span></p>
-            Text for the previous button. Defaults to '«'.</li>            <li class="level2">
-                            <p>options.ofText
-                                <span class="label string"></span></p>
-            Text to show between month and year. Defaults to ' of '.</li>            <li class="level2">
                             <p>options.onFocus
                                 <span class="label boolean"></span></p>
             If the datepicker should open when the target element is focused. Defaults to true.</li>            <li class="level2">
@@ -121,9 +133,6 @@ site_root:  ../
                             <p>options.position
                                 <span class="label string"></span></p>
             Position for the datepicker. Either 'right' or 'bottom'. Defaults to 'right'.</li>            <li class="level2">
-                            <p>options.prevLinkText
-                                <span class="label string"></span></p>
-            Text for the previous button. Defaults to '«'.</li>            <li class="level2">
                             <p>options.showClean
                                 <span class="label boolean"></span></p>
             If the clean button should be visible. Defaults to true.</li>            <li class="level2">
@@ -154,12 +163,30 @@ site_root:  ../
                             <p>options.prevValidDateFn
                                 <span class="label function"></span></p>
             Function to calculate the previous valid date, given the current. Useful when there's invalid dates or time frames.</li>            <li class="level2">
-                            <p>options.wDay
-                                <span class="label object"></span></p>
-            Hash of week day names. Sunday is 0. Defaults to { 0:'Sunday', 1:'Monday', etc...</li>            <li class="level2">
                             <p>options.yearRange
                                 <span class="label string"></span></p>
-            Enforce limits to year for the Date, ex: '1990:2020' (deprecated)</li>        </ul>
+            Enforce limits to year for the Date, ex: '1990:2020' (deprecated)</li>            <li class="level2">
+                            <p>options.month
+                                <span class="label object"></span></p>
+            (Deprecated. use options.lang or i18n instead) Hash of month names. Defaults to english month names. January is 1.</li>            <li class="level2">
+                            <p>options.wDay
+                                <span class="label object"></span></p>
+            (Deprecated. use options.lang or i18n instead) Hash of week day names. Sunday is 0. Defaults to { 0:'Sunday', 1:'Monday', etc...</li>            <li class="level2">
+                            <p>options.nextLinkText
+                                <span class="label string"></span></p>
+            (Deprecated. use options.lang or i18n instead) Text for the previous button. Defaults to '»'.</li>            <li class="level2">
+                            <p>options.prevLinkText
+                                <span class="label string"></span></p>
+            (Deprecated. use options.lang or i18n instead) Text for the previous button. Defaults to '«'.</li>            <li class="level2">
+                            <p>options.ofText
+                                <span class="label string"></span></p>
+            (Deprecated. use options.lang or i18n instead) Text to show between month and year. Defaults to ' of '.</li>            <li class="level2">
+                            <p>options.cleanText
+                                <span class="label string"></span></p>
+            (Deprecated. use options.lang or i18n instead) Text for the clean button. Defaults to 'Clear'.</li>            <li class="level2">
+                            <p>options.closeText
+                                <span class="label string"></span></p>
+            (Deprecated. use options.lang or i18n instead) Text for the close button. Defaults to 'Close'.</li>        </ul>
             <!--<h3>Samples</h3>-->		{% include js_samples/Ink_UI_DatePicker_1.html %}
             </section>    <section id="Ink_UI_DatePicker_1-Ink_UI_DatePicker-destroy" class="box box-function">
                 <h1 class="fw-300 function-desc">.destroy()
@@ -167,6 +194,12 @@ site_root:  ../
             </section>    <section id="Ink_UI_DatePicker_1-Ink_UI_DatePicker-getDate" class="box box-function">
                 <h1 class="fw-300 function-desc">.getDate()
             <i>method</i></h1><p class="text">Gets the currently selected date as a JavaScript date.</p>
+            </section>    <section id="Ink_UI_DatePicker_1-Ink_UI_DatePicker-getI18n" class="box box-function">
+                <h1 class="fw-300 function-desc">.getI18n()
+            <i>method</i></h1><p class="text">Get my I18n instance with the calendar text</p>
+            </section>    <section id="Ink_UI_DatePicker_1-Ink_UI_DatePicker-getLanguage" class="box box-function">
+                <h1 class="fw-300 function-desc">.getLanguage()
+            <i>method</i></h1><p class="text">Gets the language code string (pt_PT or en_US for example) currently in use.<br>May be global</p>
             </section>    <section id="Ink_UI_DatePicker_1-Ink_UI_DatePicker-isMonthRendered" class="box box-function">
                 <h1 class="fw-300 function-desc">.isMonthRendered()
             <i>method</i></h1><p class="text">Checks if the calendar screen is in &#39;select day&#39; mode</p>
@@ -178,6 +211,22 @@ site_root:  ../
                             <p>dateString
                                 <span class="label mandatory"></span><span class="label date"></span><span class="label string"></span></p>
             A Date object, or date string in yyyy-mm-dd format.</li>        </ul>
+            </section>    <section id="Ink_UI_DatePicker_1-Ink_UI_DatePicker-setI18n" class="box box-function">
+                <h1 class="fw-300 function-desc">.setI18n(i18n)
+            <i>method</i></h1><p class="text">Set my I18n instance with the calendar text</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>i18n
+                                <span class="label mandatory"></span><span class="label ink.util.i18n_1"></span></p>
+            I18n instance</li>        </ul>
+            </section>    <section id="Ink_UI_DatePicker_1-Ink_UI_DatePicker-setLanguage" class="box box-function">
+                <h1 class="fw-300 function-desc">.setLanguage(language)
+            <i>method</i></h1><p class="text">Set the language to the given language code<br>If we don&#39;t have an i18n instance, create one which is a copy of the global one.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>language
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            Language code (ex: en_US, pt_PT)</li>        </ul>
             </section>    <section id="Ink_UI_DatePicker_1-Ink_UI_DatePicker-show" class="box box-function">
                 <h1 class="fw-300 function-desc">.show()
             <i>method</i></h1><p class="text">Shows the calendar.</p>
