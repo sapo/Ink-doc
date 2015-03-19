@@ -1710,16 +1710,16 @@ Below you can see two sortable grids, just to show off two ways of sorting items
 When "swap mode" is active, the sorting makes more sense in grids, although it changes the list around a lot.
 
 {% capture SortableList %}
-List mode:
-<ul class="unstyled ink-sortable-list">
+<h3>List mode:</h3>
+<ul class="unstyled clearfix ink-sortable-list">
     <li class="all-50 push-left">First</li>
     <li class="all-50 push-left">Second</li>
     <li class="all-50 push-left">Third</li>
     <li class="all-50 push-left">Fourth</li>
 </ul>
 
-Swap mode:
-<ul class="unstyled ink-sortable-list" data-swap="true">
+<h3>Swap mode:</h3>
+<ul class="unstyled clearfix ink-sortable-list" data-swap="true">
     <li class="all-50 push-left">First</li>
     <li class="all-50 push-left">Second</li>
     <li class="all-50 push-left">Third</li>
@@ -1728,7 +1728,9 @@ Swap mode:
 {% endcapture %}
 
 <p class="example-title">Demo</p>
+<div>
 {{ SortableList }}
+</div>
 
 <p class="example-title">Code</p>
 {% highlight html %}
