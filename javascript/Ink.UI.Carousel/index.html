@@ -22,6 +22,12 @@ site_root:  ../
                         <td><span class="ink-label green">Constructor</span></td>
                     </tr>            <tr>
                         <td>
+                            <a href="#Ink_UI_Carousel_1-Ink_UI_Carousel_1-autoAdvance">.autoAdvance([ms])
+        </a>
+                        </td>
+                        <td> Auto-advance the carousel every <code>ms</code> milliseconds.</td>
+                    </tr>            <tr>
+                        <td>
                             <a href="#Ink_UI_Carousel_1-Ink_UI_Carousel_1-getPage">.getPage()
         </a>
                         </td>
@@ -86,6 +92,12 @@ site_root:  ../
         </a>
                         </td>
                         <td> Sets the current page index</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_Carousel_1-Ink_UI_Carousel_1-stopAutoAdvance">.stopAutoAdvance()
+        </a>
+                        </td>
+                        <td> Stop the carousel from auto-advancing. Calls clearTimeout to cancel the auto-advancer.</td>
                     </tr></tbody>
             </table>
         </section>
@@ -122,6 +134,14 @@ site_root:  ../
                                 <span class="label function"></span></p>
             Callback to be called when the page changes.</li>        </ul>
             <!--<h3>Samples</h3>-->		{% include js_samples/Ink_UI_Carousel_1.html %}
+            </section>    <section id="Ink_UI_Carousel_1-Ink_UI_Carousel_1-autoAdvance" class="box box-function">
+                <h1 class="fw-300 function-desc">.autoAdvance([ms])
+            <i>method</i></h1><p class="text">Auto-advance the carousel every <code>ms</code> milliseconds.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>ms
+                                </p>
+            {String} Number of milliseconds between advances.</li>        </ul>
             </section>    <section id="Ink_UI_Carousel_1-Ink_UI_Carousel_1-getPage" class="box box-function">
                 <h1 class="fw-300 function-desc">.getPage()
             <i>method</i></h1><p class="text">Gets the current page index</p>
@@ -173,4 +193,7 @@ site_root:  ../
                             <p>wrap
                                 <span class="label boolean"></span></p>
             falseFlag to activate circular counting (for example, if you set the page to `5` and there are only 4 pages, you're actually going to the first page).</li>        </ul>
+            </section>    <section id="Ink_UI_Carousel_1-Ink_UI_Carousel_1-stopAutoAdvance" class="box box-function">
+                <h1 class="fw-300 function-desc">.stopAutoAdvance()
+            <i>method</i></h1><p class="text">Stop the carousel from auto-advancing. Calls clearTimeout to cancel the auto-advancer.</p>
             </section>

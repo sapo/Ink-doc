@@ -43,7 +43,7 @@ site_root:  ../
                             <a href="#Ink_Util_Array_1-Ink_Util_Array_1-groupBy">.groupBy(arr, [options])
         </a>
                         </td>
-                        <td> Loops through an array, grouping similar items together.</td>
+                        <td> Finds similar objects in an array and groups them together into subarrays for you. Groups have 1 or more item each.</td>
                     </tr>            <tr>
                         <td>
                             <a href="#Ink_Util_Array_1-Ink_Util_Array_1-inArray">.inArray(value, arr)
@@ -174,7 +174,7 @@ site_root:  ../
             <!--<h3>Samples</h3>-->		{% include js_samples/Ink_Util_Array_forEach.html %}
             </section>    <section id="Ink_Util_Array_1-Ink_Util_Array_1-groupBy" class="box box-function">
                 <h1 class="fw-300 function-desc">.groupBy(arr, [options])
-            <i>method</i></h1><p class="text">Loops through an array, grouping similar items together.</p>        <h3>Accepts</h3>
+            <i>method</i></h1><p class="text">Finds similar objects in an array and groups them together into subarrays for you. Groups have 1 or more item each.</p>        <h3>Accepts</h3>
                     
                     <ul class="params">            <li class="level1">
                             <p>arr
@@ -183,16 +183,25 @@ site_root:  ../
                             <p>options
                                 <span class="label object"></span></p>
             Options object, containing:</li>            <li class="level2">
+                            <p>options.adjacentGroups
+                                <span class="label boolean"></span></p>
+            Set to `true` to mimick the python `groupby` function and only group adjacent things. For example, `'AABAA'` becomes `[['A', 'A'], ['B'], ['A', 'A']]` instead of `{ 'A': ['A', 'A', 'A', 'A'], 'B': ['B'] }`</li>            <li class="level2">
                             <p>options.key
-                                <span class="label function"></span></p>
-            A function which computes the group key by which the items are grouped.</li>            <li class="level2">
+                                <span class="label function"></span><span class="label string"></span></p>
+            A function which computes the group key by which the items are grouped. Alternatively, you can pass a string and groupBy will pluck it out of the object and use that as a key.</li>            <li class="level2">
                             <p>options.pairs
                                 <span class="label boolean"></span></p>
             Set to `true` if you want to output an array of `[key, [group...]]` pairs instead of an array of groups.</li>        </ul><p class="example-title">Example</p>
             {% highlight html %}{% raw %}
-                   InkArray.groupBy([1, 1, 2, 2, 3, 1])  // -> [ [1, 1], [2, 2], [3], [1] ]
+                   InkArray.groupBy([1, 1, 2, 2, 3, 1])  // -> [ [1, 1, 1], [2, 2], [3] ]
                    InkArray.groupBy([1.1, 1.2, 2.1], { key: Math.floor })  // -> [ [1.1, 1.2], [2.1] ]
                    InkArray.groupBy([1.1, 1.2, 2.1], { key: Math.floor, pairs: true })  // -> [ [1, [1.1, 1.2]], [2, [2.1]] ]
+                   InkArray.groupBy([1.1, 1.2, 2.1], { key: Math.floor, pairs: true })  // -> [ [1, [1.1, 1.2]], [2, [2.1]] ]
+                   InkArray.groupBy([
+                       { year: 2000, month: 1 },
+                       { year: 2000, month: 2 },
+                       { year: 2001, month: 4 }
+                   ], { key: 'year' })  // -> [ [ { year: 2000, month: 1 }, { year: 2000, month: 2} ], [ { year: 2001, month: 2 } ] ]
             
             {% endraw %}{% endhighlight %}
             
