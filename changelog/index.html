@@ -5,8 +5,40 @@ description: Track Ink's latest changes
 site_root:  ../
 ---
 
-
 <section class="no-padding half-top-space">
+    <h1 class="fw-300">3.1.6</h1>
+    <p><time>March 31, 2015</time></p>
+
+    <p class="clearfix">
+        <a href="{{site.download_url}}3.1.6/ink-3.1.6.zip" class="ink-button black">Download</a>
+        <a href="{{site.download_src_url}}3.1.6.zip" class="ink-button black">Download with source</a>
+    </p>
+
+    <h2 class="fw-300">JS</h2>
+
+    <h2>JS</h2>
+
+    <ul>
+        <li>Fixed a bug where multiple toggles would misbehave if they had data-close-on-click.</li>
+        <li>Change Toggle defaults when data-can-toggle-an-ancestor is present, to avoid a bug where the toggle won't do anything.</li>
+        <li>Fixes <a href="https://github.com/sapo/Ink/issues/435" title="Checkboxes have suffix [0] after form serialization">#435</a>.</li>
+        <li>Fixes <a href="https://github.com/sapo/Ink/issues/430" title="SortableList handleSelector bug">#430</a>.</li>
+        <li>Fixes a bug with InkElement where scrollHeight() was returning <code>0</code> in chrome.</li>
+        <li>Fixes a bug in Modal, which was ignoring <code>closeOnClick: false</code> and closing the Modal anyway.</li>
+        <li>InkArray.groupBy() can group non-adjacent objects now (<a href="https://github.com/sapo/Ink/issues/436" title="InkArray.groupBy grouping incorrectly">#436</a>).</li>
+        <li>groupBy() can take a string as a key, which makes it take that property name from each item and use that as the key.</li>
+        <li>Ink.Util.Validator.isEAN can now validate ean-8 barcodes.</li>
+    </ul>
+
+    <h2 class="fw-300">CSS</h2>
+
+    <ul>
+        <li>Fixes <a href="https://github.com/sapo/Ink/issues/432" title="Appended and prepended inputs bug">#432</a> and <a href="https://github.com/sapo/Ink/issues/433" title="Symbols Bug">#433</a>.</li>
+    </ul>
+
+</section>
+
+<section>
     <h1 class="fw-300">3.1.5</h1>
     <p><time>March 18, 2015</time></p>
 
@@ -238,7 +270,7 @@ site_root:  ../
     <h2 class="fw-300">CSS</h2>
 
     <ul>
-        <li>Removes a fade() call left over from the old LESS source (<a href="https://github.com/sapo/Ink/issues/349" class="issue-link" title="I think this is a bug">#349</a>)</li>
+        <li>Removes a fade() call left over from the old LESS source (<a href="https://github.com/sapo/Ink/issues/349" title="I think this is a bug">#349</a>)</li>
     </ul>
 
     <h2 class="fw-300">JS</h2>
