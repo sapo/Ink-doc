@@ -154,7 +154,7 @@ site_root:  ../
                         <td> Stops event propagation.</td>
                     </tr>            <tr>
                         <td>
-                            <a href="#Ink_Dom_Event_1-Ink_Dom_Event_1-throttle">.throttle(func, [wait])
+                            <a href="#Ink_Dom_Event_1-Ink_Dom_Event_1-throttle">.throttle(func, [wait], [options])
         </a>
                         </td>
                         <td> Creates a throttled version of a function.</td>
@@ -463,7 +463,7 @@ site_root:  ../
             Event handle</li>        </ul>
             <!--<h3>Samples</h3>-->		{% include js_samples/Ink_Dom_Event_1_stopPropagation.html %}
             </section>    <section id="Ink_Dom_Event_1-Ink_Dom_Event_1-throttle" class="box box-function">
-                <h1 class="fw-300 function-desc">.throttle(func, [wait])
+                <h1 class="fw-300 function-desc">.throttle(func, [wait], [options])
             <i>method</i></h1><p class="text">Creates a throttled version of a function.<br>Returns a function which calls <code>func</code>, waiting at least <code>wait</code> milliseconds between calls. This is useful for events such as <code>scroll</code> or <code>resize</code>, which can be triggered too many times per second, slowing down the browser with needless function calls.<br><p><em>note:</em> This does not delay the first function call to the function.</p></p>        <h3>Accepts</h3>
                     
                     <ul class="params">            <li class="level1">
@@ -472,6 +472,15 @@ site_root:  ../
             Function to call. Arguments and context are both passed.</li>            <li class="level1">
                             <p>wait
                                 <span class="label number"></span></p>
-            0Milliseconds to wait between calls.</li>        </ul>
+            0Milliseconds to wait between calls.</li>            <li class="level1">
+                            <p>options
+                                <span class="label object"></span></p>
+            {}Options object, containing:</li>            <li class="level2">
+                            <p>options.preventDefault
+                                <span class="label boolean"></span></p>
+            falseWhether to call preventDefault() on events received here. Use this to throttle mousemove events which you also want to preventDefault() because throttle will not call your function all the time so you don't get a chance to preventDefault() all the events, altough you might need to.</li>            <li class="level2">
+                            <p>options.bind
+                                <span class="label mixed"></span></p>
+            The throttled function is bound to this context. Otherwise, it will use whatever `this` it gets. Just a shorthand of also calling Ink.bind(context, func) on the function after throttling it.</li>        </ul>
             <!--<h3>Samples</h3>-->		{% include js_samples/Ink_Dom_Event_1_throttle.html %}
             </section>
