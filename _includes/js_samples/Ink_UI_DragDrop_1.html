@@ -1,0 +1,121 @@
+<style>
+    .drag-item {
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .drag-handle {
+        cursor: move;
+    }
+</style>
+
+<h2>Basic example</h2>
+
+<p>To create a DragDrop, you need at least a root element, and a set of elements with the drag-item class.</p>
+
+<p>This is done through adding the <code>drag-handle</code> class.</p>
+
+<p class="example-title">Demo</p>
+<div class="example">
+{% capture demo_code %}
+<div class="ink-dragdrop drop-zone" id="demo-dragdrop">
+    <div class="drag-item all-100">drag-item 1</div>
+    <div class="drag-item all-100">drag-item 2</div>
+    <div class="drag-item all-100">drag-item 3</div>
+    <div class="drag-item all-100">drag-item 4</div>
+</div>
+<script>
+    Ink.requireModules(['Ink.UI.DragDrop_1'], function (DragDrop) {
+        new DragDrop('#demo-dragdrop');
+    });
+</script>
+{% endcapture %}
+{{ demo_code }}
+</div>
+
+
+<p class="example-title">Code</p>
+{% highlight html %}
+{{ demo_code }}
+{% endhighlight %}
+
+
+
+<h2>Multiple drop zones</h2>
+
+<p>DragDrop works with multiple drop zones, if you want. Elements with the class <code>drop-zone</code> are considered drop-zones, and dragged items will be placed in them.</p>
+
+<p>By default, there is only one drop-zone which will be the root element. This is to ease development and avoid people having to create wrapper elements.</p>
+
+<p class="example-title">Demo</p>
+<div class="example">
+{% capture demo_code %}
+<div class="column-group gutters" id="demo-dragdrop-3">
+    <div class="all-50">
+        <ul class="drop-zone unstyled" style="min-height: 30px;">
+            <li class="drag-item ink-label green">Left sort item 2</li>
+            <li class="drag-item ink-label green">Left sort item 2</li>
+            <li class="drag-item ink-label green">Left sort item 3</li>
+        </ul>
+    </div>
+    <div class="all-50">
+        <ul class="drop-zone unstyled" style="min-height:30px;;">
+            <li class="drag-item ink-label blue">Right sort item 1</li>
+            <li class="drag-item ink-label blue">Right sort item 2</li>
+            <li class="drag-item ink-label blue">Right sort item 3</li>
+        </ul>
+    </div>
+</div>
+<script>
+    Ink.requireModules(['Ink.UI.DragDrop_1'], function (DragDrop) {
+        new DragDrop('#demo-dragdrop-3');
+    });
+</script>
+{% endcapture %}
+{{ demo_code }}
+</div>
+
+
+<p class="example-title">Code</p>
+{% highlight html %}
+{{ demo_code }}
+{% endhighlight %}
+
+
+
+<h2>drag-handle example</h2>
+
+<p>You can only drag these items by their handle. This is useful if you want the user to interact with some parts of the drag-item, but enable them to drag the drag-item by a handle.</p>
+
+<p>This is done through by adding the <code>drag-handle</code> class.</p>
+
+<p class="example-title">Demo</p>
+<div class="example">
+{% capture demo_code %}
+<div class="column-group drop-zone gutters" id="demo-dragdrop-2">
+    <div class="all-20 medium-33 small-50 tiny-100 drag-item"><h3><i class="fa fa-arrows drag-handle"></i> Drag me 1</h3></div>
+    <div class="all-20 medium-33 small-50 tiny-100 drag-item"><h3><i class="fa fa-arrows drag-handle"></i> Drag me 2</h3></div>
+    <div class="all-20 medium-33 small-50 tiny-100 drag-item"><h3><i class="fa fa-arrows drag-handle"></i> Drag me 3</h3></div>
+    <div class="all-20 medium-33 small-50 tiny-100 drag-item"><h3><i class="fa fa-arrows drag-handle"></i> Drag me 4</h3></div>
+    <div class="all-20 medium-33 small-50 tiny-100 drag-item"><h3><i class="fa fa-arrows drag-handle"></i> Drag me 5</h3></div>
+    <div class="all-20 medium-33 small-50 tiny-100 drag-item"><h3><i class="fa fa-arrows drag-handle"></i> Drag me 6</h3></div>
+    <div class="all-20 medium-33 small-50 tiny-100 drag-item"><h3><i class="fa fa-arrows drag-handle"></i> Drag me 7</h3></div>
+    <div class="all-20 medium-33 small-50 tiny-100 drag-item"><h3><i class="fa fa-arrows drag-handle"></i> Drag me 8</h3></div>
+    <div class="all-20 medium-33 small-50 tiny-100 drag-item"><h3><i class="fa fa-arrows drag-handle"></i> Drag me 9</h3></div>
+</div>
+
+<script>
+    Ink.requireModules(['Ink.UI.DragDrop_1'], function (DragDrop) {
+        new DragDrop('#demo-dragdrop-2');
+    });
+</script>
+{% endcapture %}
+{{ demo_code }}
+</div>
+
+
+<p class="example-title">Code</p>
+{% highlight html %}
+{{ demo_code }}
+{% endhighlight %}
+

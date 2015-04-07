@@ -1,0 +1,110 @@
+---
+layout: js-documentation
+title: Ink.UI.DragDrop_1
+description: A component for dragging things around, dropping them in dropzones, and sorting them.
+site_root:  ../
+---
+<section><p><i class="fa fa-leaf"></i> All samples are using <code>Ink.requireModules</code>, please read how to use it at <a href="/javascript/Ink/#Ink_1-Ink_1-requireModules">Ink.requireModules section</a></p>
+            <h2 class="fw-300 class-name">
+        Ink.UI.DragDrop <i>class</i>
+            </h2><p>A replacement for Draggables, Droppables, and SortableList. It aims to be good at creating draggables, droppables and sortable lists at the same time while keeping it simple for everyone.</p>
+        <p>A DragDrop component may contain one or more &quot;dropZone&quot;s, which are the areas where the &quot;dragItem&quot;s can be dropped. You can identify elements as being a dropZone or a dragItem by using the correct selectors (&quot;.drag-item&quot; and &quot;.drop-zone&quot;).</p>
+        <table class="props bottom-space">        <caption>Methods</caption>
+                <thead>
+                    <tr>
+                        <th>Method name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>            <tr>
+                        <td>
+                            <a href="#Ink_UI_DragDrop_1-Ink_UI_DragDrop-DragDrop">new DragDrop([element], [options])
+        </a>
+                        </td>
+                        <td><span class="ink-label green">Constructor</span></td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_DragDrop_1-Ink_UI_DragDrop-destroy">.destroy()
+        </a>
+                        </td>
+                        <td> Destroy your DragDrop, removing it from the DOM</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_DragDrop_1-Ink_UI_DragDrop-getDraggedElement">.getDraggedElement()
+        </a>
+                        </td>
+                        <td> Returns what element the user is dragging, or <code>null</code> if no drag is occurring.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_DragDrop_1-Ink_UI_DragDrop-getDropZone">.getDropZone(dragItem)
+        </a>
+                        </td>
+                        <td> Get the dropZone containing the given element.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_DragDrop_1-Ink_UI_DragDrop-isDragItem">.isDragItem(elm)
+        </a>
+                        </td>
+                        <td> Returns whether a given .drag-item element is a plain old .drag-item element</td>
+                    </tr></tbody>
+            </table>
+        </section>
+            <section id="Ink_UI_DragDrop_1-Ink_UI_DragDrop-DragDrop" class="box box-function">
+                <h1 class="fw-300 function-desc">new Ink.UI.DragDrop([element], [options])
+            </h1>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>element
+                                <span class="label element"></span></p>
+            Root element for the DragDrop. It can contain one or more dropzones.</li>            <li class="level1">
+                            <p>options
+                                <span class="label object"></span></p>
+            Options object, containing:</li>            <li class="level2">
+                            <p>options.dragItem
+                                <span class="label string"></span></p>
+            &#x27;.drag-item&#x27;Selector for the items to be dragged</li>            <li class="level2">
+                            <p>options.dragHandle
+                                <span class="label string"></span></p>
+            &#x27;.drag-handle&#x27;Selector for a dragging handle. You won't be able to drag other parts of the dragItem.</li>            <li class="level2">
+                            <p>options.dropZone
+                                <span class="label string"></span></p>
+            &#x27;.drop-zone&#x27;Selector of drop zones. Should add this to the element itself.</li>            <li class="level2">
+                            <p>options.ignoreDrag
+                                <span class="label string"></span></p>
+            &#x27;.drag-ignore&#x27;Selector of places where you can't drag.</li>            <li class="level2">
+                            <p>options.draggedCloneClass
+                                <span class="label string"></span></p>
+            &#x27;drag-cloned-item&#x27;Class for the cloned (and position:fixed'ed) element.</li>            <li class="level2">
+                            <p>options.placeholderClass
+                                <span class="label string"></span></p>
+            &#x27;drag-placeholder-item&#x27;Class for the placeholder clone</li>            <li class="level2">
+                            <p>options.onDrag
+                                <span class="label function"></span></p>
+            Called when dragging starts. Takes an `{ dragItem, dropZone }` object.</li>            <li class="level2">
+                            <p>options.onDrag
+                                <span class="label function"></span></p>
+            Called when dragging ends. Takes an `{ origin, dragItem, dropZone }` object.</li>        </ul>
+            <!--<h3>Samples</h3>-->		{% include js_samples/Ink_UI_DragDrop_1.html %}
+            </section>    <section id="Ink_UI_DragDrop_1-Ink_UI_DragDrop-destroy" class="box box-function">
+                <h1 class="fw-300 function-desc">.destroy()
+            <i>method</i></h1><p class="text">Destroy your DragDrop, removing it from the DOM</p>
+            </section>    <section id="Ink_UI_DragDrop_1-Ink_UI_DragDrop-getDraggedElement" class="box box-function">
+                <h1 class="fw-300 function-desc">.getDraggedElement()
+            <i>method</i></h1><p class="text">Returns what element the user is dragging, or <code>null</code> if no drag is occurring.</p>
+            </section>    <section id="Ink_UI_DragDrop_1-Ink_UI_DragDrop-getDropZone" class="box box-function">
+                <h1 class="fw-300 function-desc">.getDropZone(dragItem)
+            <i>method</i></h1><p class="text">Get the dropZone containing the given element.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>dragItem
+                                <span class="label mandatory"></span></p>
+            {Element} The dragItem to find the dropZone of</li>        </ul>
+            </section>    <section id="Ink_UI_DragDrop_1-Ink_UI_DragDrop-isDragItem" class="box box-function">
+                <h1 class="fw-300 function-desc">.isDragItem(elm)
+            <i>method</i></h1><p class="text">Returns whether a given .drag-item element is a plain old .drag-item element<br>and not one of the clones we&#39;re creating or the element we&#39;re really dragging.<br><p>Used because the selector &quot;.drag-item&quot; finds these elements we don&#39;t consider drag-items</p></p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>elm
+                                <span class="label mandatory"></span></p>
+            {Element} The element to test.</li>        </ul>
+            </section>
