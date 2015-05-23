@@ -9,7 +9,7 @@ _('O {person1} dava-se com a {person2}', {person1: 'coisinho', person2: 'coisinh
 // -> 'O coisinho dava-se com a coisinha'
 
 // This is a bit more complex
-var i18n = make().lang('pt_PT').append({
+var i18n = new Ink.Util.I18n().lang('pt_PT').append({
     pt_PT: {
         array: [1, 2],
         object: {'a': '-a-', 'b': '-b-'},

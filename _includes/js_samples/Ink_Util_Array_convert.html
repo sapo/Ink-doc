@@ -1,4 +1,4 @@
-<p>Convert <code>arguments</code> to an array</p> 
+<p>Convert <code>arguments</code> to an array.</p> 
 <p class="example-title">Code</p>
 {% highlight js %}
 Ink.requireModules(['Ink.Util.Array_1'], function(InkArray) {
@@ -9,6 +9,21 @@ Ink.requireModules(['Ink.Util.Array_1'], function(InkArray) {
 });
 {% endhighlight %}
 
+<p>Convert the result of <code>querySelectorAll</code> to an array.</p> 
+<p class="example-title">Code</p>
+{% highlight js %}
+Ink.requireModules(['Ink.Util.Array_1'], function(InkArray) {
+    var elements = document.querySelectorAll('.questions li');
+    // elements is now a NodeList.
+    // This is not convenient because NodeLists don't have much methods.
+    elements = InkArray.convert(elements);
+
+    // Now it's a real array
+    var last = elements.pop();
+});
+{% endhighlight %}
+
+<p>Since this returns a copy of the array, extra methods and other properties will be lost!</p>
 <p class="example-title">Code</p>
 {% highlight js %}
 Ink.requireModules(['Ink.Util.Array_1'], function(InkArray) {
