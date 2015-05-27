@@ -5,8 +5,35 @@ description: Track Ink's latest changes
 site_root:  ../
 ---
 
-
 <section class="no-padding half-top-space">
+    <h1 class="fw-300">3.1.8</h1>
+
+    <p><time>May 27, 2015</time></p>
+    <h2>CSS</h2>
+    
+    <ul>
+        <li>Fixes round corners when there's only one child in the <code>.button-group</code> element.</li>
+        <li>Fixes vertical alignment in Safari.</li>
+        <li>Base font settings are now defined with the <code>font</code> property and the <code>$base-font-weight</code>,<code>$base-font-stretch</code> and <code>$base-font-variant</code> variables were added.</li>
+    </ul>
+
+    <h2>JS</h2>
+    <ul>
+        <li>Dropdown does not need to be passed a 'target' option anymore, it can find its menu by itself</li>
+        <li>Modal will not stop propagation of events any more</li>
+        <li>Modal's onShow callback now takes an object with the modal trigger. It now is function (modalInstance, { trigger }) {}</li>
+        <li>Modal getModalElement, getShadeElement methods, which return the corresponding DOM elements which make up the modal</li>
+        <li>Pagination JS now supports chevron and dotted mode at the same time.</li>
+        <li>FormValidator_2 now supports a data-lang option to set its language to something else.</li>
+        <li>FormValidator_2 FormElement instances now have forceInvalid and forceValid methods, so you can arbitrarily say an input is valid or invalid and bypass all validation rules.</li>
+        <li>Support Opera Mini, which does not have onscroll, in LazyLoad</li>
+        <li>InkArray.forEachObj, for iterating an object's key/value pairs as you do in InkArray.forEach.</li>
+        <li>Fixed an Ink.UI.DatePicker bug in Chrome, which didn't let you select the field.</li>
+    </ul>
+
+</section>
+
+<section>
     <h1 class="fw-300">3.1.7</h1>
     <p><time>April 7, 2015</time></p>
     <h2>JS</h2>
