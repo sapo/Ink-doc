@@ -223,7 +223,7 @@ site_root:  ../
                         <td> Gets options an object and element&#39;s metadata.</td>
                     </tr>            <tr>
                         <td>
-                            <a href="#Ink_UI_Common_1-Ink_UI_Common_1-registerInstance">.registerInstance(inst, [el])
+                            <a href="#Ink_UI_Common_1-Ink_UI_Common_1-registerInstance">.registerInstance(inst, el)
         </a>
                         </td>
                         <td> Saves an object (which should inherit BaseUIComponent) in the registry, associated with an element. You can retrieve it later by calling getInstance.</td>
@@ -527,16 +527,16 @@ site_root:  ../
             {% endraw %}{% endhighlight %}
             
             </section>    <section id="Ink_UI_Common_1-Ink_UI_Common_1-registerInstance" class="box box-function">
-                <h1 class="fw-300 function-desc">.registerInstance(inst, [el])
+                <h1 class="fw-300 function-desc">.registerInstance(inst, el)
             <i>method</i></h1><p class="text">Saves an object (which should inherit BaseUIComponent) in the registry, associated with an element. You can retrieve it later by calling getInstance.<br><p>This won&#39;t allow two instances of the same class to be created on a single element. It will fail and print a warning to the console if you try to do it. That is a common error when using Ink.</p></p>        <h3>Accepts</h3>
                     
                     <ul class="params">            <li class="level1">
                             <p>inst
                                 <span class="label mandatory"></span><span class="label object"></span></p>
-            Object to be registered</li>            <li class="level1">
+            Object that holds the instance.</li>            <li class="level1">
                             <p>el
-                                <span class="label element"></span></p>
-            inst._elementElement to associate with `inst`. Defaults to `_element` property of `inst`.</li>        </ul>
+                                <span class="label mandatory"></span><span class="label element"></span></p>
+            Element to associate with `inst`.</li>        </ul>
             </section>    <section id="Ink_UI_Common_1-Ink_UI_Common_1-restoreIdAndClasses" class="box box-function">
                 <h1 class="fw-300 function-desc">.restoreIdAndClasses(toEl, inObj)
             <i>method</i></h1><p class="text">Sets the id and className properties of an element based</p>        <h3>Accepts</h3>

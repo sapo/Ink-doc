@@ -90,10 +90,10 @@ site_root:  ../
             Options</li>            <li class="level2">
                             <p>options.lang
                                 <span class="label string"></span></p>
-            Set the language of this Ink.Util.I18n instance. pt_PT and en_US are available, but using getI18n().append({ lang_CODE: {...} }) you can create your own language.</li>            <li class="level2">
+            Set the language of the DatePicker, to show month names, day names, etc. Internally this results in changing our Ink.Util.I18n instance. pt_PT and en_US are available, but using getI18n().append({ lang_CODE: {...} }) you can create your own language.</li>            <li class="level2">
                             <p>options.autoOpen
                                 <span class="label boolean"></span></p>
-            Flag to automatically open the datepicker.  *</li>            <li class="level2">
+            Flag to automatically open the datepicker.</li>            <li class="level2">
                             <p>options.cssClass
                                 <span class="label string"></span></p>
             CSS class to be applied on the datepicker</li>            <li class="level2">
@@ -115,6 +115,9 @@ site_root:  ../
                             <p>options.yearField
                                 <span class="label string"></span><span class="label element"></span></p>
             (if using options.displayInSelect) `select` field with years.</li>            <li class="level2">
+                            <p>options.createSelectOptions
+                                <span class="label boolean"></span></p>
+            (if using options.displayInSelect) create the `option` elements with months, days, and years. Otherwise, datepicker trusts you to create them yourself.</li>            <li class="level2">
                             <p>options.format
                                 <span class="label string"></span></p>
             Date format string</li>            <li class="level2">

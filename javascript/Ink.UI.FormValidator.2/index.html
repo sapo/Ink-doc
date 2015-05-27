@@ -28,6 +28,36 @@ site_root:  ../
                         <td><span class="ink-label green">Constructor</span></td>
                     </tr>            <tr>
                         <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-displayErrors">.displayErrors()
+        </a>
+                        </td>
+                        <td> Displays error messages and marks as invalid, if this is invalid.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-forceInvalid">.forceInvalid([message])
+        </a>
+                        </td>
+                        <td> Forcefully mark this FormElement as invalid. Use unsetInvalid() to remove this forced invalidation.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-forceValid">.forceValid()
+        </a>
+                        </td>
+                        <td> Forcefully mark this FormElement as valid</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-getControl">.getControl()
+        </a>
+                        </td>
+                        <td> Returns the .control element. Might not exist</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-getControlGroup">.getControlGroup()
+        </a>
+                        </td>
+                        <td> Returns the element which gets the .validation.error classes. Might not exist.</td>
+                    </tr>            <tr>
+                        <td>
                             <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-getElement">.getElement()
         </a>
                         </td>
@@ -46,10 +76,40 @@ site_root:  ../
                         <td> Gets other elements in the same form.</td>
                     </tr>            <tr>
                         <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-getLabel">.getLabel()
+        </a>
+                        </td>
+                        <td> Gets this FormElement&#39;s display label, as passed to the error messages.</td>
+                    </tr>            <tr>
+                        <td>
                             <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-getValue">.getValue()
         </a>
                         </td>
                         <td> Gets an element&#39;s value</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-removeErrors">.removeErrors()
+        </a>
+                        </td>
+                        <td> Remove error marking and any error paragraphs</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-setRules">.setRules(rulesStr)
+        </a>
+                        </td>
+                        <td> Sets the rules string (just as passed in data-rules) of this FormElement.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-unforceInvalid">.unforceInvalid()
+        </a>
+                        </td>
+                        <td> Undo a forceInvalid() call on this FormElement.</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-unforceValid">.unforceValid()
+        </a>
+                        </td>
+                        <td> Undo a forceValid() call</td>
                     </tr>            <tr>
                         <td>
                             <a href="#Ink_UI_FormValidator_2-FormValidator_FormElement-validate">.validate()
@@ -79,9 +139,32 @@ site_root:  ../
                             <p>options.error
                                 <span class="label string"></span></p>
             Error message to show in case of error</li>            <li class="level2">
+                            <p>options.autoReparse
+                                <span class="label boolean"></span></p>
+            Set to `true` to reparse data-rules every time this is submitted.</li>            <li class="level2">
                             <p>options.form
                                 <span class="label mandatory"></span><span class="label formvalidator"></span></p>
             FormValidator instance.</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-displayErrors" class="box box-function">
+                <h1 class="fw-300 function-desc">.displayErrors()
+            <i>method</i></h1><p class="text">Displays error messages and marks as invalid, if this is invalid.</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-forceInvalid" class="box box-function">
+                <h1 class="fw-300 function-desc">.forceInvalid([message])
+            <i>method</i></h1><p class="text">Forcefully mark this FormElement as invalid. Use unsetInvalid() to remove this forced invalidation.</p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>message
+                                <span class="label string"></span></p>
+            &#x27;(generic error string)'] The error message to show.</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-forceValid" class="box box-function">
+                <h1 class="fw-300 function-desc">.forceValid()
+            <i>method</i></h1><p class="text">Forcefully mark this FormElement as valid</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-getControl" class="box box-function">
+                <h1 class="fw-300 function-desc">.getControl()
+            <i>method</i></h1><p class="text">Returns the .control element. Might not exist</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-getControlGroup" class="box box-function">
+                <h1 class="fw-300 function-desc">.getControlGroup()
+            <i>method</i></h1><p class="text">Returns the element which gets the .validation.error classes. Might not exist.</p>
             </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-getElement" class="box box-function">
                 <h1 class="fw-300 function-desc">.getElement()
             <i>method</i></h1><p class="text">Gets the DOM element related to the instance.</p>
@@ -91,9 +174,29 @@ site_root:  ../
             </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-getFormElements" class="box box-function">
                 <h1 class="fw-300 function-desc">.getFormElements()
             <i>method</i></h1><p class="text">Gets other elements in the same form.</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-getLabel" class="box box-function">
+                <h1 class="fw-300 function-desc">.getLabel()
+            <i>method</i></h1><p class="text">Gets this FormElement&#39;s display label, as passed to the error messages.</p>
             </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-getValue" class="box box-function">
                 <h1 class="fw-300 function-desc">.getValue()
             <i>method</i></h1><p class="text">Gets an element&#39;s value</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-removeErrors" class="box box-function">
+                <h1 class="fw-300 function-desc">.removeErrors()
+            <i>method</i></h1><p class="text">Remove error marking and any error paragraphs</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-setRules" class="box box-function">
+                <h1 class="fw-300 function-desc">.setRules(rulesStr)
+            <i>method</i></h1><p class="text">Sets the rules string (just as passed in data-rules) of this FormElement.<br><p>Use this if a form&#39;s rules need to be dynamically modified.</p></p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>rulesStr
+                                <span class="label mandatory"></span><span class="label string"></span></p>
+            String with rules</li>        </ul>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-unforceInvalid" class="box box-function">
+                <h1 class="fw-300 function-desc">.unforceInvalid()
+            <i>method</i></h1><p class="text">Undo a forceInvalid() call on this FormElement.</p>
+            </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-unforceValid" class="box box-function">
+                <h1 class="fw-300 function-desc">.unforceValid()
+            <i>method</i></h1><p class="text">Undo a forceValid() call</p>
             </section>    <section id="Ink_UI_FormValidator_2-FormValidator_FormElement-validate" class="box box-function">
                 <h1 class="fw-300 function-desc">.validate()
             <i>method</i></h1><p class="text">Validates the element based on the rules defined.<br>It parses the rules defined in the _options.rules property.</p>
@@ -488,6 +591,9 @@ site_root:  ../
                             <p>options
                                 <span class="label object"></span></p>
             Options object, containing the following options:</li>            <li class="level2">
+                            <p>options.lang
+                                <span class="label string"></span></p>
+            Set the language of the error messages. This internally sets the lang of our Ink.Util.I18n instance. pt_PT and en_US are available, but using getI18n().append({ lang_CODE: {...} }) you can create your own language.</li>            <li class="level2">
                             <p>options.eventTrigger
                                 <span class="label string"></span></p>
             Event that will trigger the validation. Defaults to 'submit'.</li>            <li class="level2">
@@ -499,7 +605,13 @@ site_root:  ../
             Selector containing the validation data-attributes. Defaults to 'input, select, textarea, .control-group'.</li>            <li class="level2">
                             <p>options.beforeValidation
                                 <span class="label function"></span></p>
-            Callback to be executed before validating the form</li>            <li class="level2">
+            Callback to be executed before validating the form. Takes { validator (this FormValidator), elements (Object containing arrays of FormElement) } as an argument. Use this callback to preemptively mark fields as invalid or valid using forceInvalid or forceValid.</li>            <li class="level2">
+                            <p>options.autoReparse
+                                <span class="label boolean"></span></p>
+            Set to `true` to reparse data-rules in input elements every time this is submitted.</li>            <li class="level2">
+                            <p>options.extraValidation
+                                <span class="label function"></span></p>
+            Use this callback to perform extra validation on the form. Useful for cross-validation of several fields, for example. Takes { validator (this FormValidator), elements (Object containing arrays of FormElement), errorCount (errors the form had before calling the function) } as an argument, and is called at the end of validate(). Return false to force the form to be invalid. You are responsible for showing any visual feedback to the user for now. This might change later.</li>            <li class="level2">
                             <p>options.onError
                                 <span class="label function"></span></p>
             Validation error callback</li>            <li class="level2">
@@ -512,7 +624,7 @@ site_root:  ../
             <i>method</i></h1><p class="text">Add to the I18n dictionary.<br>See <code>Ink.Util.I18n.append()</code> documentation.</p>
             </section>    <section id="Ink_UI_FormValidator_2-FormValidator_2-getElements" class="box box-function">
                 <h1 class="fw-300 function-desc">.getElements()
-            <i>method</i></h1><p class="text">Searches for the elements in the form.<br>This method is based in the this._options.searchFor configuration.</p>
+            <i>method</i></h1><p class="text">Searches for the elements in the form.<br>This method is based in the this._options.searchFor configuration.<br><p>Returns an object mapping names of object to arrays of FormElement instances.</p></p>
             </section>    <section id="Ink_UI_FormValidator_2-FormValidator_2-getI18n" class="box box-function">
                 <h1 class="fw-300 function-desc">.getI18n()
             <i>method</i></h1><p class="text">Gets the i18n object in charge of the error messages</p>

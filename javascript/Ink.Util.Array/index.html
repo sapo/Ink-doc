@@ -40,6 +40,12 @@ site_root:  ../
                         <td> Runs a function through each of the elements of an array.</td>
                     </tr>            <tr>
                         <td>
+                            <a href="#Ink_Util_Array_1-Ink_Util_Array_1-forEachObj">.forEachObj(obj, callback, [context])
+        </a>
+                        </td>
+                        <td> Like forEach, but for objects.</td>
+                    </tr>            <tr>
+                        <td>
                             <a href="#Ink_Util_Array_1-Ink_Util_Array_1-groupBy">.groupBy(arr, [options])
         </a>
                         </td>
@@ -74,6 +80,12 @@ site_root:  ../
         </a>
                         </td>
                         <td> Gets the indexes of a value in an array</td>
+                    </tr>            <tr>
+                        <td>
+                            <a href="#Ink_Util_Array_1-Ink_Util_Array_1-keys">.keys(obj)
+        </a>
+                        </td>
+                        <td> Object.keys replacement. Returns a list of an object&#39;s own properties.</td>
                     </tr>            <tr>
                         <td>
                             <a href="#Ink_Util_Array_1-Ink_Util_Array_1-map">.map(array, mapFn, [context])
@@ -172,6 +184,21 @@ site_root:  ../
                                 <span class="label mandatory"></span><span class="label mixed"></span></p>
             The value of `this` inside the `callback` you passed.</li>        </ul>
             <!--<h3>Samples</h3>-->		{% include js_samples/Ink_Util_Array_forEach.html %}
+            </section>    <section id="Ink_Util_Array_1-Ink_Util_Array_1-forEachObj" class="box box-function">
+                <h1 class="fw-300 function-desc">.forEachObj(obj, callback, [context])
+            <i>method</i></h1><p class="text">Like forEach, but for objects.<br><p>Calls <code>callback</code> with <code>(value, key, entireObject)</code> once for each key-value pair in <code>obj</code></p></p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>obj
+                                <span class="label mandatory"></span><span class="label object"></span></p>
+            Input object</li>            <li class="level1">
+                            <p>callback
+                                <span class="label mandatory"></span><span class="label function"></span></p>
+            Iteration callback, called once for each key/value pair in the object. `function (value, key, all) { this === context }`</li>            <li class="level1">
+                            <p>context
+                                <span class="label mixed"></span></p>
+            Set what the context (`this`) in the function will be.</li>        </ul>
+            <!--<h3>Samples</h3>-->		{% include js_samples/Ink_Util_Array_forEachObj.html %}
             </section>    <section id="Ink_Util_Array_1-Ink_Util_Array_1-groupBy" class="box box-function">
                 <h1 class="fw-300 function-desc">.groupBy(arr, [options])
             <i>method</i></h1><p class="text">Finds similar objects in an array and groups them together into subarrays for you. Groups have 1 or more item each.</p>        <h3>Accepts</h3>
@@ -267,6 +294,14 @@ site_root:  ../
                                 <span class="label boolean"></span></p>
             Flag to stop the search at the first match. It also returns an index number instead of an array of indexes.</li>        </ul>
             <!--<h3>Samples</h3>-->		{% include js_samples/Ink_Util_Array_keyValue.html %}
+            </section>    <section id="Ink_Util_Array_1-Ink_Util_Array_1-keys" class="box box-function">
+                <h1 class="fw-300 function-desc">.keys(obj)
+            <i>method</i></h1><p class="text">Object.keys replacement. Returns a list of an object&#39;s own properties.<br><p>If Object.keys is available, just calls it.</p></p>        <h3>Accepts</h3>
+                    
+                    <ul class="params">            <li class="level1">
+                            <p>obj
+                                <span class="label mandatory"></span><span class="label object"></span></p>
+            Object with the properties.</li>        </ul>
             </section>    <section id="Ink_Util_Array_1-Ink_Util_Array_1-map" class="box box-function">
                 <h1 class="fw-300 function-desc">.map(array, mapFn, [context])
             <i>method</i></h1><p class="text">Runs a function for each item in the array.<br>Uses Array.prototype.map if available.<br>That function will receive each item as an argument and its return value will change the corresponding array item.</p>        <h3>Accepts</h3>
