@@ -1,0 +1,15 @@
+<p>Iterate over a simple object</p> 
+<p class="example-title">Code</p>
+{% highlight js %}
+Ink.requireModules(['Ink.Util.Array_1'], function(InkArray) {
+    var people = {
+        'Amy': '+351 234 564',
+        'John': '+351 444 444'
+    };
+
+    // List the people in our database.
+    InkArray.forEachObj(people, function(tel, name) {
+        console.log(name + ': ' + tel);
+    });
+});
+{% endhighlight %}
