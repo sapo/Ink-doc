@@ -7,7 +7,7 @@
         </ul>
         <ul class="menu horizontal black push-right hide-small hide-tiny hide-medium">
             <li>
-                <a class="ink-button blue" href="{{ site.download_url }}{{ site.version }}/ink-{{ site.version }}.zip" onclick="ga('send', 'event', 'link', 'click', 'Download');" data-trackerlink="content|menutop|downloadzip">Download</a>
+                <a class="ink-button blue" href="{{ site.download_url }}{{ site.version }}/ink-{{ site.version }}.zip" onclick="ga('send', 'event', 'link', 'click', 'Download');" data-trackerlink="content|menutop|downloadzip">Download <span>{{site.version}}</span></a>
             </li>
             {% for section in site.sections %}
             {% assign section_uri = section.title | downcase | replace:' ','-' %}
