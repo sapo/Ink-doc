@@ -59,9 +59,9 @@ Ink.requireModules(['Ink.UI.Toggle_1'], function (Toggle) {
 {% endhighlight %}
 
 
-<h2 id="Ink.UI.Carousel_1">
+<h2 id="InkUICarousel_1">
     Carousel
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.Carousel_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUICarousel_1"></a>
 </h2>
 
 A responsive carousel with one or more slides per page. Cycle back and forth between slides with any content you can put in. You can also swipe back and forth with your finger if your device supports touch.
@@ -195,9 +195,9 @@ You can visit [the Carousel API docs](/javascript/Ink.UI.Carousel/) to find out 
 -------------
 
 
-<h2 id="Ink.UI.Close_1">
+<h2 id="InkUIClose_1">
     Close
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.Close_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUIClose_1"></a>
 </h2>
 
 Dismiss things.
@@ -239,9 +239,9 @@ There's not much to know about Close, but here are [the Close JS API docs](/java
 
 
 
-<h2 id="Ink.UI.DatePicker_1">
+<h2 id="InkUIDatePicker_1">
     DatePicker
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.DatePicker_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUIDatePicker_1"></a>
 </h2>
 
 
@@ -403,9 +403,9 @@ You can visit [the DatePicker API docs](/javascript/Ink.UI.DatePicker/) to find 
 
 
 
-<h2 id="Ink.UI.Draggable_1">
+<h2 id="InkUIDraggable_1">
     Draggable
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.Draggable_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUIDraggable_1"></a>
 </h2>
 
 Draggable is a component which works with [Droppable](#Ink.UI.Droppable_1).
@@ -492,9 +492,9 @@ You can visit [the Draggable API docs](/javascript/Ink.UI.Draggable/) to find ou
 
 
 
-<h2 id="Ink.UI.Drawer_1">
+<h2 id="InkUIDrawer_1">
     Drawer
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.Drawer_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUIDrawer_1"></a>
 </h2>
 
 
@@ -629,9 +629,9 @@ You can visit [the Drawer API docs](/javascript/Ink.UI.Drawer/) to find out abou
 
 
 
-<h2 id="Ink.UI.Dropdown_1">
+<h2 id="InkUIDropdown_1">
     Dropdown
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.Dropdown_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUIDropdown_1"></a>
 </h2>
 
 
@@ -711,9 +711,9 @@ You can visit [the Dropdown API docs](/javascript/Ink.UI.Dropdown/) to find out 
 
 
 
-<h2 id="Ink.UI.Droppable_1">
+<h2 id="InkUIDroppable_1">
     Droppable
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.Dropdown_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUIDropdown_1"></a>
 </h2>
 
 
@@ -801,9 +801,9 @@ You can visit [the Droppable API docs](/javascript/Ink.UI.Droppable/) to find ou
 
 
 
-<h2 id="Ink.UI.FormValidator_2">
+<h2 id="InkUIFormValidator_2">
     FormValidator_2
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.FormValidator_2"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUIFormValidator_2"></a>
 </h2>
 
 
@@ -1010,9 +1010,9 @@ You can visit [the FormValidator_2 API docs](/javascript/Ink.UI.FormValidator.2/
 
 
 
-<h2 id="Ink.UI.LazyLoad_1">
+<h2 id="InkUILazyLoad_1">
     LazyLoad
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.LazyLoad_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUILazyLoad_1"></a>
 </h2>
 
 
@@ -1118,9 +1118,9 @@ You can visit [the LazyLoad API docs](/javascript/Ink.UI.LazyLoad/) to find out 
 
 
 
-<h2 id="Ink.UI.Modal_1">
+<h2 id="InkUIModal_1">
     Modal
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.Modal_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUIModal_1"></a>
 </h2>
 
 
@@ -1253,9 +1253,9 @@ You can visit [the Modal API docs](/javascript/Ink.UI.Modal/) to find out about 
 
 
 
-<h2 id="Ink.UI.Pagination_1">
+<h2 id="InkUIPagination_1">
     Pagination
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.Pagination_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUIPagination_1"></a>
 </h2>
 
 
@@ -1380,9 +1380,9 @@ You can visit [the Pagination API docs](/javascript/Ink.UI.Pagination/) to find 
 
 
 
-<h2 id="Ink.UI.ProgressBar_1">
+<h2 id="InkUIProgressBar_1">
     ProgressBar
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.ProgressBar_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUIProgressBar_1"></a>
 </h2>
 
 A ProgressBar can be used to indicate progress in a certain process.
@@ -1425,9 +1425,9 @@ You can visit [the ProgressBar API docs](/javascript/Ink.UI.ProgressBar/) to lea
 
 
 
-<h2 id="Ink.UI.SmoothScroller_1">
+<h2 id="InkUISmoothScroller_1">
     SmoothScroller
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.SmoothScroller_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUISmoothScroller_1"></a>
 </h2>
 
 SmoothScroller is a component for
@@ -1551,9 +1551,9 @@ You can visit [the SmoothScroller API docs](/javascript/Ink.UI.SmoothScroller/) 
 
 
 
-<h2 id="Ink.UI.SortableList_1">
+<h2 id="InkUISortableList_1">
     SortableList
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.SortableList_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUISortableList_1"></a>
 </h2>
 
 SortableList turns a list into a list which can be sorted by the user using the
@@ -1763,9 +1763,9 @@ You can visit [the SortableList API docs](/javascript/Ink.UI.SortableList/) to f
 
 
 
-<h2 id="Ink.UI.Spy_1">
+<h2 id="InkUISpy_1">
     Spy
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.Spy_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUISpy_1"></a>
 </h2>
 
 
@@ -1867,9 +1867,9 @@ You can visit [the Spy API docs](/javascript/Ink.UI.Spy/) to find out about Java
 
 
 
-<h2 id="Ink.UI.Stacker_1">
+<h2 id="InkUIStacker_1">
     Stacker
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.Stacker_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUIStacker_1"></a>
 </h2>
 
 Stacker will reorganize N columns when the screen is not wide enough to show them all. It will mash together the contents of the 3 columns
@@ -2016,9 +2016,9 @@ You can visit [the Stacker API docs](/javascript/Ink.UI.Stacker/) to find out ab
 
 
 
-<h2 id="Ink.UI.Sticky_1">
+<h2 id="InkUISticky_1">
     Sticky
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.Sticky_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUISticky_1"></a>
 </h2>
 
 
@@ -2165,9 +2165,9 @@ You can visit [the Sticky API docs](/javascript/Ink.UI.Sticky/) to find out abou
 -------------
 
 
-<h2 id="Ink.UI.Tabs_1">
+<h2 id="InkUITabs_1">
     Tabs
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.Tabs_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUITabs_1"></a>
 </h2>
 
 The Tabs Component offers a simple way to build a tab-separated layout, allowing you to offer multiple content panes in the same space with intuitive navigation. This component requires your markup to have:
@@ -2319,9 +2319,9 @@ You can visit [the Tabs API docs](/javascript/Ink.UI.Tabs/) to find out about Ja
 -------------
 
 
-<h2 id="Ink.UI.Toggle_1">
+<h2 id="InkUIToggle_1">
     Toggle
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.Toggle_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUIToggle_1"></a>
 </h2>
 
 Toggle is a component for showing and hiding things. It can be made to do far more.
@@ -2587,9 +2587,9 @@ You can visit [the Toggle API docs](/javascript/Ink.UI.Toggle/) to find out abou
 -------------
 
 
-<h2 id="Ink.UI.Tooltip_1">
+<h2 id="InkUITooltip_1">
     Tooltip
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.Tooltip_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUITooltip_1"></a>
 </h2>
 
 
@@ -2762,9 +2762,9 @@ You can visit [the Tooltip API docs](/javascript/Ink.UI.Tooltip/) to find out ab
 -------------
 
 
-<h2 id="Ink.UI.TreeView_1">
+<h2 id="InkUITreeView_1">
     TreeView
-    <a class="fa fa-paragraph para-link" href="#Ink.UI.TreeView_1"></a>
+    <a class="fa fa-paragraph para-link" href="#InkUITreeView_1"></a>
 </h2>
 
 
@@ -2833,6 +2833,21 @@ Ink.requireModules(['Ink.UI.SmoothScroller_1', 'Ink.Dom.Css_1', 'Ink.Autoload_1'
     for (var i = 0; i < paragraphs.length; i++) {
         paragraphs[i].setAttribute('data-margin', '48');  // 45 is the width of the top bar
         Css.addClassName(paragraphs[i], 'ink-smooth-scroll');
+    }
+
+    var menu = Ink.s('ul.menu[data-js-side-nav]');
+
+    if (menu) {
+        for (var i = 0; i < paragraphs.length; i++) {
+            var link = document.createElement('a');
+            link.href = paragraphs[i].href;
+            link.textContent = paragraphs[i].parentNode.textContent || paragraphs[i].parentNode.innerText;
+            link.className = 'ink-smooth-scroll';
+            link.setAttribute('data-margin', '48');
+            var li = document.createElement('li');
+            li.appendChild(link);
+            menu.appendChild(li);
+        }
     }
 
     var iframes = [].slice.call(Ink.ss('.full-document-example-iframe'));

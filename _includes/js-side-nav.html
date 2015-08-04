@@ -2,7 +2,7 @@
 
 {% include section-selector.html %}
 
-<ul class="menu vertical">{% for component in section.components %}
+<ul class="menu vertical" data-js-side-nav>{% for component in section.components %}
   <li class="heading">{{ component.title }}{% if component.topics %}
     <ul>{% for topic in component.topics %}
       <li><a href="{{ site.url }}{{ section.url }}/{{ topic.title | replace: ' ','-' }}" title="{{ topic.title }}">{{ topic.title }}</a></li>{% endfor %}
