@@ -513,7 +513,7 @@ This is a simple Drawer coming in from the left.
 
 {% capture DrawerLeft %}
 <body class="ink-drawer">
-    <div class="left-drawer">
+    <div class="left-drawer" style="background:gray">
         Left drawer content...
     </div>
     <div id="main-content" class="content-drawer ink-grid">
@@ -545,10 +545,10 @@ This is an example of two drawers, one coming from the right and one from the le
 
 {% capture DrawerBoth %}
 <body class="ink-drawer">
-    <div class="left-drawer">
+    <div class="left-drawer" style="background:gray">
         Left drawer content...
     </div>
-    <div class="right-drawer">
+    <div class="right-drawer" style="background:blue">
         Right drawer content...
     </div>
     <div id="main-content" class="content-drawer ink-grid">
