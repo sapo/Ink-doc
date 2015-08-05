@@ -66,13 +66,13 @@ Ink.requireModules(['Ink.UI.Toggle_1'], function (Toggle) {
 
 A responsive carousel with one or more slides per page. Cycle back and forth between slides with any content you can put in. You can also swipe back and forth with your finger if your device supports touch.
 
-Most of the time, you will use this in conjunction with [Pagination](#Ink.UI.Pagination_1), because you want some sort of way to change pages!
+Most of the time, you will use this in conjunction with [Pagination](#InkUIPagination_1), because you want some sort of way to change pages!
 
 ### Carousel Examples
 
 #### Basic example:
 
-This example shows you how to create a basic Carousel, use it together with a basic [Pagination](#Ink.UI.Pagination_1). It's touch-enabled (touch support is on by default) and responsive (because it uses Ink's [CSS grid classes](/ui-elements/grid/#multiple-screen-sizes)). As you switch to smaller devices, you'll see that you get less slides per page to better use the viewport space.
+This example shows you how to create a basic Carousel, use it together with a basic [Pagination](#InkUIPagination_1). It's touch-enabled (touch support is on by default) and responsive (because it uses Ink's [CSS grid classes](/ui-elements/grid/#multiple-screen-sizes)). As you switch to smaller devices, you'll see that you get less slides per page to better use the viewport space.
 
 
 {% capture Carousel %}
@@ -132,7 +132,7 @@ This example shows you how to create a basic Carousel, use it together with a ba
 
 This is how you create a Carousel with chevron pagination.
 
-To use a chevron [Pagination](#Ink.UI.Pagination_1) with it, embed the `.ink-pagination` element inside the `.ink-carousel` element and add the `chevron` class to its `ul`.
+To use a chevron [Pagination](#InkUIPagination_1) with it, embed the `.ink-pagination` element inside the `.ink-carousel` element and add the `chevron` class to its `ul`.
 
 {% capture Carousel %}
 <div id="my-carousel-2" class="ink-carousel" data-pagination="#my-carousel-2-pagination">
@@ -178,7 +178,7 @@ To use a chevron [Pagination](#Ink.UI.Pagination_1) with it, embed the `.ink-pag
 
 Add the following attributes to your `.ink-carousel` element to configure your Carousel.
 
- * `data-pagination="<selector>"`: [Pagination](#Ink.UI.Pagination_1) element to use with this Carousel. *Don't forget this!*
+ * `data-pagination="<selector>"`: [Pagination](#InkUIPagination_1) element to use with this Carousel. *Don't forget this!*
  * `data-initial-page="<page>"`: Carousel starts in `page`. First page is 0.
  * `data-space-after-last-slide="false"`: Don't leave blank space after the last slide.
  * `data-swipe="false"`: Disable touch support.
@@ -408,7 +408,7 @@ You can visit [the DatePicker API docs](/javascript/Ink.UI.DatePicker/) to find 
     <a class="fa fa-paragraph para-link" href="#InkUIDraggable_1"></a>
 </h2>
 
-Draggable is a component which works with [Droppable](#Ink.UI.Droppable_1).
+Draggable is a component which works with [Droppable](#InkUIDroppable_1).
 
 
 ### Draggable Examples
@@ -717,7 +717,7 @@ You can visit [the Dropdown API docs](/javascript/Ink.UI.Dropdown/) to find out 
 </h2>
 
 
-The Droppable is a dropping area for [Draggable](#Ink.UI.Draggable_1)s. It's useful to create shopping carts, playlists, and other things which rely on dragging and dropping action.
+The Droppable is a dropping area for [Draggable](#InkUIDraggable_1)s. It's useful to create shopping carts, playlists, and other things which rely on dragging and dropping action.
 
 ### Droppable Examples
 
@@ -1261,7 +1261,7 @@ You can visit [the Modal API docs](/javascript/Ink.UI.Modal/) to find out about 
 
 You can use Pagination when you need interactive paginators. It does not
 paginate anything by itself and must be connected to some other piece of
-javascript to do anything useful. [Above](#Ink.UI.Carousel_1) you see it used
+javascript to do anything useful. [Above](#InkUICarousel_1) you see it used
 together with Carousel to change its pages.
 
 It uses the CSS you see in the [Pagination UI Element (CSS)](/ui-elements/navigation/#pagination).
