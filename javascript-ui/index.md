@@ -943,6 +943,11 @@ To issue a custom error message for that input, add a data-error attribute to th
 {% endhighlight %}
 
 
+### FormValidator_2 options for the form
+
+Put this in your `<form>` if you want to translate the form. Options to define the validation of each input are below.
+
+ * `data-lang="pt_PT"` - Write error messages in portuguese. Languages available are `pt_PT` and `en_US` but others can be added through javascript.
 
 
 ### FormValidator_2 options for each input
