@@ -102,6 +102,52 @@ sections:
           - title: Reordering
   - title: Javascript UI Components
     url: javascript-ui
+    components:
+      - title: Components
+        topics:
+          - title: Carousel
+            url: "#InkUICarousel_1"
+          - title: Close
+            url: "#InkUIClose_1"
+          - title: DatePicker
+            url: "#InkUIDatePicker_1"
+          - title: Draggable
+            url: "#InkUIDraggable_1"
+          # TODO do the easy-doc on this one! - title: DragDrop
+          - title: Drawer
+            url: "#InkUIDrawer_1"
+          - title: Dropdown
+            url: "#InkUIDropdown_1"
+          - title: Droppable
+            url: "#InkUIDroppable_1"
+          - title: FormValidator_2
+            url: "#InkUIFormValidator_2"
+          - title: LazyLoad
+            url: "#InkUILazyLoad_1"
+          - title: Modal
+            url: "#InkUIModal_1"
+          - title: Pagination
+            url: "#InkUIPagination_1"
+          - title: ProgressBar
+            url: "#InkUIProgressBar_1"
+          - title: SmoothScroller
+            url: "#InkUISmoothScroller_1"
+          - title: SortableList
+            url: "#InkUISortableList_1"
+          - title: Spy
+            url: "#InkUISpy_1"
+          - title: Stacker
+            url: "#InkUIStacker_1"
+          - title: Sticky
+            url: "#InkUISticky_1"
+          - title: Tabs
+            url: "#InkUITabs_1"
+          - title: Toggle
+            url: "#InkUIToggle_1"
+          - title: Tooltip
+            url: "#InkUITooltip_1"
+          - title: TreeView
+            url: "#InkUITreeView_1"
   - title: Javascript API Reference
     url: javascript
     components:

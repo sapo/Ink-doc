@@ -2840,21 +2840,6 @@ Ink.requireModules(['Ink.UI.SmoothScroller_1', 'Ink.Dom.Css_1', 'Ink.Autoload_1'
         Css.addClassName(paragraphs[i], 'ink-smooth-scroll');
     }
 
-    var menu = Ink.s('ul.menu[data-js-side-nav]');
-
-    if (menu) {
-        for (var i = 0; i < paragraphs.length; i++) {
-            var link = document.createElement('a');
-            link.href = paragraphs[i].href;
-            link.textContent = paragraphs[i].parentNode.textContent || paragraphs[i].parentNode.innerText;
-            link.className = 'ink-smooth-scroll';
-            link.setAttribute('data-margin', '48');
-            var li = document.createElement('li');
-            li.appendChild(link);
-            menu.appendChild(li);
-        }
-    }
-
     var iframes = [].slice.call(Ink.ss('.full-document-example-iframe'));
     for (var i = 0; i < iframes.length; i++) {
         iframes[i].setAttribute('src', 'data:text/html,' + encodeURIComponent(iframes[i].textContent));
