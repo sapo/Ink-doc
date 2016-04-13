@@ -5,7 +5,11 @@
 <ul class="menu vertical" data-js-side-nav>{% for component in section.components %}
   <li class="heading">{{ component.title }}{% if component.topics %}
     <ul>{% for topic in component.topics %}
-      <li><a href="{{ site.url }}{{ section.url }}/{{ topic.title | replace: ' ','-' }}" title="{{ topic.title }}">{{ topic.title }}</a></li>{% endfor %}
+      {% if topic.url %}
+        <li><a href="{{ topic.url }}" {% if topic.url contains "#" %}class="ink-smooth-scroll" data-margin="48"{% endif %} title="{{ topic.title }}">{{ topic.title }}</a></li>
+      {% else %}
+        <li><a href="{{ site.url }}{{ section.url }}/{{ topic.title | replace: ' ','-' }}" title="{{ topic.title }}">{{ topic.title }}</a></li>
+      {% endif %}{% endfor %}
     </ul>{% endif %}
   </li>{% endfor %}
 </ul>
