@@ -26,7 +26,7 @@ tags: user interface, components, elements, responsive, customization
 <link rel="stylesheet" type="text/css" href="{{ site.cdn_ssl_url }}x.x.x/">
 {% endhighlight %}
 
-<p>x.x.x will be the version number and inside each version the CDN mimicks the distibution bundle:</p>
+<p>x.x.x will be the version number and inside each version the CDN mimics the distribution bundle:</p>
 
 {% highlight html %}
 <link rel="stylesheet" type="text/css" href="{{ site.cdn_url }}{{ site.version }}/css/ink.css"> <!-- inks css file -->
@@ -86,13 +86,13 @@ tags: user interface, components, elements, responsive, customization
 {% endhighlight %}
 
   <h2 class="fw-300">Flexbox</h2>
-  <p>In version 3.0.0 we introduced an alternative stylesheet that uses the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">Flexible box</a> (<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">flexbox</a>) layout mode to do the heavy lifting in Ink. Although this allows us to add a lot of features that further enhance control over our user interfaces, be aware that the Flexible box layout mode is still at the Candidate Recommendation stage of the specification and currently has many diferent implementations across browsers.</p>
-  <p>The good news is that we'll handle the complexity of dealing with all of these diferences and let you take a plunge into the one of the most exciting features available on the web.</p>
+  <p>In version 3.0.0 we introduced an alternative stylesheet that uses the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">Flexible box</a> (<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes">flexbox</a>) layout mode to do the heavy lifting in Ink. Although this allows us to add a lot of features that further enhance control over our user interfaces, be aware that the Flexible box layout mode is still at the Candidate Recommendation stage of the specification and currently has many different implementations across browsers.</p>
+  <p>The good news is that we'll handle the complexity of dealing with all of these differences and let you take a plunge into the one of the most exciting features available on the web.</p>
   <p>The <a href="{{ site.url }}ui-elements/grid/">Grid</a> makes most use of flexbox features, but across our documentation, whenever flexbox is an alternative, we'll have a chapter documenting its use.</p>
   <p>If you want to know more about Inks flexbox features head over to the <a href="{{ site.url }}ui-elements/flexbox">flexbox</a> page of our documentation.</p>
 
   <h2 class="fw-300">CSS generation and customization</h2>
-  <p>Inks CSS is generated with <a href="http://compass-style.org/">Compass</a> and is modular in its structure. If you wan't to edit and recompile the sass code, you can use our build system, but you'll need to install a couple of tools:</p>
+  <p>Inks CSS is generated with <a href="http://compass-style.org/">Compass</a> and is modular in its structure. If you want to edit and recompile the sass code, you can use our build system, but you'll need to install a couple of tools:</p>
   <ul>
     <li><a href="http://compass-style.org/install/">Compass</a></li>
     <li><a href="http://nodejs.org/">Node.js</a></li>
@@ -103,16 +103,16 @@ tags: user interface, components, elements, responsive, customization
 {% highlight bash %}
 /config/ # the files where sass variables are defined, i.e. component class names, colors, font stacks, etc.
 /contrib/ # third party code, like the Compass core and Font Awesome sass source.
-/mixins/ # sass @mixins that we've written to automate some css geration tasks
+/mixins/ # sass @mixins that we've written to automate some css generation tasks
 /modules/ # modules structure definition, grid, navigation, forms, etc
-/themes/ # themeing code that implementes our color schemes
+/themes/ # theming code that implements our color schemes
 ink-flex.scss # generates ink-flex.css which has our flexbox grid system and components. EXPERIMENTAL!
 ink-ie.scss # generates ink-ie.css for Internet Explorer 7 and 8.
 ink.scss # generates ink.css
 quick-start.scss # generates quick-start.css. Contains the media queries for all of our breakpoints to get you started.
 {% endhighlight %}
 
-<p>If you don't need all the suppiled modules you can just go into <code>ink.scss</code>, <code>ink-flex.scss</code>, <code>ink-ie.scss</code>, comment out any unnecessary modules and recompile the css:</p>
+<p>If you don't need all the supplied modules you can just go into <code>ink.scss</code>, <code>ink-flex.scss</code>, <code>ink-ie.scss</code>, comment out any unnecessary modules and recompile the css:</p>
 
 <p class="example-title">ink.scss</p>
 {% highlight sass %}
@@ -190,7 +190,7 @@ quick-start.scss # generates quick-start.css. Contains the media queries for all
 {% endhighlight %}
 
 <p>And of course, you can go into our source code and tweak it to your liking. Just bear in mind that upgrading to a future version of Ink will be a lot harder, as you'll have to port your changes by hand.</p>
-<p>Another way to customize, <strong>and this is our recomendation</strong>, is to import <code>ink.scss</code> into your own SASS file, and override our variables in that file:</p>
+<p>Another way to customize, <strong>and this is our recommendation</strong>, is to import <code>ink.scss</code> into your own SASS file, and override our variables in that file:</p>
 <p class="example-title">Code</p>
 {% highlight sass %}
 @import ink.scss;
