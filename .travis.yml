@@ -5,9 +5,11 @@ branches:
   only:
     - develop
     - gh-pages
-before_script:
+install:
+  - npm install
   - rvm install 2.2.2
   - gem install compass
   - gem install jekyll
   - npm install -g grunt-cli
-script: "grunt --verbose"
+script:
+  - "grunt --verbose"
