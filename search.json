@@ -10,3 +10,4 @@
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}]
 ]
+
