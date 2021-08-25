@@ -198,7 +198,7 @@ module.exports = function(grunt) {
         globalReplace: true,
         regExp: new RegExp(
           '([\'|\"|@]?version[\'|\"]?[ ]*:?[ ]*[\'|\"]?|'+
-            'http://(?:fastly|cdn).ink.sapo.pt/' +
+            'https://(?:fastly|cdn).ink.sapo.pt/' +
           ')' +
           '(\\d+\\.\\d+\\.\\d+(-' +
           '\\.\\d+)?(-\\d+)?)[\\d||A-a|.|-]*([\'|\"]?)', 'i'),

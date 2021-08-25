@@ -1002,7 +1002,7 @@ footer .socialplugins .fb-like span {
 }
 
 .copyright .SAPOlogo {
-  background: url("http://imgs.sapo.pt/sapologos/madeby/madeby-100x35-white.png") no-repeat;
+  background: url("https://imgs.sapo.pt/sapologos/madeby/madeby-100x35-white.png") no-repeat;
   text-indent: -9999px;
   text-align: left;
   display: inline-block;
@@ -1010,7 +1010,7 @@ footer .socialplugins .fb-like span {
   min-height: 43px;
 }
 .copyright .SAPOlogo.dark {
-  background: url("http://imgs.sapo.pt/sapologos/madeby/madeby-100x35-black.png") no-repeat;
+  background: url("https://imgs.sapo.pt/sapologos/madeby/madeby-100x35-black.png") no-repeat;
 }
 .copyright .PTClogo {
   background: url("../img/PTlogo.png") no-repeat 0 top;

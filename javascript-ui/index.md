@@ -8,9 +8,9 @@ site_root:  ../../
 {% capture IframeHead %}
 <head>
     <meta charset="utf-8">
-    <script type="text/javascript" src="http://fastly.ink.sapo.pt/{{ site.version }}/js/ink-all.min.js"></script>
-    <script type="text/javascript" src="http://fastly.ink.sapo.pt/{{ site.version }}/js/autoload.js"></script>
-    <link rel="stylesheet" href="http://fastly.ink.sapo.pt/{{ site.version }}/css/ink-flex.css">
+    <script type="text/javascript" src="https://ink.freetls.fastly.net/{{ site.version }}/js/ink-all.min.js"></script>
+    <script type="text/javascript" src="https://ink.freetls.fastly.net/{{ site.version }}/js/autoload.js"></script>
+    <link rel="stylesheet" href="https://ink.freetls.fastly.net/{{ site.version }}/css/ink-flex.css">
 </head>
 {% endcapture %}
 
@@ -20,9 +20,9 @@ To get started, include the following JS files in the *bottom* of your HTML:
 
 {% highlight html %}
 <!-- Load the js files -->
-<script type="text/javascript" src="http://fastly.ink.sapo.pt/{{ site.version }}/js/ink-all.js"></script>
+<script type="text/javascript" src="https://ink.freetls.fastly.net/{{ site.version }}/js/ink-all.js"></script>
 <!-- Autoload is required for the examples on this page. Read more below. -->
-<script type="text/javascript" src="http://fastly.ink.sapo.pt/{{ site.version }}/js/autoload.js"></script>
+<script type="text/javascript" src="https://ink.freetls.fastly.net/{{ site.version }}/js/autoload.js"></script>
 {% endhighlight %}
 
 
@@ -79,7 +79,7 @@ This example shows you how to create a basic Carousel, use it together with a ba
 <div id="my-carousel-1" class="ink-carousel" data-pagination="#my-carousel-1-pagination">
     <ul class="stage column-group half-gutters">
         <li class="slide xlarge-33 all-50 small-100 tiny-100">
-            <img class="quarter-bottom-space" src="http://lorempixel.com/400/200/sports/1">
+            <img class="quarter-bottom-space" src="https://lorempixel.com/400/200/sports/1">
             <div class="description">
                 <h4>Title</h4>
                 <p>Description paragraph</p>
@@ -87,7 +87,7 @@ This example shows you how to create a basic Carousel, use it together with a ba
         </li>
 
         <li class="slide xlarge-33 all-50 small-100 tiny-100">
-            <img class="quarter-bottom-space" src="http://lorempixel.com/400/200/sports/2">
+            <img class="quarter-bottom-space" src="https://lorempixel.com/400/200/sports/2">
             <div class="description">
                 <h4>Title</h4>
                 <p>Description paragraph</p>
@@ -104,7 +104,7 @@ This example shows you how to create a basic Carousel, use it together with a ba
         </li>
 
         <li class="slide xlarge-33 all-50 small-100 tiny-100">
-            <img class="quarter-bottom-space" src="http://lorempixel.com/400/200/sports/3">
+            <img class="quarter-bottom-space" src="https://lorempixel.com/400/200/sports/3">
             <div class="description">
                 <h4>Title</h4>
                 <p>Description paragraph</p>
@@ -138,21 +138,21 @@ To use a chevron [Pagination](#InkUIPagination_1) with it, embed the `.ink-pagin
 <div id="my-carousel-2" class="ink-carousel" data-pagination="#my-carousel-2-pagination">
     <ul class="stage column-group half-gutters">
         <li class="slide all-50 small-100 tiny-100">
-            <img class="quarter-bottom-space" src="http://lorempixel.com/400/200/sports/1">
+            <img class="quarter-bottom-space" src="https://lorempixel.com/400/200/sports/1">
             <div class="description">
                 <h4>This is slide 1</h4>
             </div>
         </li>
 
         <li class="slide all-50 small-100 tiny-100">
-            <img class="quarter-bottom-space" src="http://lorempixel.com/400/200/sports/2">
+            <img class="quarter-bottom-space" src="https://lorempixel.com/400/200/sports/2">
             <div class="description">
                 <h4>This is slide 2</h4>
             </div>
         </li>
 
         <li class="slide all-50 small-100 tiny-100">
-            <img class="quarter-bottom-space" src="http://lorempixel.com/400/200/sports/3">
+            <img class="quarter-bottom-space" src="https://lorempixel.com/400/200/sports/3">
             <div class="description">
                 <h4>This is slide 3</h4>
             </div>
@@ -247,7 +247,7 @@ There's not much to know about Close, but here are [the Close JS API docs](/java
 
 DatePicker is a component for picking dates. You use it together with an input box, and it gets filled with the date in a certain format. The user may change the date by navigating the calendar or by typing in the input box using the correct format.
 
-The date's format is given in the `data-format` option, where you pass a date format string in the syntax of [PHP's `date()` function](http://php.net/manual/en/function.date.php#refsect1-function.date-parameters).
+The date's format is given in the `data-format` option, where you pass a date format string in the syntax of [PHP's `date()` function](https://php.net/manual/en/function.date.php#refsect1-function.date-parameters).
 
 
 ### DatePicker Examples
@@ -353,7 +353,7 @@ Add the following attributes to your `.ink-datepicker` input element to configur
 
  * `data-start-date="<yyyy>-<mm>-<dd>"`: Start with a certain date. Defaults to today.
  * `data-date-range="<start>:<end>"`: Only allow dates between `start` and `end`. Don't forget the `:` :).
- * `data-format="d-m-Y"`: Date format string. Uses the same syntax as [PHP's `date()` function](http://php.net/manual/en/function.date.php#refsect1-function.date-parameters). Let's see how they format the date "15th July of 1939":
+ * `data-format="d-m-Y"`: Date format string. Uses the same syntax as [PHP's `date()` function](https://php.net/manual/en/function.date.php#refsect1-function.date-parameters). Let's see how they format the date "15th July of 1939":
    * `data-format="d-m-Y"` - "15-07-1939"
    * `data-format="Y/d/m"` - "1939/15/07"
    * `data-format="Y-m-d"` - "1939-07-15"
@@ -811,7 +811,7 @@ FormValidator is a component which validates forms interactively on the client s
 
 To use FormValidator, add the `.ink-formvalidator` class to a `<form>` element. Ink won't let the user submit until the data is valid.
 
-You will probably need to read the [Forms UI Element](http://ink.sapo.pt/ui-elements/forms/) documentation to get to grips with the classes used. TL;DR: `.ink-form` goes outside, `.control-group` is nestable and groups similar controls, and `.control` wraps the inputs.
+You will probably need to read the [Forms UI Element](https://ink.sapo.pt/ui-elements/forms/) documentation to get to grips with the classes used. TL;DR: `.ink-form` goes outside, `.control-group` is nestable and groups similar controls, and `.control` wraps the inputs.
 
 ### FormValidator_2 Examples
 
@@ -852,7 +852,7 @@ Here is a simple example of a user registration field:
 <p class="example-title">Demo</p>
 {{ FormValidator_2 }}
 
-**Note: The `required` class is related to the [Form UI Element](http://ink.sapo.pt/ui-elements/forms/). it doesn't affect the FormValidator's behaviour.**
+**Note: The `required` class is related to the [Form UI Element](https://ink.sapo.pt/ui-elements/forms/). it doesn't affect the FormValidator's behaviour.**
 
 <p class="example-title">Code</p>
 {% highlight html %}
@@ -899,7 +899,7 @@ Here's how FormValidator deals with `<input type="radio">` and `<input type="che
 <p class="example-title">Demo</p>
 {{ FormValidator_2 }}
 
-**Note: The `required` class is related to the [Form UI Element](http://ink.sapo.pt/ui-elements/forms/). it doesn't affect the FormValidator's behaviour.**
+**Note: The `required` class is related to the [Form UI Element](https://ink.sapo.pt/ui-elements/forms/). it doesn't affect the FormValidator's behaviour.**
 
 <p class="example-title">Code</p>
 {% highlight html %}
@@ -935,7 +935,7 @@ To issue a custom error message for that input, add a data-error attribute to th
 <p class="example-title">Demo</p>
 {{ FormValidator_2 }}
 
-**Note: The `required` class is related to the [Form UI Element](http://ink.sapo.pt/ui-elements/forms/). it doesn't affect the FormValidator's behaviour.**
+**Note: The `required` class is related to the [Form UI Element](https://ink.sapo.pt/ui-elements/forms/). it doesn't affect the FormValidator's behaviour.**
 
 <p class="example-title">Code</p>
 {% highlight html %}
@@ -989,7 +989,7 @@ Some assorted rules which are useful in combination with other rules:
 Random rules you might need:
 
  * `data-rules="color"` - A color in `#hex`, `rgb()`, `rgba()`, `hsl()`, `hsla()` format.
- * `data-rules="date[<format>]"` - A date. `format` is a date format string in the syntax of [PHP's `date()` function](http://php.net/manual/en/function.date.php#refsect1-function.date-parameters)
+ * `data-rules="date[<format>]"` - A date. `format` is a date format string in the syntax of [PHP's `date()` function](https://php.net/manual/en/function.date.php#refsect1-function.date-parameters)
  * `data-rules="decimal[...]"` - Exactly like `numeric` but only decimal numbers are allowed.
  * `data-rules="ip[ipv6]"` - An IP address.
  * `data-rules="ip[ipv4]"` - A legacy IP address.
@@ -999,8 +999,8 @@ Random rules you might need:
  * `data-rules="phone[MZ]"` - A Mozambique phone number.
  * `data-rules="phone[TL]"` - A Timor phone number.
  * `data-rules="phone"` - Any of the above types of phone number.
- * `data-rules="url"` - A URL. (Ex: `"/foo/bar"`, `"http://example.com/foo/bar"`, etc.)
- * `data-rules="url[true]"` - Just like `url` but only if it contains the "http://" part.
+ * `data-rules="url"` - A URL. (Ex: `"/foo/bar"`, `"https://example.com/foo/bar"`, etc.)
+ * `data-rules="url[true]"` - Just like `url` but only if it contains the "https://" part.
  * `data-rules="ean"` - A barcode in [EAN-13 format](https://en.wikipedia.org/wiki/International_Article_Number_%28EAN%29).
 
 You can see more validation rules, as well as a more in-depth description of each one of them, in [the JS documentation for `FormValidator.validationFunctions`](/javascript/Ink.UI.FormValidator.2/#Ink_UI_FormValidator_2-FormValidator_validationFunctions)
@@ -1149,7 +1149,7 @@ Click the button to open a modal
         <div class="modal-body" id="modalContent">
             <h3>This is the modal content</h3>
             <figure class="ink-image">
-                <img src="http://lorempixel.com/1200/675/sports/1" alt="" class="ink-image">
+                <img src="https://lorempixel.com/1200/675/sports/1" alt="" class="ink-image">
             </figure>
         </div>
     </div>
@@ -1180,7 +1180,7 @@ Besides the content, this modal has a dismiss button, a header and a footer, bes
         <div class="modal-body" id="modalContent">
             <h3>This is the modal content</h3>
             <figure class="ink-image">
-                <img src="http://lorempixel.com/1200/675/sports/1" alt="" class="ink-image">
+                <img src="https://lorempixel.com/1200/675/sports/1" alt="" class="ink-image">
             </figure>
         </div>
         <div class="modal-footer">
@@ -1213,7 +1213,7 @@ To automatically open the modal, just omit the trigger!
         <div class="modal-body" id="modalContent">
             <h3>This is the modal content</h3>
             <figure class="ink-image">
-                <img src="http://lorempixel.com/1200/675/sports/1" alt="" class="ink-image">
+                <img src="https://lorempixel.com/1200/675/sports/1" alt="" class="ink-image">
             </figure>
         </div>
     </div>
@@ -2869,5 +2869,5 @@ Ink.requireModules(['Ink.UI.SmoothScroller_1', 'Ink.Dom.Css_1', 'Ink.Autoload_1'
 </style>
 
 <!-- This is the only page in the docs that needs autoload -->
-<script type="text/javascript" src="http://fastly.ink.sapo.pt/{{ site.version }}/js/autoload.js"></script>
+<script type="text/javascript" src="https://ink.freetls.fastly.net/{{ site.version }}/js/autoload.js"></script>
 

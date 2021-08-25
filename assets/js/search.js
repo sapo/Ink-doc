@@ -69,8 +69,8 @@ Ink.requireModules(['Ink.Net.Ajax_1', 'Ink.Dom.Event_1', 'Ink.Util.Url_1', 'Ink.
 
     if(typeof(curQS.search) !== 'undefined' && curQS.search !== '') {
         var value = decodeURIComponent(curQS.search);
-        //http://services.sapo.pt/RSS/Feed/site/ink?wt=json&indent=on&fl=Title,Url,RSSWorksId&q=grid%20space
-        var url = 'http://services.sapo.pt/RSS/Feed/site/ink';
+        //https://services.sapo.pt/RSS/Feed/site/ink?wt=json&indent=on&fl=Title,Url,RSSWorksId&q=grid%20space
+        var url = 'https://services.sapo.pt/RSS/Feed/site/ink';
         new InkAjax(url, {
                     method: 'GET',
                     parameters: 'wt=json&indent=on&hl=true&fl=Title,Url,RSSWorksId&q='+encodeURIComponent(value),

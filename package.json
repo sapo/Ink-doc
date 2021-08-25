@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://github.com/sapo/Ink.git"
+    "url": "https://github.com/sapo/Ink.git"
   },
   "scripts": {
     "all": "grunt --verbose"

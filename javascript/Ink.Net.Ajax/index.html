@@ -139,7 +139,7 @@ site_root:  ../
             Request timeout in seconds</li>            <li class="level2">
                             <p>options.xhrProxy
                                 <span class="label string"></span></p>
-            URI for proxy service hosted on the same server as the web app, that can fetch documents from other domains. The service must pipe all input and output untouched (some input sanitization is allowed, like clearing cookies). e.g., requesting http://example.org/doc can become /proxy/http%3A%2F%2Fexample.org%2Fdoc The proxy service will be used for cross-domain requests, if set, else a network error is returned as exception.</li>            <li class="level2">
+            URI for proxy service hosted on the same server as the web app, that can fetch documents from other domains. The service must pipe all input and output untouched (some input sanitization is allowed, like clearing cookies). e.g., requesting https://example.org/doc can become /proxy/http%3A%2F%2Fexample.org%2Fdoc The proxy service will be used for cross-domain requests, if set, else a network error is returned as exception.</li>            <li class="level2">
                             <p>options.onComplete
                                 <span class="label function"></span></p>
             Callback executed after the request is completed, regardless of what happened during the request.</li>            <li class="level2">

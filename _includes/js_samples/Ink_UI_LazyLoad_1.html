@@ -1,17 +1,17 @@
 {% capture example_code %}
 <div id="my-lazy-load">
-    <img data-src="http://cdn.ink.sapo.pt/2.2.1/img/shot_meo.png" class="lazyload-item quarter-vertical-space">
-    <img data-src="http://cdn.ink.sapo.pt/2.2.1/img/shot_musicbox.png" class="lazyload-item quarter-vertical-space">
-    <img data-src="http://cdn.ink.sapo.pt/2.2.1/img/shot_intra.png" class="lazyload-item quarter-vertical-space">
-    <img data-src="http://cdn.ink.sapo.pt/2.2.1/img/shot_ink.png" class="lazyload-item quarter-vertical-space">
-    <img data-src="http://cdn.ink.sapo.pt/2.2.1/img/shot_pessoa.png" class="lazyload-item quarter-vertical-space">    
+    <img data-src="https://cdn.ink.sapo.pt/2.2.1/img/shot_meo.png" class="lazyload-item quarter-vertical-space">
+    <img data-src="https://cdn.ink.sapo.pt/2.2.1/img/shot_musicbox.png" class="lazyload-item quarter-vertical-space">
+    <img data-src="https://cdn.ink.sapo.pt/2.2.1/img/shot_intra.png" class="lazyload-item quarter-vertical-space">
+    <img data-src="https://cdn.ink.sapo.pt/2.2.1/img/shot_ink.png" class="lazyload-item quarter-vertical-space">
+    <img data-src="https://cdn.ink.sapo.pt/2.2.1/img/shot_pessoa.png" class="lazyload-item quarter-vertical-space">    
 </div>
 
 <script type="text/javascript">
 Ink.requireModules(['Ink.UI.LazyLoad_1', 'Ink.Dom.Element_1'], function(LazyLoad, InkElement) {
     new LazyLoad('#my-lazy-load', {
         delta: -300,
-        placeholder: 'http://cdn.ink.sapo.pt/2.2.1/img/logo_home.png'
+        placeholder: 'https://cdn.ink.sapo.pt/2.2.1/img/logo_home.png'
     });
 });
 </script>

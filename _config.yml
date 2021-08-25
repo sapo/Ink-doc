@@ -3,7 +3,7 @@ exclude: [".gitignore", ".git", "config.rb", "package.json", "Gruntfile.js", "bo
 
 destination: ./_site
 
-url: http://ink.sapo.pt/
+url: https://ink.sapo.pt/
 environment: production
 description: Ink is a set of tools for quick development of web interfaces.
 timezone: Europe/Lisbon
@@ -18,7 +18,7 @@ version: 3.1.10
 download_url: https://github.com/sapo/Ink/releases/download/
 download_src_url: https://github.com/sapo/Ink/archive/
 repo_url: https://github.com/sapo/Ink/
-cdn_url: http://fastly.ink.sapo.pt/
+cdn_url: https://ink.freetls.fastly.net/
 cdn_ssl_url: https://ink.global.ssl.fastly.net/
 
 # ASSETS PATHS

@@ -126,12 +126,12 @@
          * @param {String} rootURI   Base URL path and schema to be appended to the module or namespace
          *
          * @example
-         *      Ink.setPath('Ink', 'http://my-cdn/Ink/');
-         *      Ink.setPath('Lol', 'http://my-cdn/Lol/');
+         *      Ink.setPath('Ink', 'https://my-cdn/Ink/');
+         *      Ink.setPath('Lol', 'https://my-cdn/Lol/');
          *
-         *      // Loads from http://my-cdn/Ink/Dom/Whatever/lib.js
+         *      // Loads from https://my-cdn/Ink/Dom/Whatever/lib.js
          *      Ink.requireModules(['Ink.Dom.Whatever'], function () { ... });
-         *      // Loads from http://my-cdn/Lol/Whatever/lib.js
+         *      // Loads from https://my-cdn/Lol/Whatever/lib.js
          *      Ink.requireModules(['Lol.Whatever'], function () { ... });
          */
         setPath: function(key, rootURI) {
@@ -705,7 +705,7 @@ Ink.createModule('Ink.Net.Ajax', '1', [], function() {
      * @param {Function}        [options.onTimeout]             Callback executed if the request times out
      * @param {Boolean|String}  [options.evalJS]=true           If the request Content-type header is application/json, evaluates the response and populates responseJSON. Use 'force' if you want to force the response evaluation, no matter what Content-type it's using.
      * @param {Boolean}         [options.sanitizeJSON]          Flag to sanitize the content of responseText before evaluation
-     * @param {String}          [options.xhrProxy]              URI for proxy service hosted on the same server as the web app, that can fetch documents from other domains. The service must pipe all input and output untouched (some input sanitization is allowed, like clearing cookies). e.g., requesting http://example.org/doc can become /proxy/http%3A%2F%2Fexample.org%2Fdoc The proxy service will be used for cross-domain requests, if set, else a network error is returned as exception.
+     * @param {String}          [options.xhrProxy]              URI for proxy service hosted on the same server as the web app, that can fetch documents from other domains. The service must pipe all input and output untouched (some input sanitization is allowed, like clearing cookies). e.g., requesting https://example.org/doc can become /proxy/http%3A%2F%2Fexample.org%2Fdoc The proxy service will be used for cross-domain requests, if set, else a network error is returned as exception.
      *
      * @sample Ink_Net_Ajax_1.html 
      */
@@ -819,7 +819,7 @@ Ink.createModule('Ink.Net.Ajax', '1', [], function() {
          **/
         _locationFromURL: function (url) {
             var urlLocation =  document.createElementNS ?
-                document.createElementNS('http://www.w3.org/1999/xhtml', 'a') :
+                document.createElementNS('https://www.w3.org/1999/xhtml', 'a') :
                 document.createElement('a');
             urlLocation.href = url;
             return urlLocation;
@@ -1128,7 +1128,7 @@ Ink.createModule('Ink.Net.Ajax', '1', [], function() {
                 }
 
                 if (this.usingXDomainReq && headerContentType.indexOf('xml') !== -1 && 'DOMParser' in window) {
-                    // http://msdn.microsoft.com/en-us/library/ie/ff975278(v=vs.85).aspx
+                    // https://msdn.microsoft.com/en-us/library/ie/ff975278(v=vs.85).aspx
                     var mimeType;
                     switch (headerContentType) {
                         case 'application/xml':
@@ -3163,7 +3163,7 @@ Ink.createModule('Ink.Dom.Element', 1, [], function() {
          */
         isLink: function(element){
             var b = element && element.nodeType === 1 && ((/^a|area$/i).test(element.tagName) ||
-                element.hasAttributeNS && element.hasAttributeNS('http://www.w3.org/1999/xlink','href'));
+                element.hasAttributeNS && element.hasAttributeNS('https://www.w3.org/1999/xlink','href'));
             return !!b;
         },
 
@@ -5642,7 +5642,7 @@ Ink.createModule('Ink.Dom.Event', 1, [], function() {
 
 /**
  * Lets you attach event listeners to both elements and objects.
- * http://github.com/fat/bean#on
+ * https://github.com/fat/bean#on
  *
  * @method on
  * @param {DOMElement|Object} element An HTML DOM element or any JavaScript Object
@@ -5658,7 +5658,7 @@ Ink.createModule('Ink.Dom.Event', 1, [], function() {
 /**
  * Alias for `on` but will only be executed once.
  * bean.one() is an alias for bean.on() except that the handler will only be executed once and then removed for the event type(s).
- * http://github.com/fat/bean#one
+ * https://github.com/fat/bean#one
  *
  * @method one
  * @param {DOMElement|Object} element An HTML DOM element or any JavaScript Object
@@ -5674,7 +5674,7 @@ Ink.createModule('Ink.Dom.Event', 1, [], function() {
 /**
  * Removes event handlers.
  * bean.off() is how you get rid of handlers once you no longer want them active. It's also a good idea to call off on elements before you remove them from your DOM; this gives Bean a chance to clean up some things and prevents memory leaks.
- * http://github.com/fat/bean#off
+ * https://github.com/fat/bean#off
  *
  * @method off
  * @param {DOMElement|Object} element An HTML DOM element or any JavaScript Object
@@ -5688,7 +5688,7 @@ Ink.createModule('Ink.Dom.Event', 1, [], function() {
 /**
  * Clones events from one object to another
  * bean.clone() is a method for cloning events from one DOM element or object to another.
- * http://github.com/fat/bean#clone
+ * https://github.com/fat/bean#clone
  *
  * @method clone
  * @param {DOMElement|Object} destElement An HTML DOM element or any JavaScript Object to copy events to
@@ -5701,7 +5701,7 @@ Ink.createModule('Ink.Dom.Event', 1, [], function() {
 
 /**
  * Triggers events.
- * http://github.com/fat/bean#fire
+ * https://github.com/fat/bean#fire
  *
  * @method fire
  * @param {DOMElement|Object} destElement An HTML DOM element or any JavaScript Object fire the event on
@@ -6094,7 +6094,7 @@ Ink.createModule('Ink.Dom.Selector', 1, [], function() {
  * Sizzle CSS Selector Engine
  * Copyright 2013 jQuery Foundation and other contributors
  * Released under the MIT license
- * http://sizzlejs.com/
+ * https://sizzlejs.com/
  */
 
 var i,
@@ -6154,17 +6154,17 @@ var i,
 
 	// Regular expressions
 
-	// Whitespace characters http://www.w3.org/TR/css3-selectors/#whitespace
+	// Whitespace characters https://www.w3.org/TR/css3-selectors/#whitespace
 	whitespace = "[\\x20\\t\\r\\n\\f]",
-	// http://www.w3.org/TR/css3-syntax/#characters
+	// https://www.w3.org/TR/css3-syntax/#characters
 	characterEncoding = "(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",
 
 	// Loosely modeled on CSS identifier characters
-	// An unquoted value should be a CSS identifier http://www.w3.org/TR/css3-selectors/#attribute-selectors
-	// Proper syntax: http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
+	// An unquoted value should be a CSS identifier https://www.w3.org/TR/css3-selectors/#attribute-selectors
+	// Proper syntax: https://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
 	identifier = characterEncoding.replace( "w", "w#" ),
 
-	// Acceptable operators http://www.w3.org/TR/selectors/#attribute-selectors
+	// Acceptable operators https://www.w3.org/TR/selectors/#attribute-selectors
 	operators = "([*^$|!~]?=)",
 	attributes = "\\[" + whitespace + "*(" + characterEncoding + ")" + whitespace +
 		"*(?:" + operators + whitespace + "*(?:(['\"])((?:\\\\.|[^\\\\])*?)\\3|(" + identifier + ")|)|)" + whitespace + "*\\]",
@@ -6214,7 +6214,7 @@ var i,
 	rescape = /'|\\/g,
 	rattributeQuotes = /\=[\x20\t\r\n\f]*([^'"\]]*)[\x20\t\r\n\f]*\]/g,
 
-	// CSS escapes http://www.w3.org/TR/CSS21/syndata.html#escaped-characters
+	// CSS escapes https://www.w3.org/TR/CSS21/syndata.html#escaped-characters
 	runescape = /\\([\da-fA-F]{1,6}[\x20\t\r\n\f]?|.)/g,
 	funescape = function( _, escaped ) {
 		var high = "0x" + escaped - 0x10000;
@@ -6486,7 +6486,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 		div.id = expando + 0;
 		// Support: Windows 8 Native Apps
 		// Assigning innerHTML with "name" attributes throws uncatchable exceptions
-		// http://msdn.microsoft.com/en-us/library/ie/hh465388.aspx
+		// https://msdn.microsoft.com/en-us/library/ie/hh465388.aspx
 		div.appendChild( document.createElement("a") ).setAttribute( "name", expando );
 		div.appendChild( document.createElement("i") ).setAttribute( "name", expando );
 		docElem.appendChild( div );
@@ -6623,7 +6623,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			// This is to test IE's treatment of not explicitly
 			// setting a boolean content attribute,
 			// since its presence should be enough
-			// http://bugs.jquery.com/ticket/12359
+			// https://bugs.jquery.com/ticket/12359
 			div.innerHTML = "<select><option selected=''></option></select>";
 
 			// IE8 - Some boolean attributes are not treated correctly
@@ -6632,7 +6632,7 @@ setDocument = Sizzle.setDocument = function( node ) {
 			}
 
 			// Webkit/Opera - :checked should return selected option elements
-			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
+			// https://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
 			// IE8 throws error here and will not see later tests
 			if ( !div.querySelectorAll(":checked").length ) {
 				rbuggyQSA.push(":checked");
@@ -7217,7 +7217,7 @@ Expr = Sizzle.selectors = {
 
 		"PSEUDO": function( pseudo, argument ) {
 			// pseudo-class names are case-insensitive
-			// http://www.w3.org/TR/selectors/#pseudo-classes
+			// https://www.w3.org/TR/selectors/#pseudo-classes
 			// Prioritize by case sensitivity in case custom pseudos are added with uppercase letters
 			// Remember that setFilters inherits from pseudos
 			var args,
@@ -7301,7 +7301,7 @@ Expr = Sizzle.selectors = {
 		// or beginning with the identifier C immediately followed by "-".
 		// The matching of C against the element's language value is performed case-insensitively.
 		// The identifier C does not have to be a valid language name."
-		// http://www.w3.org/TR/selectors/#lang-pseudo
+		// https://www.w3.org/TR/selectors/#lang-pseudo
 		"lang": markFunction( function( lang ) {
 			// lang value must be a valid identifier
 			if ( !ridentifier.test(lang || "") ) {
@@ -7348,7 +7348,7 @@ Expr = Sizzle.selectors = {
 
 		"checked": function( elem ) {
 			// In CSS3, :checked should return both checked and selected elements
-			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
+			// https://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
 			var nodeName = elem.nodeName.toLowerCase();
 			return (nodeName === "input" && !!elem.checked) || (nodeName === "option" && !!elem.selected);
 		},
@@ -7365,7 +7365,7 @@ Expr = Sizzle.selectors = {
 
 		// Contents
 		"empty": function( elem ) {
-			// http://www.w3.org/TR/selectors/#empty-pseudo
+			// https://www.w3.org/TR/selectors/#empty-pseudo
 			// :empty is only affected by element nodes and content nodes(including text(3), cdata(4)),
 			//   not comment, processing instructions, or others
 			// Thanks to Diego Perini for the nodeName shortcut
@@ -8983,7 +8983,7 @@ Ink.createModule('Ink.Util.Date', '1', [], function() {
 
         /**
          * Formats a date object.
-         * This works exactly as php date() function. http://php.net/manual/en/function.date.php
+         * This works exactly as php date() function. https://php.net/manual/en/function.date.php
          *
          * @method get
          * @param   {String}      format    The format in which the date it will be formatted.
@@ -9223,7 +9223,7 @@ Ink.createModule('Ink.Util.Date', '1', [], function() {
 
         /**
          * Creates a date object based on a format string.
-         * This works exactly as php date() function. http://php.net/manual/en/function.date.php
+         * This works exactly as php date() function. https://php.net/manual/en/function.date.php
          *
          * @method set
          * @param   {String}    [format]    The format in which the date will be formatted. Defaults to 'Y-m-d'
@@ -11909,9 +11909,9 @@ Ink.createModule('Ink.Util.Validator', '1', [], function() {
         /**
          * Regular expression groups for several groups of characters
          *
-         * http://en.wikipedia.org/wiki/C0_Controls_and_Basic_Latin
-         * http://en.wikipedia.org/wiki/Plane_%28Unicode%29#Basic_Multilingual_Plane
-         * http://en.wikipedia.org/wiki/ISO_8859-1
+         * https://en.wikipedia.org/wiki/C0_Controls_and_Basic_Latin
+         * https://en.wikipedia.org/wiki/Plane_%28Unicode%29#Basic_Multilingual_Plane
+         * https://en.wikipedia.org/wiki/ISO_8859-1
          *
          * @property _characterGroups
          * @type {Object}
@@ -12269,7 +12269,7 @@ Ink.createModule('Ink.Util.Validator', '1', [], function() {
             if(typeof full === "undefined" || full === false) {
                 var reHTTP = new RegExp("(^(http\\:\\/\\/|https\\:\\/\\/)(.+))", "i");
                 if(reHTTP.test(url) === false) {
-                    url = 'http://'+url;
+                    url = 'https://'+url;
                 }
             }
 

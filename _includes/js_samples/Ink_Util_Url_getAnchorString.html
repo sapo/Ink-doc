@@ -2,7 +2,7 @@
 {% highlight js %}
 Ink.requireModules(['Ink.Util.Url_1'], function(InkUrl) {
              
-    // In URL: http://domain.com/#param1=value1&param2=value2
+    // In URL: https://domain.com/#param1=value1&param2=value2
     var oHash = InkUrl.getAnchorString(); 
     Ink.log(oHash);
     // { param1: "value1", param2: "value2" }    
@@ -14,7 +14,7 @@ Ink.requireModules(['Ink.Util.Url_1'], function(InkUrl) {
 {% highlight js %}
 Ink.requireModules(['Ink.Util.Url_1'], function(InkUrl) {
              
-    var url = 'http://domain.com/#param1=value1&param2=value2'; 
+    var url = 'https://domain.com/#param1=value1&param2=value2'; 
     var oHash = InkUrl.getAnchorString(url); 
     Ink.log(oHash);
     // { param1: "value1", param2: "value2" }    

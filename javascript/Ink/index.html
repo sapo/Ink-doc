@@ -362,12 +362,12 @@ site_root:  ../
                                 <span class="label mandatory"></span><span class="label string"></span></p>
             Base URL path and schema to be appended to the module or namespace</li>        </ul><p class="example-title">Example</p>
             {% highlight html %}{% raw %}
-                 Ink.setPath('Ink', 'http://my-cdn/Ink/');
-                 Ink.setPath('Lol', 'http://my-cdn/Lol/');
+                 Ink.setPath('Ink', 'https://my-cdn/Ink/');
+                 Ink.setPath('Lol', 'https://my-cdn/Lol/');
             
-                 // Loads from http://my-cdn/Ink/Dom/Whatever/lib.js
+                 // Loads from https://my-cdn/Ink/Dom/Whatever/lib.js
                  Ink.requireModules(['Ink.Dom.Whatever'], function () { ... });
-                 // Loads from http://my-cdn/Lol/Whatever/lib.js
+                 // Loads from https://my-cdn/Lol/Whatever/lib.js
                  Ink.requireModules(['Lol.Whatever'], function () { ... });
             {% endraw %}{% endhighlight %}
             

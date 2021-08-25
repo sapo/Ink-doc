@@ -6,7 +6,7 @@
 <script>
 Ink.requireModules(['Ink.Net.JsonP_1'], function(JsonP) {
 
-    var uri = 'http://services.sapo.pt/Photos/JSON2?u=codebits';
+    var uri = 'https://services.sapo.pt/Photos/JSON2?u=codebits';
     new JsonP(uri, {
         params: {limit: '3'}, // the query string parameters can be defined here 
         onSuccess: function(data) {

@@ -20,15 +20,15 @@ site_root: ../../
     <li>Automatic width distribution i.e. grids without having to declare widths.</li>
   </ul>
   <p>On this page we'll cover all the places where flexbox feature enhancement exists and how to take advantage of them.</p>
-  <p><i class="fa fa-leaf"></i> Be aware that the Flexible box layout mode is still at the <a href="http://www.w3.org/TR/css3-flexbox/#status">Candidate Recommendation</a> stage of the specification and even though the W3C encourages browser makers to implement it, it is subject to change before the final version of the specification.</p>
+  <p><i class="fa fa-leaf"></i> Be aware that the Flexible box layout mode is still at the <a href="https://www.w3.org/TR/css3-flexbox/#status">Candidate Recommendation</a> stage of the specification and even though the W3C encourages browser makers to implement it, it is subject to change before the final version of the specification.</p>
   <h2 class="fw-300">How to use</h2>
   <p>Ink-flex.css is the file that contains the new flexbox features, so the first step is to link it on your document <code>head</code>:</p>
 <p class="example-title">Code</p>
 {% highlight html %}
 <!-- pretty version for development -->
-<link rel="stylesheet" href="http://cdn.ink.sapo.pt/{{site.version}}/css/ink-flex.css">
+<link rel="stylesheet" href="https://cdn.ink.sapo.pt/{{site.version}}/css/ink-flex.css">
 <!-- minified version for production -->
-<link rel="stylesheet" href="http://cdn.ink.sapo.pt/{{site.version}}/css/ink-flex.min.css">
+<link rel="stylesheet" href="https://cdn.ink.sapo.pt/{{site.version}}/css/ink-flex.min.css">
 {% endhighlight %}
 <p>In the example above we're calling the css from our cdn but if you want to host the files yourself, just put them wherever you like and set the propper url.</p>
 <p><code>ink-flex.css</code> or <code>ink-flex.min.css</code> don't contain css for browsers without flexbox support, so if you still want or need to have a fallback for older browsers we have a <code>ink-legacy.css</code> file that contains all the non-flexbox code where all the rules have <code>html.no-flexbox, html.no-flexboxlegacy</code> as part of the selector:</p>
@@ -43,15 +43,15 @@ html.no-flexboxlegacy .ink-grid {
 }
 ...
 {% endhighlight %}
-<p>We can now use the included <a href="http://modernizr.com/" target="_blank">modernizr.js</a> to detect if the browser does not support flexbox and load the lecagy stylesheet if needed:</p>
+<p>We can now use the included <a href="https://modernizr.com/" target="_blank">modernizr.js</a> to detect if the browser does not support flexbox and load the lecagy stylesheet if needed:</p>
 <p class="example-title">Code</p>
 {% highlight html %}
     ...
-    <script type="text/javascript" src="http://cdn.ink.sapo.pt/{{ site.version }}/js/modernizr.js"></script>
+    <script type="text/javascript" src="https://cdn.ink.sapo.pt/{{ site.version }}/js/modernizr.js"></script>
     <script type="text/javascript">
         Modernizr.load({
           test: Modernizr.flexbox,
-          nope : 'http://cdn.ink.sapo.pt/{{ site.version }}/css/ink-legacy.min.css',
+          nope : 'https://cdn.ink.sapo.pt/{{ site.version }}/css/ink-legacy.min.css',
         });
     </script>
   </body>
